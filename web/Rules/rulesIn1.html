@@ -51,5 +51,51 @@
     </div>
 </nav>
 <!-- Navigation bar end -->
+<div class="content-body">
+    <!-- Menu -->
+    <div class="tab">
+        <button class="tablinks active" onclick="openRules(event, 'Rule1')">Rule1</button>
+        <button class="tablinks" onclick="openRules(event, 'Rule2')">Rule2</button>
+        <button class="tablinks" onclick="openRules(event, 'Rule3')">Rule3</button>
+    </div>
+    <!-- Menu end -->
+    <!-- jednotlivé pravidlá, vysvetlenie -->
+    <div id="Rule1" class="tabcontent active">
+        <h3>Rule1</h3>
+        <p>Rule1. <br> Some content. <br> Bla bla bla. <br> Bla bla bla.</p>
+    </div>
+
+    <div id="Rule2" class="tabcontent none">
+        <h3>Rule2</h3>
+        <p>Rule2. <br> Some content. <br> Bla bla bla. <br> Bla bla bla.</p>
+    </div>
+
+    <div id="Rule3" class="tabcontent none">
+        <h3>Rule3</h3>
+        <p>Rule3. <br> Some content. <br> Bla bla bla. <br> Bla bla bla.</p>
+    </div>
+</div>
 </body>
+<script>
+    function openRules(evt, RulesName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the link that opened the tab
+        document.getElementById(RulesName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
 </html>
