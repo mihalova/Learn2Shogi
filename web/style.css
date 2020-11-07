@@ -1,0 +1,37 @@
+body {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.navbar-custom {
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: black;
+    background-color: white;
+    alignment: center;
+    padding: 20px 0px 20px 0px;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: white;
+    background-color: black;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+/* menu icon */
+.toggler-icon {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0 6px 0;
+}
+.navbar-toggler {
+    padding: 20px 20px 20px 20px;
+}
