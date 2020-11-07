@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-custom {
-    background-color: yellow;
+    background-color: white;
     margin: 0;
     padding: 0;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
@@ -34,4 +34,16 @@ body {
 }
 .navbar-toggler {
     padding: 20px 20px 20px 20px;
+}
+/* show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* change color of active dropdown item */
+.dropdown-item.active,
+.dropdown-item:hover {
+    color: white;
+    background-color: black;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
 }
