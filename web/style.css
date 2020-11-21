@@ -1,18 +1,51 @@
-body {
+/* odsadenie body content od navigation */
+main {
     margin-right: 100px;
     margin-left: 100px;
-}
-/* odsadenie body content od navigation */
-.content-body {
     margin-top: 100px;
 }
 
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: gray;
+    color: white;
+}
+
+p {
+    text-align: justify;
+}
+
+section {
+    display: table;
+}
+
+.column {
+    padding-right: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+figure {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .navbar-custom {
-    background-color: white;
+    background-color: gray;
     margin: 0;
     padding: 0;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
 }
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand:hover{
+    color: white;
+    font-weight: bold;
+    padding-right: 50px;
+    padding-left: 20px;
+}
+
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
     color: black;
@@ -34,11 +67,11 @@ body {
     padding: 15px;
     font-size: 30px;
 }
-/* show dropdown on hover */
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-/* change color of active dropdown item */
+
 .dropdown-item.active,
 .dropdown-item:hover {
     color: white;
@@ -47,7 +80,7 @@ body {
     border-top: 1px solid white;
 }
 
-/* Style the tab content */
+
 .tabcontent {
     display: block;
     float: left;
@@ -57,22 +90,22 @@ body {
     height: 500px;
 }
 
-/* The sidebar menu */
+/*
 .sidebar {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     background-color: white;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 100px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    overflow-x: hidden;
+    padding-top: 100px;
+    transition: 0.5s;
     box-shadow: 3px 0 6px 0 rgba(0,0,0,.2);
 }
 
-/* The sidebar links */
+
 .sidebar a {
     padding: 8px 8px 8px 32px;
     color: black;
@@ -80,15 +113,13 @@ body {
     transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
+
 .sidebar a:hover {
     background-color: black;
     color: white;
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
 }
 
-/* The button used to open the sidebar */
+
 .sidebarButton {
     font-size: 20px;
     cursor: pointer;

@@ -3,7 +3,7 @@ window.onload = prepare();
 function prepare() {
     removeOld();
     document.getElementById("Rule1").style.display = "block";
-    document.getElementById("Rule1Button").className += " active";
+    document.getElementById("Rule1Button").className += "active";
 }
 
 function removeOld(){
@@ -19,7 +19,7 @@ function removeOld(){
     // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace("active", "");
     }
 }
 
