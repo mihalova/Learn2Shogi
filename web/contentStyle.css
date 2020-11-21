@@ -2,7 +2,7 @@
 main {
     margin-right: 100px;
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 footer {
@@ -12,16 +12,34 @@ footer {
     color: white;
 }
 
-p {
-    text-align: justify;
+section {
+    text-align: center;
 }
 
-section {
+.columns-center {
+    padding: 50px 0px;
     display: flex;
     align-items: center;
 }
 
-.column {
-    padding-right: 50px;
+.columns-top {
+    padding: 50px 0px;
+    display: flex;
+}
+
+.column-two {
+    padding: 0px 50px;
     flex: 50%;
+    text-align: center;
+}
+
+.column-three {
+    padding: 0px 50px;
+    flex: 33%;
+    text-align: center;
+}
+
+.paragraph-center {
+    width: 50%;
+    margin: auto;
 }
