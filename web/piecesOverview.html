@@ -3,19 +3,23 @@
 <head>
     <title>Prehľad figúrok</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="navbarStyle.css">
+    <link href="navbarStyle.css" rel="stylesheet">
+    <link href="contentStyle.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
 <!-- Navigation bar -->
 <nav class="navbar fixed-top navbar-expand-sm navbar-custom">
     <a class="navbar-brand">Learn2Shogi</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">&#9776;
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav nav-fill w-100">
@@ -47,8 +51,217 @@
 
 <!-- Main content -->
 <main>
-
-
+    <section class="columns-top">
+        <div class="column-two">
+            <header>
+                <h1>Prehľad figúrok</h1>
+            </header>
+            <p>Vidíš znak figúrky a nevieš si spomenúť na jej význam? Nájdi ju v našom prehľade hracích figúrok.<br><br>
+                V prehľade nájdeš všetky herné figúrky, aj ich možné promócie.<br>
+                Nasmeruj myškou na figúrku aby sa ukázal jej význam.
+            </p>
+        </div>
+        <div class="column-two">
+            <table>
+                <tr>
+                    <th class="col1 table-top">slovenský názov &#8594;</th>
+                    <th class="col2 table-top"><h4>Kráľ 王將</h4></th>
+                </tr>
+                <tr>
+                    <td class="col1">reálny výzor hernej figúrky v originálnej japonskej verzii &#8594;</td>
+                    <td class="col2">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_osho.png" alt="Kráľ">
+                        </figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1 table-bottom">ako čítať znak &#8594;</td>
+                    <td class="col2 table-bottom">ōshō</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <section class="show" id="kral">
+                        <header>
+                            <h4>Kráľ 王將</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_osho.png" alt="Kráľ">
+                        </figure>
+                        <p>ōshō</p>
+                    </section>
+                    <section class="hide" id="kral_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/osho.png" alt="Pohyb kráľa">
+                        </figure>
+                        <p>Môže sa presunúť o jedno pole ktorýmkoľvek smerom.</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section class="show" id="veza">
+                        <header>
+                            <h4>Veža 飛車</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_hisha.png" alt="Veža">
+                        </figure>
+                        <p>hisha</p>
+                    </section>
+                    <section class="hide" id="veza_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/hisha.png" alt="Pohyb veže">
+                        </figure>
+                        <p>Môže sa presunúť o jedno pole ktorýmkoľvek smerom.</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Povýšená veža 龍王</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_ryuo.png" alt="Povýšená veža">
+                        </figure>
+                        <p>ryūō</p>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Biskup 角行</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_kakugyo.png" alt="Biskup">
+                        </figure>
+                        <p>kakugyō</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Povýšený biskup 龍馬</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_ryuma.png" alt="Povýšený biskup">
+                        </figure>
+                        <p>ryūma</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Zlatý generál 金將</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_kinsho.png" alt="Zlatý generál">
+                        </figure>
+                        <p>kinshō</p>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Strieborný generál 銀將</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_ginsho.png" alt="Strieborný generál">
+                        </figure>
+                        <p>ginshō</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Povýšený strieborný generál 成銀</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_narigin.png" alt="Povýšený strieborný generál">
+                        </figure>
+                        <p>narigin</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Rytier 桂馬</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_keima.png" alt="Rytier">
+                        </figure>
+                        <p>keima</p>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Povýšený rytier 成桂</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_narikei.png" alt="Povýšený rytier">
+                        </figure>
+                        <p>narikei</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Kopijník 香車</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_kyosha.png" alt="Kopijník">
+                        </figure>
+                        <p>kyōsha</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Povýšený kopijník 成香</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_narikyo.png" alt="Povýšený kopijník">
+                        </figure>
+                        <p>narikyō</p>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Pešiak 歩兵</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_fuhyo.png" alt="Pešiak">
+                        </figure>
+                        <p>fuhyō</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section>
+                        <header>
+                            <h4>Povýšený pešiak と金</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_tokin.png" alt="Povýšený pešiak">
+                        </figure>
+                        <p>tokin</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <!-- Autori -->
@@ -56,4 +269,16 @@
     <p>&copy; 2020 Dominika Kincelová, Samuel Kubala, Dominika Mihálová, Filip Novák</p>
 </footer>
 </body>
+<script>
+   $(".show").hover(
+       function() {
+           $(this).hide();
+           $('#'+this.id+'_move').show();
+
+       }, function() {
+           $(this).show();
+           $('#'+this.id+'_move').hide();
+       }
+   );
+</script>
 </html>
