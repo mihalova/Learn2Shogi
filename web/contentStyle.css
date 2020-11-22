@@ -1,4 +1,5 @@
 /* odsadenie main od navigation */
+
 main {
     margin-right: 5%;
     margin-left: 5%;
@@ -34,6 +35,12 @@ section {
     text-align: center;
 }
 
+.column-two {
+    padding: 0 50px;
+    flex: 50%;
+    text-align: center;
+}
+
 .column-three {
     padding: 0 50px;
     flex: 33%;
@@ -43,7 +50,6 @@ section {
 .paragraph-center {
     width: 50%;
     margin: auto;
-    padding-bottom: 20px;
 }
 
 .shogi-figure {
@@ -74,24 +80,16 @@ table {
 }
 .col-sm-4 {
     background: white;
-    padding: 15px;
+    padding: 10px 10px 0 10px;
 }
 
-.col-sm-4 > section {
+.col-sm-4 > section{
     background: gray;
-    height: 300px;
-    align-items: center;
 }
 
-.show, .hide {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    gap: 4px;
-    grid-auto-flow: row;
-    color: white;
+.hide {
+    display: none;
 }
-
 /*.container {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -105,3 +103,4 @@ table {
     text-align: center;
     color: white;
 }
+ */
