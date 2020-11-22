@@ -34,12 +34,6 @@ section {
     text-align: center;
 }
 
-.column-two {
-    padding: 0 50px;
-    flex: 50%;
-    text-align: center;
-}
-
 .column-three {
     padding: 0 50px;
     flex: 33%;
@@ -79,16 +73,23 @@ table {
 }
 .col-sm-4 {
     background: white;
-    padding: 10px 10px 0 10px;
+    padding: 5px 5px 5px 5px;
 }
 
-.col-sm-4 > section{
+.col-sm-4 > section {
     background: gray;
+    height: 300px;
+    align-items: center;
 }
 
-.hide {
-    display: none;
+.show, .hide {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 4px;
+    grid-auto-flow: row;
 }
+
 /*.container {
     display: grid;
     grid-template-columns: 30% 30% 30%;

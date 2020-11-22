@@ -116,11 +116,11 @@
                         <figure>
                             <img class="shogi-figure" src="../pictures/moves/hisha.png" alt="Pohyb veže">
                         </figure>
-                        <p>Môže sa presunúť o jedno pole ktorýmkoľvek smerom.</p>
+                        <p>Môže se presunúť o ľubovoľný počet polí buď zvislým, alebo vodorovným smerom.</p>
                     </section>
                 </div>
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="povysena_veza">
                         <header>
                             <h4>Povýšená veža 龍王</h4>
                         </header>
@@ -129,33 +129,51 @@
                         </figure>
                         <p>ryūō</p>
                     </section>
+                    <section class="hide" id="povysena_veza_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/ryuo.png" alt="Pohyb povýšenej veže">
+                        </figure>
+                        <p>Pohybuje sa buď ako veža alebo ako kráľ.</p>
+                    </section>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="strelec">
                         <header>
-                            <h4>Biskup 角行</h4>
+                            <h4>Strelec 角行</h4>
                         </header>
                         <figure>
-                            <img class="shogi-figure" src="../pictures/pieces/Shogi_kakugyo.png" alt="Biskup">
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_kakugyo.png" alt="Strelec">
                         </figure>
                         <p>kakugyō</p>
                     </section>
-                </div>
-                <div class="col-sm-4">
-                    <section>
-                        <header>
-                            <h4>Povýšený biskup 龍馬</h4>
-                        </header>
+                    <section class="hide" id="strelec_move">
                         <figure>
-                            <img class="shogi-figure" src="../pictures/pieces/Shogi_ryuma.png" alt="Povýšený biskup">
+                            <img class="shogi-figure" src="../pictures/moves/kakugyo.png" alt="Pohyb strelca">
                         </figure>
-                        <p>ryūma</p>
+                        <p>Môže sa presunúť o ľubovoľný počet polí šikmým smerom.</p>
                     </section>
                 </div>
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="povyseny_strelec">
+                        <header>
+                            <h4>Povýšený strelec 龍馬</h4>
+                        </header>
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_ryuma.png" alt="Povýšený strelec">
+                        </figure>
+                        <p>ryūma</p>
+                    </section>
+                    <section class="hide" id="povyseny_strelec_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/ryuma.png" alt="Pohyb povýšeného strelca">
+                        </figure>
+                        <p>Pohybuje sa buď ako strelec, alebo ako kráľ.</p>
+                    </section>
+                </div>
+                <div class="col-sm-4">
+                    <section class="show" id="zlaty_general">
                         <header>
                             <h4>Zlatý generál 金將</h4>
                         </header>
@@ -164,11 +182,17 @@
                         </figure>
                         <p>kinshō</p>
                     </section>
+                    <section class="hide" id="zlaty_general_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/kinsho.png" alt="Pohyb zlatého generála">
+                        </figure>
+                        <p>Môže sa prenusúť buď o jedno pole zvisle alebo vodorovne ľubovoľným smerom, alebo o jedno pole šikmo vpred.</p>
+                    </section>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="strieborny_general">
                         <header>
                             <h4>Strieborný generál 銀將</h4>
                         </header>
@@ -177,9 +201,15 @@
                         </figure>
                         <p>ginshō</p>
                     </section>
+                    <section class="hide" id="strieborny_general_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/ginsho.png" alt="Pohyb strieborného generála">
+                        </figure>
+                        <p>Môže sa presunúť buď o jedno pole šikmo ľubovoľným smerom, alebo o jeno pole zvislo vpred.</p>
+                    </section>
                 </div>
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="povyseny_strieborny_general">
                         <header>
                             <h4>Povýšený strieborný generál 成銀</h4>
                         </header>
@@ -188,33 +218,51 @@
                         </figure>
                         <p>narigin</p>
                     </section>
+                    <section class="hide" id="povyseny_strieborny_general_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/narigin.png" alt="Pohyb povýšeného strieborného generála">
+                        </figure>
+                        <p>Stráca svoje doterajšie vlastnosti a pohybuje sa ako zlatý generál.</p>
+                    </section>
                 </div>
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="jazdec">
                         <header>
-                            <h4>Rytier 桂馬</h4>
+                            <h4>Jazdec 桂馬</h4>
                         </header>
                         <figure>
-                            <img class="shogi-figure" src="../pictures/pieces/Shogi_keima.png" alt="Rytier">
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_keima.png" alt="Jazdec">
                         </figure>
                         <p>keima</p>
+                    </section>
+                    <section class="hide" id="jazdec_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/keima.png" alt="Pohyb jazdca">
+                        </figure>
+                        <p>Skáče do predného "veľkého L". Ako jediný kameň môže preskakovať kamene, ktoré stoja v ceste jeho pohybu.</p>
                     </section>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="povyseny_jazdec">
                         <header>
-                            <h4>Povýšený rytier 成桂</h4>
+                            <h4>Povýšený jazdec 成桂</h4>
                         </header>
                         <figure>
-                            <img class="shogi-figure" src="../pictures/pieces/Shogi_narikei.png" alt="Povýšený rytier">
+                            <img class="shogi-figure" src="../pictures/pieces/Shogi_narikei.png" alt="Povýšený jazdec">
                         </figure>
                         <p>narikei</p>
                     </section>
+                    <section class="hide" id="povyseny_jazdec_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/narikei.png" alt="Pohyb povýšeného jazdca">
+                        </figure>
+                        <p>Stratí svoje doterajšie vlatnosti a pohybuje sa ako zlatý generál.</p>
+                    </section>
                 </div>
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="kopijnik">
                         <header>
                             <h4>Kopijník 香車</h4>
                         </header>
@@ -223,9 +271,15 @@
                         </figure>
                         <p>kyōsha</p>
                     </section>
+                    <section class="hide" id="kopijnik_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/kyosha.png" alt="Pohyb kopijníka">
+                        </figure>
+                        <p>Môže sa presunúťo ľudovoľný počet polí zvislo vpred. Nemôže sa pohybovať žiadnym iným smerom.</p>
+                    </section>
                 </div>
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="povyseny_kopijnik">
                         <header>
                             <h4>Povýšený kopijník 成香</h4>
                         </header>
@@ -234,11 +288,17 @@
                         </figure>
                         <p>narikyō</p>
                     </section>
+                    <section class="hide" id="povyseny_kopijnik_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/narkyo.png" alt="Pohyb povýšeného kopijníka">
+                        </figure>
+                        <p>Stráca svoje doterajšie vlastnosti a pohybuje sa ako zlatý generál.</p>
+                    </section>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="pesiak">
                         <header>
                             <h4>Pešiak 歩兵</h4>
                         </header>
@@ -247,9 +307,16 @@
                         </figure>
                         <p>fuhyō</p>
                     </section>
+                    <section class="hide" id="pesiak_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/fuhyo.png" alt="Pohyb pešiaka">
+                        </figure>
+                        <p>Môže sa presunúť o jedno pole zvislo vpred. Na rozdiel od klasického šachu sa v shogi môže
+                            pešiak pohybovať iba o jedno pole vpred aj v prípade, že sa chystá zobrať súperov kameň.</p>
+                    </section>
                 </div>
                 <div class="col-sm-4">
-                    <section>
+                    <section class="show" id="povyseny_pesiak">
                         <header>
                             <h4>Povýšený pešiak と金</h4>
                         </header>
@@ -257,6 +324,12 @@
                             <img class="shogi-figure" src="../pictures/pieces/Shogi_tokin.png" alt="Povýšený pešiak">
                         </figure>
                         <p>tokin</p>
+                    </section>
+                    <section class="show" id="povyseny_pesiak_move">
+                        <figure>
+                            <img class="shogi-figure" src="../pictures/moves/tokin.png" alt="Pohyb povýšeného pešiaka">
+                        </figure>
+                        <p>Stráca svoje doterajšie vlastnosti a pohybuje sa ako zlatý generál.</p>
                     </section>
                 </div>
             </div>
@@ -270,6 +343,7 @@
 </footer>
 </body>
 <script>
+   $(".hide").hide(); // hide at beginning
    $(".show").hover(
        function() {
            $(this).hide();
