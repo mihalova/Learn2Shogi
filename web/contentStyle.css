@@ -43,6 +43,7 @@ section {
 .paragraph-center {
     width: 50%;
     margin: auto;
+    padding-bottom: 20px;
 }
 
 .shogi-figure {
@@ -73,7 +74,7 @@ table {
 }
 .col-sm-4 {
     background: white;
-    padding: 5px 5px 5px 5px;
+    padding: 15px;
 }
 
 .col-sm-4 > section {
@@ -88,6 +89,7 @@ table {
     align-content: center;
     gap: 4px;
     grid-auto-flow: row;
+    color: white;
 }
 
 /*.container {
