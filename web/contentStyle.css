@@ -50,6 +50,7 @@ section {
 .paragraph-center {
     width: 50%;
     margin: auto;
+    padding-bottom: 20px;
 }
 
 .shogi-figure {
