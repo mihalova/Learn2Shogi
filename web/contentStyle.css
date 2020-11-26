@@ -47,10 +47,14 @@ section {
 }
 
 .shogi-figure {
-    height: 190px;
-    width: 160px;
+    height: 150px;
+    width: 120px;
 }
-
+.moves-figure {
+    height: 150px;
+    width: 150px;
+}
+/* ukazka figurky */
 table {
     margin: 20px 0;
 }
@@ -72,24 +76,29 @@ table {
 .table-bottom {
     padding-bottom: 20px;
 }
-.col-sm-4 {
+/* jednotlive figurky s pravidlami */
+.col-xs-12,
+.col-sm-6,
+.col-md-6,
+.col-lg-4 {
     background: white;
-    padding: 15px;
+    padding: 0;
 }
 
-.col-sm-4 > section {
-    background: gray;
-    height: 300px;
-    align-items: center;
-}
-
-.show, .hide {
+.showed, .hidden {
     display: grid;
     justify-content: center;
     align-content: center;
-    gap: 4px;
     grid-auto-flow: row;
     color: white;
+    background: gray;
+    height: 300px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.big-image {
+    width: 100%;
 }
 
 /*.container {
@@ -105,3 +114,33 @@ table {
     text-align: center;
     color: white;
 }
+*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 992px) {
+    .columns-center {
+        display: block;
+    }
+    .columns-top {
+        display: block;
+    }
+    .column-two {
+        padding-bottom: 50px;
+    }
+    .column-three {
+        padding-bottom: 50px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 992px) {
+}
+*/
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...}*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...}
+ */
