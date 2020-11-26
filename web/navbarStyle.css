@@ -18,7 +18,7 @@
     color: black;
     background-color: white;
     alignment: center;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 
 /* change the color of active or hovered links */
@@ -35,8 +35,17 @@
     font-size: 30px;
 }
 
+.dropdown-menu {
+    padding: 0;
+    margin: 0;
+}
+
 .dropdown:hover .dropdown-menu {
-    display: block;
+    display: inline-block;
+}
+
+.dropdown-item {
+    padding: 15px;
 }
 
 .dropdown-item.active,
@@ -45,4 +54,11 @@
     background-color: black;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
+}
+
+@media only screen and (max-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        width: 100%;
+    }
 }

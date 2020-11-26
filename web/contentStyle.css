@@ -54,8 +54,8 @@ section {
 }
 
 .shogi-figure {
-    height: 150px;
-    width: 120px;
+    min-height: 150px;
+    min-width: 120px;
 }
 .moves-figure {
     height: 150px;
@@ -104,9 +104,25 @@ table {
     margin: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
+.showed:hover + .hidden {
+    display: block;
+}
+
+.showed:hover {
+    display: none;
+}
+
 .big-image {
     width: 100%;
 
+}
+
+.abc:hover {
+    color:red;
 }
 /*.container {
     display: grid;
