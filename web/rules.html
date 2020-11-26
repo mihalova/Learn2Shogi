@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="navbarStyle.css">
     <link rel="stylesheet" href="contentStyle.css">
+    <link rel="stylesheet" href="rulesStyle.css">
 </head>
 <body>
 <!-- Navigation bar -->
@@ -50,15 +51,70 @@
     </div>
 </nav>
 
-<!-- Main content -->
-<main>
+<main class="container-flow">
+    <div class="row">
+        <aside class="col-3">
+            <ol>
+                <li><a href="#">Základy hry shogi</a>
 
+                    <ul>
+                        <li><a href="#" class="aside-activ">Hracia plocha</a></li>
+                        <li><a href="./Rules/rulesIn1.html">Cieľ hry</a></li>
+                        <li><a href="#">Priebeh Kola</a></li>
+                        <li><a href="#">Hracie komponenty 1</a></li>
+                        <li><a href="#">Hracie komponenty 2</a></li>
+                        <li><a href="#">Zhrnutie</a></li>
+                        <li><a href="#">Výzva</a></li>
+                    </ul>
 
+                </li>
+                <li><a href="#">Vlastnosti a povýšenie figúrok</a>
+                    <ul>
+                        <li><a href="#">Prehľad figúrok</a></li>
+                        <li><a href="#">Herné figúrky</a></li>
+                        <li><a href="#">Povýšenie jednotiek 1</a></li>
+                        <li><a href="#">Povýšenie jednotiek 2</a></li>
+                        <li><a href="#">Zajatie figúrok 1</a></li>
+                        <li><a href="#">zajatie figúrok 2</a></li>
+                        <li><a href="#">Zhrnutie</a></li>
+                        <li><a href="#">Hra</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Špeciálne situácie a doplnujúce pravidlá</a></li>
+            </ol>
+        </aside>
+
+        <section class="col-6" style="background-color: #db7b37;">
+            <div class="sec-header">
+
+                <h2>Hracia plocha</h2>
+
+                <!-- Left and right controls -->
+<!--                <a class="carousel-control-prev" href="#demo" data-slide="prev">-->
+<!--                    <span class="carousel-control-prev-icon"></span>-->
+<!--                </a>-->
+                <a class="carousel-control-next" href="./Rules/rulesIn1.html" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            <div class="sec-descript">
+                <p>Dvaja hráči hrajú na drevenej doske s 9x9 políčkami. Jednotlivé políčka dosky nie sú farebne odlíšené.</p>
+            </div>
+            <img src="../pictures/rules/act.png" alt="" width="200px" class="img-thumbnail">
+            <p>Ukážka rozostavania hernej plochy</p>
+
+        </section>
+
+        <article class="col-3 d-flex justify-content-center align-items-center" >
+                <img src="../pictures/rules/act.png" alt="Ukážka rozostavania hernej plochy" width="100%">
+        </article>
+    </div>
 </main>
 
 <!-- Autori -->
 <footer>
     <p>&copy; 2020 Dominika Kincelová, Samuel Kubala, Dominika Mihálová, Filip Novák</p>
 </footer>
+
 </body>
 </html>

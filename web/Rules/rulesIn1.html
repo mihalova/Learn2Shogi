@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <title>Oblasť pravidiel 1</title>
+    <title>Pravidlá</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -9,6 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../navbarStyle.css">
+    <link rel="stylesheet" href="../contentStyle.css">
+    <link rel="stylesheet" href="../rulesStyle.css">
+    <link rel="stylesheet" href="../normalize.css" type="text/css">
+
 </head>
 <body>
 <!-- Navigation bar -->
@@ -30,9 +34,9 @@
                     Pravidlá
                 </a>
                 <div class="dropdown-menu w-100 p-0">
-                    <a class="dropdown-item active" href="rulesIn1.html">Oblasť pravidiel 1</a>
-                    <a class="dropdown-item" href="rulesIn2.html">Oblasť pravidiel 2</a>
-                    <a class="dropdown-item" href="rulesIn3.html">Oblasť pravidiel 3</a>
+                    <a class="dropdown-item" href="../Rules/rulesIn1.html">Oblasť pravidiel 1</a>
+                    <a class="dropdown-item" href="../Rules/rulesIn2.html">Oblasť pravidiel 2</a>
+                    <a class="dropdown-item" href="../Rules/rulesIn3.html">Oblasť pravidiel 3</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -45,16 +49,74 @@
     </div>
 </nav>
 
-<!-- Main content -->
-<main>
+<main class="container-flow">
+    <div class="row">
+        <aside class="col-3">
+            <ol>
+                <li><a href="../rules.html">Základy hry shogi</a>
 
+                    <ul>
+                        <li><a href="../rules.html">Hracia plocha</a></li>
+                        <li><a href="#" class="aside-activ">Cieľ hry</a></li>
+                        <li><a href="#">Priebeh Kola</a></li>
+                        <li><a href="#">Hracie komponenty 1</a></li>
+                        <li><a href="#">Hracie komponenty 2</a></li>
+                        <li><a href="#">Zhrnutie</a></li>
+                        <li><a href="#">Výzva</a></li>
+                    </ul>
 
+                </li>
+                <li><a href="#">Vlastnosti a povýšenie figúrok</a>
+                    <ul>
+                        <li><a href="#">Prehľad figúrok</a></li>
+                        <li><a href="#">Herné figúrky</a></li>
+                        <li><a href="#">Povýšenie jednotiek 1</a></li>
+                        <li><a href="#">Povýšenie jednotiek 2</a></li>
+                        <li><a href="#">Zajatie figúrok 1</a></li>
+                        <li><a href="#">zajatie figúrok 2</a></li>
+                        <li><a href="#">Zhrnutie</a></li>
+                        <li><a href="#">Hra</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Špeciálne situácie a doplnujúce pravidlá</a></li>
+            </ol>
+        </aside>
+
+        <section class="col-6" style="background-color: #4660bd;">
+            <div class="sec-header">
+
+                <h2>Cieľ hry</h2>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="../rules.html" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="./rulesIn1.html" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+            <div class="sec-descript">
+
+                <p>Cieľom hry je dať súperovi mat (japonsky „Tsumi”).</p>
+                <p>Teda hráč sa snaží dostať súperovho kráľa do takej situácie,
+                    aby ho súper nevedel v ďalšom ťahu zachrániť pred vyradením.</p>
+
+            </div>
+            <img src="../../pictures/pieces/Shogi_gyokusho.png" alt="" class="img-thumbnail" width="200px">
+            <p>Figúrka kráľa</p>
+
+        </section>
+
+        <article class="col-3 d-flex justify-content-center align-items-center" >
+        </article>
+    </div>
 </main>
 
 <!-- Autori -->
 <footer>
     <p>&copy; 2020 Dominika Kincelová, Samuel Kubala, Dominika Mihálová, Filip Novák</p>
 </footer>
+
 </body>
-<script src="rulesInScript.js"></script>
 </html>
