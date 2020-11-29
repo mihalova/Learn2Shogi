@@ -1,27 +1,38 @@
 /** {*/
 /*    outline: 3px solid black;*/
 /*}*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0;}
 
+.active, .dot:hover {
+    background-color: #717171;
+    color: #fff;
+}
 
 main{
-    /*background: blueviolet;*/
     display: inline-block;
     margin-bottom: 20px;
 }
 
+.row{
+    width: 95%;
+    margin: 0 auto;
+}
+
 aside{
-    display: block !important;
-    max-height: 550px;
+    /*display: block !important;*/
+    max-height: 650px;
     /*position: fixed !important;*/
-    z-index: 1;
+    /*z-index: 1;*/
     overflow: auto;
-    display: none;
+    /*display: none;*/
 }
 
 ol{
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+
 }
 
 ul{
@@ -31,14 +42,25 @@ ul{
 
 
 section{
-    display: block;
-    height: 560px;
-    color:#ffffff;
+    /*display: block;*/
+    /*height: 560px;*/
+    /*width: 700px;*/
+    /*padding: 0 100px;*/
+    color:#fff;
+    margin:0 auto;
+}
+.sl-cont{
+    /*width: 100ex;*/
+}
+.mySlides{
+    margin-bottom: 30px;
+    min-height: 300px;
 }
 
-.sec-header{
+.sec-header h2{
     margin-top: 30px;
     border-bottom: 1px solid whitesmoke;
+    font-weight: 700;
 }
 
 .sec-descript{
@@ -47,24 +69,8 @@ section{
 }
 
 article{
-    display: block;
-}
-
-aside a{
-    color: black;
-    text-decoration: none;
-    white-space: nowrap;
-    display: inline-block;
-}
-
-aside a:hover{
-    background-color: whitesmoke;
-    color: black;
-    text-decoration: none;
-}
-
-aside a:active{
-    background-color: black;
+    /*display: block;*/
+    margin: 0 auto;
 }
 
 aside .aside-activ{
@@ -73,4 +79,15 @@ aside .aside-activ{
     padding: 2px 5px 3px 5px;
     border-radius: 5px;
 }
+
+/*@media only screen and (max-width: 768px) {*/
+/*    !* For mobile phones: *!*/
+/*    [class*="col-"] {*/
+/*        max-width: 100%;*/
+/*        flex: auto;*/
+/*        padding: 0;*/
+/*    }*/
+/*}*/
+
+
 

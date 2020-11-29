@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--    <link rel="stylesheet" href="normalize.css" type="text/css">-->
     <link rel="stylesheet" href="navbarStyle.css">
     <link rel="stylesheet" href="contentStyle.css">
     <link rel="stylesheet" href="rulesStyle.css">
@@ -15,9 +16,11 @@
 <body>
 <!-- Navigation bar -->
 <nav class="navbar fixed-top navbar-expand-md navbar-custom">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupported">
+        &#9876;
+    </button>
     <a class="navbar-brand">
-        <img src="../pictures/shogi_icon.svg" width="40" height="40" alt="">
-        Learn2Shogi
+        <img src="../pictures/logo2.png" width="223" height="" alt="Learn2Shogi logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">&#9776;
@@ -31,15 +34,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="history.html">História</a>
             </li>
-            <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="rules.html">
+            <li class="nav-item active">
+                <a class="nav-link " href="rules.html">
                     Pravidlá
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="Rules/rulesIn1.html">Základy hry Shogi</a>
-                    <a class="dropdown-item" href="Rules/rulesIn2.html">Vlastnosti a povýšenie figúrok</a>
-                    <a class="dropdown-item" href="Rules/rulesIn3.html">Špeciálne situácie a doplnujúce pravidlá</a>
-                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="piecesOverview.html">Prehľad figúrok</a>
@@ -51,74 +49,472 @@
     </div>
 </nav>
 
-<main class="container-flow">
+<main class="container-fluid" >
+
     <div class="row">
-        <aside class="col-3">
-            <ol>
-                <li><a href="#">Základy hry shogi</a>
 
-                    <ul>
-                        <li><a href="#" class="aside-activ">Hracia plocha</a></li>
-                        <li><a href="./Rules/rulesIn1.html">Cieľ hry</a></li>
-                        <li><a href="#">Priebeh Kola</a></li>
-                        <li><a href="#">Hracie komponenty 1</a></li>
-                        <li><a href="#">Hracie komponenty 2</a></li>
-                        <li><a href="#">Zhrnutie</a></li>
-                        <li><a href="#">Výzva</a></li>
-                    </ul>
+        <div class="navbar-expand-md  col-md-12 col-lg-4 col-xl-3">
+            <aside class=" collapse navbar-collapse" id="navbarSupported">
+                <ol class="w-100">
+                    <li><b>Základy hry shogi</b>
+                        <ul>
+                            <li class="dot" onclick="currentSlide(1)">Hracia plocha</li>
+                            <li class="dot" onclick="currentSlide(2)">Cieľ hry</li>
+                            <li class="dot" onclick="currentSlide(3)">Priebeh Kola</li>
+                            <li class="dot" onclick="currentSlide(4)">Hracie komponenty 1</li>
+                            <li class="dot" onclick="currentSlide(5)">Hracie komponenty 2</li>
+                            <li class="dot" onclick="currentSlide(6)">Zhrnutie</li>
+                            <li class="dot" onclick="currentSlide(7)">Výzva</li>
+                        </ul>
+                    </li>
+                    <li> <b> Vlastnosti a povýšenie figúrok</b>
+                        <ul>
+                            <li class="dot" onclick="currentSlide(8)">Prehľad figúrok</li>
+                            <li class="dot" onclick="currentSlide(9)">Herné figúrky</li>
+                            <li class="dot" onclick="currentSlide(10)">Povýšenie jednotiek 1</li>
+                            <li class="dot" onclick="currentSlide(11)">Povýšenie jednotiek 2</li>
+                            <li class="dot" onclick="currentSlide(12)">Zajatie figúrok 1</li>
+                            <li class="dot" onclick="currentSlide(13)">zajatie figúrok 2</li>
+                            <li class="dot" onclick="currentSlide(14)">Zhrnutie</li>
+                            <li class="dot" onclick="currentSlide(15)">Hra</li>
+                        </ul>
+                    </li>
+                </ol>
+            </aside>
+        </div>
 
-                </li>
-                <li><a href="#">Vlastnosti a povýšenie figúrok</a>
-                    <ul>
-                        <li><a href="#">Prehľad figúrok</a></li>
-                        <li><a href="#">Herné figúrky</a></li>
-                        <li><a href="#">Povýšenie jednotiek 1</a></li>
-                        <li><a href="#">Povýšenie jednotiek 2</a></li>
-                        <li><a href="#">Zajatie figúrok 1</a></li>
-                        <li><a href="#">zajatie figúrok 2</a></li>
-                        <li><a href="#">Zhrnutie</a></li>
-                        <li><a href="#">Hra</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Špeciálne situácie a doplnujúce pravidlá</a></li>
-            </ol>
-        </aside>
 
-        <section class="col-6" style="background-color: #db7b37;">
-            <div class="sec-header">
+        <section class="col-md-12 col-lg-8 col-xl-8" style="background-color: #4660bd;">
+            <div class="sl-cont ">
 
-                <h2>Hracia plocha</h2>
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Hracia plocha</h2>
+                    </div>
 
-                <!-- Left and right controls -->
-<!--                <a class="carousel-control-prev" href="#demo" data-slide="prev">-->
-<!--                    <span class="carousel-control-prev-icon"></span>-->
-<!--                </a>-->
-                <a class="carousel-control-next" href="./Rules/rulesIn1.html" data-slide="next">
+                    <div class="sec-descript">
+
+                        <p>Dvaja hráči hrajú na drevenej doske s 9x9 políčkami.
+                            Jednotlivé políčka dosky nie sú farebne odlíšené.
+                        </p>
+
+                    </div>
+                    <img src="../pictures/rules/rozestaveni.png" alt="" class="img-thumbnail" width="200px">
+                    <p>Ukážka rozostavania hernej plochy</p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Cieľ hry</h2>
+                    </div>
+
+                    <div class="sec-descript">
+
+                        <p>Cieľom hry je dať súperovi mat (japonsky „Tsumi”).</p>
+                        <p>Teda hráč sa snaží dostať súperovho kráľa do takej situácie,
+                            aby ho súper nevedel v ďalšom ťahu zachrániť pred vyradením.</p>
+
+                    </div>
+                    <img src="../pictures/rules/Shogi_osho.png" alt="" class="img-thumbnail" width="200px">
+                    <p>Figúrka kráľa</p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Priebeh Kola</h2>
+                    </div>
+
+                    <div class="sec-descript">
+
+                        <p>
+                            V hre Shogi sa hráči striedajú vždy po vykonaní jednej akcie.
+                        </p>
+                        <p>
+                            Ako akcia sa považuje buď pohyb jednej z figúrok alebo vloženie
+                            zajatej figúrky na prázdne políčko.
+                        </p>
+                        <p>
+                            Hráči nie sú časovo limitovaný na vykonanie svojho ťahu.
+                            V Shogi ide o česť a úmyselne zdržavanie nie je bežnou praktikou.
+                        </p>
+
+                    </div>
+                    <img src="../pictures/rules/budik.png" alt="" class="img-thumbnail" width="200px">
+                    <p>V amatérskych hrách sa však často využívajú podobné stopky ako v profesionálnom šachu. </p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Hracie komponenty 1</h2>
+                    </div>
+
+                    <div class="sec-descript">
+
+                        <p>
+                            Každý hráč má k dispozícii 20 figúrok, ktoré majú tvar klinu.
+
+                            O aký typ figúrky ide je dané znakom napísaným na jej najväčšiu plochu.
+
+                            Ostrý hrot figúrky smeruje vždy na súpera. Takto vieme, ktorému hráčovi figúrka patrí.
+                        </p>
+                   </div>
+
+                    <div class="column-two">
+                        <table>
+                            <tr>
+                                <th class="col1 table-top"></th>
+                                <th class="col1 table-top"><-   - hrot figúrky</th>
+                            </tr>
+                            <tr>
+                                <td class="col1">
+                                    <figure>
+                                        <img class="shogi-figure" src="../pictures/pieces/Shogi_osho.svg" alt="Kráľ">
+                                    </figure>
+                                </td>
+                                <td class="col1"><--     - typ figúrky</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Hracie komponenty 2</h2>
+                    </div>
+
+                    <div class="sec-descript">
+
+                        <p>
+                            Každá z figúrok má v hre svoj vlastný spôsob pohybu.
+                        </p><p>
+                            Vyskúšaj si pohyb rôznych figúrok na interaktivnej ploche.
+                        </p>
+                    </div>
+
+                    <div class="column-two">
+                        <table>
+                            <tr>
+                                <th class="col2 table-top">Hracia plocha</th>
+                            </tr>
+                            <tr>
+                                <td class="col2">vzdy je na ploche iba jedna figúrka a začína priamo v strede plochy</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Zhrnutie</h2>
+                    </div>
+
+                    <div class="sec-descript">
+
+                        <p>
+                            Hrá sa na 9x9 ploche a každý hráč má 20 figúrok.
+                        </p><p>
+                            Cieľom hry je vyradiť súperovho kráľa.
+                        </p><p>
+                            Hráči sa striedaju vždy po vykonaní 1 akcie.
+                        </p><p>
+                            Figúrky sa vedia hýbať rôznymi spôsobmi podľa ich typu.
+                        </p><p>
+                            Figúrky smeruju ostrím hrotom vždy na protisediacého súpera.
+                        </p>
+
+                    </div>
+                    <img src="../pictures/rules/rozestaveni.png" alt="" class="img-thumbnail" width="200px">
+                    <p></p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Výzva</h2>
+                    </div>
+
+                    <div class="sec-descript">
+
+                        <p>
+                            Pohni figúrku kráľa tak, aby nebola v ďaľšom ťahu ohrozená súperovou figúrkou.
+                        </p>
+                    </div>
+
+                    <div class="column-two">
+                        <table>
+                            <tr>
+                                <th class="col1 table-top"></th>
+                                <th class="col2 table-top">Hracia plocha</th>
+                            </tr>
+                            <tr>
+                                <td class="col1">
+                                </td>
+                                <td class="col2">tak ako je definovna v interakcii</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Prehľad figúrok</h2>
+                    </div>
+
+                    <div class="sec-descript">
+                        <p>
+                            Celkový set hráčových figúrok sa skladá z 20 fígúrok, konkrétne ide o:
+                        </p>
+                        <p>
+                            Názov figúrky je hrubým prekladom, v zátvorke uvádzame japonské čítanie figúrok.
+                        </p>
+                    </div>
+
+                    <div class="column-two">
+                        <table>
+                            <tr>
+                                <th class="col1 table-top">
+                                    <ul>
+                                        <li>9 pešiakov (fuhyō)</li>
+                                        <li>2 oštepov (kyōsha)</li>
+                                        <li>2 jazdcov (keima)</li>
+                                        <li>2 strieborných generálov (ginshō)</li>
+                                        <li>2 zlatých generálov (kinshō)</li>
+                                        <li>1 strelca (kakugyō)</li>
+                                        <li>1 vežu (hisha)</li>
+                                        <li>1 kráľa (ōshō)</li>
+                                    </ul>
+                                </th>
+                                <th class="col1 table-top"><figure>
+                                    <img class="shogi-figure" src="../pictures/rules/prehlad.png" alt="Kráľ">
+                                </figure></th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>zjednodušený set figúrok</th>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Herné figúrky</h2>
+                    </div>
+
+                    <div class="sec-descript">
+                        <p>
+                            Každá z figúrok predstavuje bojovníka v generálovej armáde.
+                        </p>
+                        <p>
+                            Jej pomenovanie je znázornené jedným alebo dvoma Kanji znakmi.
+                        </p>
+                        <p>
+                            Jedna strana figúrky je čierna a druha červená (v tradičných setoch je tiež čierna a mení sa iba znak).
+                        </p>
+                        <p>
+                            Čierna je základna podoba figúrky, červená je jej povýšená verzia.
+                        </p>
+                    </div>
+
+                    <div class="column-two">
+                        <table>
+                            <tr>
+                                <th class="col1 table-top">
+                                    <figure>
+                                        <img class="shogi-figure" src="../pictures/rules/f1.png" alt="Kráľ">
+                                    </figure>
+                                </th>
+                                <th class="col1 table-top">
+                                    <figure>
+                                        <img class="shogi-figure" src="../pictures/rules/f2.png" alt="Kráľ">
+                                    </figure>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="col1">figúrka pešiaka nepovýšena</th>
+                                <th class="col1">figúrka pešiaka povýšena</th>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Povýšenie jednotiek 1</h2>
+                    </div>
+
+                    <div class="sec-descript">
+
+                        <p>
+                            Každá z jednotiek okrem kráľa má možnosť byť povýšená.
+                        </p>
+                        <p>
+                            Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu v takzvanej povyšovacej
+                            zóne, môže sa hráč na konci svojho kola rozhodnúť povýšiť svoju jednotku.
+                        </p>
+
+                    </div>
+                    <img src="../pictures/rules/herz.png" alt="" class="img-thumbnail" width="200px">
+                    <p>Povyšovacia zóna z pohľadu dole sediaceho hráča</p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Povýšenie jednotiek 2</h2>
+                    </div>
+
+                    <div class="sec-descript">
+
+                        <p>
+                            Interakcia povýšenia z google jams
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Zajatie figúrok 1</h2>
+                    </div>
+
+                    <div class="sec-descript">
+                        <p>
+                            Ak hráčovova figúrka svojim pohybom dokáže skončiť na políčku so
+                            súperovou figúrkou, môže tak spraviť a figúrku zajať.
+                        </p>
+                        <p>
+                            Zajatá figúrka sa uloží hráčovi mimo hernú plochu.
+                        </p>
+                        <p>
+                            Hráč má možnosť ako svoju akciu za kolo vložiť zajatú figúrku
+                            na ľubovoľne voľne políčko hernej plochy ako svoju figúrku.
+                        </p>
+                    </div>
+
+                    <div class="column-two">
+                        <table>
+                            <tr>
+                                <th class="col2 ">
+                                        obrazok figúrky na nepov. strane
+                                </th>
+                                <th class="col2 ">
+                                        obrazok figúrky na pov. strane
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="col1">nepovýšená fig.</th>
+                                <th class="col1">povýšená fig.</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>PS: figúrky sa vkladajú vždy nepovýšenou stranou.</p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Zajatie figúrok 2</h2>
+                    </div>
+
+                    <div class="sec-descript">
+                        <p>
+                            Vyskúšaj si zajatie a vloženie súperovej figúrky.
+                        </p>
+                        <p>
+                            Popis interakcie v jams:
+                        </p>
+                    </div>
+                    <p>Hracia plocha
+                        tak ako je definovna v interakcii</p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Zhrnutie</h2>
+                    </div>
+
+                    <div class="sec-descript">
+                        <p>
+                            Každá figúrka okrem kráľa má aj svojú povýšenu stranu (označenú červenou).
+                        </p>
+                        <p>
+                            Hráč sa môže rozhodnúť povýšiť figúrku, ak začína alebo končí ťah v povyšovacej zóne.
+                        </p>
+                        <p>
+                            Vyradené figúrky sa stávaju zajatcami a hráč, ktorý ich zajal ich môže vrátiť do hry ako svoje.
+                        </p>
+                        <p>
+                            Ak chceš spoznať všetky rôzne figúrky a ich povýšenia, máme pripravený prehľad:
+                        </p>
+                    </div>
+                    <button> <a class="nav-link" href="piecesOverview.html">Prehľad </a> </button>
+                </div>
+
+                <div class="mySlides">
+                    <div class="sec-header">
+                        <h2>Hra</h2>
+                    </div>
+
+                    <div class="sec-descript">
+                        <p>
+                            Základné pravidlá a figúrky by si poznať už mal, zvyšok sa naučiš priamo pri hraní.
+                        </p>
+                    </div>
+                    <button><a class="nav-link" href="play.html">Hraj</a></button>
+                </div>
+
+                <a onclick="plusSlides(-1)" class="carousel-control-prev"  data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a  onclick="plusSlides(1)" class="carousel-control-next"  data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
-            </div>
-            <div class="sec-descript">
-                <p>Dvaja hráči hrajú na drevenej doske s 9x9 políčkami. Jednotlivé políčka dosky nie sú farebne odlíšené.</p>
-            </div>
-            <img src="../pictures/rules/act.png" alt="" width="200px" class="img-thumbnail">
-            <p>Ukážka rozostavania hernej plochy</p>
 
+<!--                <a class="prev" onclick="plusSlides(-1)">back</a>-->
+<!--                <a class="next" onclick="plusSlides(1)">next</a>-->
+
+            </div>
         </section>
 
     </div>
-
-    <section id="hracia_plocha">
-    </section>
 </main>
 
 <!-- Autori -->
 <footer>
     <p>&copy; 2020 Dominika Kincelová, Samuel Kubala, Dominika Mihálová, Filip Novák</p>
 </footer>
-<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossOrigin></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossOrigin></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js" crossOrigin></script>
-<script type="text/babel" src="Board1.js"></script>
-<script src="ShogiPiece.js"></script>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+
 </body>
 </html>

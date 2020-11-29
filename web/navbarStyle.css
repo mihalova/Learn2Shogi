@@ -1,5 +1,5 @@
 .navbar-custom {
-    background-color: gray;
+    /*background-color: gray;*/
     margin: 0;
     padding: 0;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
@@ -57,6 +57,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        width: 100%;
+    }
     .dropdown:hover .dropdown-menu {
         display: block;
         width: 100%;

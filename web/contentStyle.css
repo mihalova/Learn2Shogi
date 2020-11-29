@@ -1,9 +1,11 @@
 /* odsadenie main od navigation */
 
+
 main {
     margin-right: 5%;
     margin-left: 5%;
     margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -16,6 +18,7 @@ footer {
 
 section {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .columns-center {
@@ -83,15 +86,6 @@ table {
 .table-bottom {
     padding-bottom: 20px;
 }
-/* jednotlive figurky s pravidlami */
-.col-xs-12,
-.col-sm-6,
-.col-md-6,
-.col-lg-4 {
-    background: white;
-    padding: 0;
-}
-
 .showed, .hidden {
     display: grid;
     justify-content: center;
@@ -118,12 +112,20 @@ table {
 
 .big-image {
     width: 100%;
-
 }
 
 .abc:hover {
     color:red;
 }
+
+[class*="col-"] {
+    margin-bottom: 15px;
+}
+
+figure{
+    margin: 15px auto;
+}
+
 /*.container {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -139,7 +141,20 @@ table {
 }
 */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 992px) {
+
+@media only screen and (max-width: 768px) {
+    /*main{*/
+    /*    margin-left: 0;*/
+    /*    margin-right: 0;*/
+    /*    padding: 0;*/
+    /*}*/
+    /*.paragraph-center{*/
+    /*    width: 90%;*/
+    /*}*/
+    /*figure{*/
+    /*    !*width:90%;*!*/
+    /*    margin: auto;*/
+    /*}*/
     .columns-center {
         display: block;
     }
@@ -147,23 +162,44 @@ table {
         display: block;
     }
     .column-two {
-        padding-bottom: 50px;
+        /*padding-bottom: 50px;*/
+        padding: 0 5% 50px 5%;
     }
     .column-three {
         padding-bottom: 50px;
     }
+    .big-image{
+        width:288px;
+    }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/*@media only screen and (min-width: 992px) {
+
+@media only screen and (max-width: 573px) {
+    .big-image{
+        width:288px;
+    }
 }
-*/
-/* Medium devices (landscape tablets, 768px and up) */
-/*@media only screen and (min-width: 768px) {...}*/
 
-/* Large devices (laptops/desktops, 992px and up) */
-/*@media only screen and (min-width: 992px) {...}*/
+@media only screen and (max-width: 1300px) {
+    /*figure{*/
+    /*    width:400px;*/
+    /*}*/
+}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/*@media only screen and (min-width: 1200px) {...}
- */
+
+
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 992px) {
+}
+ Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {...}
+
+ Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {...}
+
+ Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {...}*/
