@@ -73,10 +73,10 @@
                             <li class="dot" onclick="currentSlide(9)">Herné figúrky</li>
                             <li class="dot" onclick="currentSlide(10)">Povýšenie jednotiek 1</li>
                             <li class="dot" onclick="currentSlide(11)">Povýšenie jednotiek 2</li>
-                            <li class="dot" onclick="currentSlide(12)">Zajatie figúrok 1</li>
-                            <li class="dot" onclick="currentSlide(13)">zajatie figúrok 2</li>
-                            <li class="dot" onclick="currentSlide(14)">Zhrnutie</li>
-                            <li class="dot" onclick="currentSlide(15)">Hra</li>
+                            <li class="dot" onclick="currentSlide(12)">Zajatie figúrok</li>
+                            <!--<li class="dot" onclick="currentSlide(13)">zajatie figúrok 2</li>-->
+                            <li class="dot" onclick="currentSlide(13)">Zhrnutie</li>
+                            <li class="dot" onclick="currentSlide(14)">Hra</li>
                         </ul>
                     </li>
                 </ol>
@@ -158,23 +158,7 @@
                             Ostrý hrot figúrky smeruje vždy na súpera. Takto vieme, ktorému hráčovi figúrka patrí.
                         </p>
                    </div>
-
-                    <div class="column-two">
-                        <table>
-                            <tr>
-                                <th class="col1 table-top"></th>
-                                <th class="col1 table-top"><-   - hrot figúrky</th>
-                            </tr>
-                            <tr>
-                                <td class="col1">
-                                    <figure>
-                                        <img class="shogi-figure" src="pictures/pieces/Shogi_osho.svg" alt="Kráľ">
-                                    </figure>
-                                </td>
-                                <td class="col1"><--     - typ figúrky</td>
-                            </tr>
-                        </table>
-                    </div>
+                    <img class="shogi-figure" src="pictures/king-rules.png" alt="Kráľ" width="400">
                 </div>
 
                 <div class="mySlides">
@@ -316,26 +300,21 @@
                         </p>
                     </div>
 
-                    <div class="column-two">
-                        <table>
-                            <tr>
-                                <th class="col1 table-top">
-                                    <figure>
-                                        <img class="shogi-figure" src="pictures/rules/f1.png" alt="Kráľ">
-                                    </figure>
-                                </th>
-                                <th class="col1 table-top">
-                                    <figure>
-                                        <img class="shogi-figure" src="pictures/rules/f2.png" alt="Kráľ">
-                                    </figure>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th class="col1">figúrka pešiaka nepovýšena</th>
-                                <th class="col1">figúrka pešiaka povýšena</th>
+                    <div class="row">
+                        <div class="col-6">
+                            <figure>
+                                <img class="shogi-figure" src="pictures/rules/f1.png" alt="Kráľ">
+                            </figure>
+                            <p>figúrka pešiaka nepovýšena</p>
+                        </div>
+                        <div class="col-6">
+                            <figure>
+                                <img class="shogi-figure" src="pictures/rules/f2.png" alt="Kráľ">
+                            </figure>
+                            <p>figúrka pešiaka povýšena</p>
 
-                            </tr>
-                        </table>
+                        </div>
+
                     </div>
                 </div>
 
@@ -376,7 +355,7 @@
 
                 <div class="mySlides">
                     <div class="sec-header">
-                        <h2>Zajatie figúrok 1</h2>
+                        <h2>Zajatie figúrok</h2>
                     </div>
 
                     <div class="sec-descript">
@@ -393,41 +372,41 @@
                         </p>
                     </div>
 
-                    <div class="column-two">
-                        <table>
-                            <tr>
-                                <th class="col2 ">
-                                        obrazok figúrky na nepov. strane
-                                </th>
-                                <th class="col2 ">
-                                        obrazok figúrky na pov. strane
-                                </th>
-                            </tr>
-                            <tr>
-                                <th class="col1">nepovýšená fig.</th>
-                                <th class="col1">povýšená fig.</th>
-                            </tr>
-                        </table>
-                    </div>
+                    <!--<div class="column-two">-->
+                        <!--<table>-->
+                            <!--<tr>-->
+                                <!--<th class="col2 ">-->
+                                        <!--obrazok figúrky na nepov. strane-->
+                                <!--</th>-->
+                                <!--<th class="col2 ">-->
+                                        <!--obrazok figúrky na pov. strane-->
+                                <!--</th>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<th class="col1">nepovýšená fig.</th>-->
+                                <!--<th class="col1">povýšená fig.</th>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                    <!--</div>-->
                     <p>PS: figúrky sa vkladajú vždy nepovýšenou stranou.</p>
                 </div>
 
-                <div class="mySlides">
-                    <div class="sec-header">
-                        <h2>Zajatie figúrok 2</h2>
-                    </div>
+                <!--<div class="mySlides">-->
+                    <!--<div class="sec-header">-->
+                        <!--<h2>Zajatie figúrok 2</h2>-->
+                    <!--</div>-->
 
-                    <div class="sec-descript">
-                        <p>
-                            Vyskúšaj si zajatie a vloženie súperovej figúrky.
-                        </p>
-                        <p>
-                            Popis interakcie v jams:
-                        </p>
-                    </div>
-                    <p>Hracia plocha
-                        tak ako je definovna v interakcii</p>
-                </div>
+                    <!--<div class="sec-descript">-->
+                        <!--<p>-->
+                            <!--Vyskúšaj si zajatie a vloženie súperovej figúrky.-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--Popis interakcie v jams:-->
+                        <!--</p>-->
+                    <!--</div>-->
+                    <!--<p>Hracia plocha-->
+                        <!--tak ako je definovna v interakcii</p>-->
+                <!--</div>-->
 
                 <div class="mySlides">
                     <div class="sec-header">
