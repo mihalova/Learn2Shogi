@@ -1,8 +1,8 @@
 
 class ShogiPiece{
-    constructor(name, id, color, x, y){
+    constructor(name, onBoard, color, x, y){
         this.name = name;
-        this.id = id;
+        this.onBoard = onBoard;
         this.color = color;
         this.x = x;
         this.y = y;
@@ -24,5 +24,11 @@ class ShogiPiece{
     }
     setY(newY){
         this.y = newY;
+    }
+    getOnBoard(){
+        return this.onBoard;
+    }
+    setOnBoard(n){
+        this.onBoard = n;
     }
 }

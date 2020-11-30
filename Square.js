@@ -17,5 +17,3 @@ class SQ{
         this.color = color;
     }
 }
-
-export default SQ;

@@ -1,201 +1,238 @@
+
+
 class Board1 extends React.Component {
-    state = {//nemam vyriesene ze ked vyhodis protihraca tak je potom tvoj(asi spravil len classy bez tych mien v
-        // pieces alebo by som posielal id v poli cez stlacenie)
-        pieces: {pawn_black: new ShogiPiece("pawn", 1, "black", 234, 119),
-            silver_white: new ShogiPiece("silver", 1, "white", 272, 157)
+    state = {
+        pieces: {pawn_white: new ShogiPiece("pawn", 0, "white", 36, 27),
+            bishop_white: new ShogiPiece("bishop", 0, "white", 36, 97),
+            king_white: new ShogiPiece("king", 0, "white", 36, 167),
+            rook_white: new ShogiPiece("rook", 0, "white", 36, 237),
+            lance_white: new ShogiPiece("lance", 0, "white", 36, 307),
         },
         clicked: "",
-        SPath: ["AllDD", "F"],
+        startX: 0,
+        startY: 0,
         PPath: ["F"],
         KPath: ["AllDD", "AllSD"],
         LPath: ["MF"],
-        RPath: ["MSD"]
+        RPath: ["MSD"],
+        BPath: ["MDD"]
     };
 
     mark(type, color){
         let name = type + "_" + color;
-        console.log(this.state.pieces[name].getColor());
-        if(this.state.clicked !== name) {   //zaklikni
+        let isPlaying = this.state.pieces[name].getOnBoard();
+
+        if(isPlaying === 1) {
+            if(this.state.clicked === name) {
+                this.setState({
+                    clicked: ""
+                });
+                this.deleteMovement();
+            } else {
+                this.setState({
+                    clicked: name
+                });
+
+                let movement;
+                switch (type) {
+                    case "king":
+                        movement = this.state.KPath;
+                        break;
+                    case "lance":
+                        movement = this.state.LPath;
+                        break;
+                    case "bishop":
+                        movement = this.state.BPath;
+                        break;
+                    case "rook":
+                        movement = this.state.RPath;
+                        break;
+                    case "pawn":
+                        movement = this.state.PPath;
+                        break;
+                    default:
+                        movement = [];
+                }
+
+                let cx = this.state.pieces[name].getX();
+                let cy = this.state.pieces[name].getY();
+
+                this.possibleMov(movement, color, cx, cy);
+            }
+        } else if (isPlaying === 0){
+            let allPieces = this.state.pieces;
+
+            for(let pName in allPieces){
+                let piece = allPieces[pName];
+                if(piece.getOnBoard() === 1){
+                    this.deleteMovement();
+
+                    let startX = this.state.startX;
+                    let startY = this.state.startY;
+                    piece.setX(startX);
+                    piece.setY(startY);
+                    piece.setOnBoard(0);
+
+                    let playingID = document.getElementById(pName);
+                    playingID.setAttribute("x", startX + "px");
+                    playingID.setAttribute("y", startY + "px");
+
+                    break;
+                }
+            }
+            let newPiece = this.state.pieces[name];
             this.setState({
-                clicked: name
+                clicked: "",
+                startX: newPiece.getX(),
+                startY: newPiece.getY()
             });
 
-            let movement;
-            switch (type) {
-                case "king":
-                    movement = this.state.KPath;
-                    break;
-                case "gold":
-                    movement = [];
-                    break;
-                case "silver":
-                    movement = this.state.SPath;
-                    break;
-                case "promotedSilver":
-                    movement = [];
-                    break;
-                case "knight":
-                    movement = [];
-                    break;
-                case "promotedKnight":
-                    movement = [];
-                    break;
-                case "lance":
-                    movement = this.state.LPath;
-                    break;
-                case "promotedLance":
-                    movement = [];
-                    break;
-                case "bishop":
-                    movement = [];
-                    break;
-                case "promotedBishop":
-                    movement = [];
-                    break;
-                case "rook":
-                    movement = this.state.RPath;
-                    break;
-                case "promotedRook":
-                    movement = [];
-                    break;
-                case "pawn":
-                    movement = this.state.PPath;
-                    break;
-                case "promotedPawn":
-                    movement = [];
-                    break;
-                default:
-                    movement = [];
-            }
-            let cx = this.state.pieces[name].getX();
-            let cy = this.state.pieces[name].getY();
-
-            this.possibleMov(movement, cx, cy);
-        } else { //odklikni
-            this.setState({
-                clicked: ""
-            });
-            const svg = document.querySelector("svg");
-            while (svg.childNodes[25]) { //25 pretoze tam mame nakreslenych 25 veci a potom su uz len tie modre stvorce
-                svg.removeChild(svg.childNodes[25]);
-            }
+            newPiece.setX(272);
+            newPiece.setY(157);
+            newPiece.setOnBoard(1);
+            let newPID = document.getElementById(name);
+            newPID.setAttribute("x", 272 + "px");
+            newPID.setAttribute("y", 157 + "px");
         }
     }
 
-    possibleMov(movement, cx, cy){
+    possibleMov(movement, currentColor, cx, cy){
         const svg = document.querySelector("svg");
 
         for (let i = 0; i < movement.length; i++) {
             if(movement[i] === "AllDD"){    //diagonal directions
                 if((cx-38) >= 120 && (cy+38) < 347){
+                    let bx = cx-38;
+                    let by = cy+38;
                     let newRect1 =  this.blueRect({
-                        'x':cx-38, 'y':cy+38,
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx-38, cy+38);
+                    }, bx, by);
                     svg.appendChild(newRect1);
                 }
 
                 if((cx-38) >= 120 && (cy-38) >= 5){
-                    let newRect2 =  this.blueRect({
-                        'x':cx-38, 'y':cy-38,
+                    let bx = cx-38;
+                    let by = cy-38;
+                    let newRect2 = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx-38, cy-38);
+                    }, bx, by);
                     svg.appendChild(newRect2);
+
                 }
 
                 if((cx+38) < 462 && (cy-38) >= 5){
-                    let newRect3 =  this.blueRect({
-                        'x':cx+38, 'y':cy-38,
+                    let bx = cx+38;
+                    let by = cy-38;
+                    let newRect3 = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx+38, cy-38);
+                    }, bx, by);
                     svg.appendChild(newRect3);
                 }
 
                 if((cx+38) < 462 && (cy+38) < 347){
-                    let newRect4 =  this.blueRect({
-                        'x':cx+38, 'y':cy+38,
+                    let bx = cx+38;
+                    let by = cy+38;
+                    let newRect4 = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx+38, cy+38);
+                    }, bx, by);
                     svg.appendChild(newRect4);
                 }
             } else if (movement[i] === "F"){    // 1 forward
                 if((cy-38) >= 5){
-                    let newRect =  this.blueRect({
-                        'x':cx, 'y':cy-38,
+                    let bx = cx;
+                    let by = cy-38;
+                    let newRect = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx, cy-38);
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
             } else if (movement[i] === "AllSD"){    //straight directions
                 if((cx-38) >= 120){
-                    let newRect =  this.blueRect({
-                        'x':cx-38, 'y':cy,
+                    let bx = cx-38;
+                    let by = cy;
+                    let newRect = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx-38, cy);
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
 
                 if((cy-38) >= 5){
-                    let newRect =  this.blueRect({
-                        'x':cx, 'y':cy-38,
+                    let bx = cx;
+                    let by = cy-38;
+                    let newRect = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx, cy-38);
+                    }, bx, by);
                     svg.appendChild(newRect);
+
                 }
 
                 if((cx+38) < 462){
-                    let newRect =  this.blueRect({
-                        'x':cx+38, 'y':cy,
+                    let bx = cx+38;
+                    let by = cy;
+                    let newRect = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx+38, cy);
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
 
                 if((cy+38) < 347){
-                    let newRect =  this.blueRect({
-                        'x':cx, 'y':cy+38,
+                    let bx = cx;
+                    let by = cy+38;
+                    let newRect = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx, cy+38);
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
             } else if (movement[i] === "MF"){    //many forward
                 let n = (cy-5)/38;      //kolko ma pred sebou policok
+                let k, bx, by;
                 for (let i = 1; i <= n; i++) {
-                    let k = 38*i;
-                    let newRect =  this.blueRect({
-                        'x':cx, 'y':cy-k,
+                    k = 38*i;
+                    bx = cx;
+                    by = cy-k;
+                    let newRect = this.blueRect({
+                        'x': bx, 'y': by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx, cy-k);
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
             } else if (movement[i] === "MSD"){    //many straight directions
@@ -203,48 +240,115 @@ class Board1 extends React.Component {
                 let n2 = (462-38-cx)/38;      //kolko ma na pravo policok
                 let n3 = (347-38-cy)/38;      //kolko ma pod sebou policok
                 let n4 = (cx-120)/38;      //kolko ma na lavo policok
+                let k, bx, by;
                 for (let i = 1; i <= n1; i++) {
-                    let k = 38*i;
+                    k = 38*i;
+                    bx = cx;
+                    by = cy-k;
                     let newRect =  this.blueRect({
-                        'x':cx, 'y':cy-k,
+                        'x':bx, 'y':by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx, cy-k);
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
                 for (let i = 1; i <= n2; i++) {
-                    let k = 38*i;
+                    k = 38*i;
+                    bx = cx+k;
+                    by = cy;
                     let newRect =  this.blueRect({
-                        'x':cx+k, 'y':cy,
+                        'x':bx, 'y':by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx+k, cy);
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
                 for (let i = 1; i <= n3; i++) {
-                    let k = 38*i;
+                    k = 38*i;
+                    bx = cx;
+                    by = cy+k;
                     let newRect =  this.blueRect({
-                        'x':cx, 'y':cy+k,
+                        'x':bx, 'y':by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx, cy+k);
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
                 for (let i = 1; i <= n4; i++) {
-                    let k = 38*i;
+                    k = 38*i;
+                    bx = cx-k;
+                    by = cy;
                     let newRect =  this.blueRect({
-                        'x':cx-k, 'y':cy,
+                        'x':bx, 'y':by,
                         'width': 38, 'height': 38,
                         'fill': "none",
                         'stroke-width': 3, 'stroke': "blue",
                         'pointer-events': "visible",
-                    }, cx-k, cy);
+                    }, bx, by);
+                    svg.appendChild(newRect);
+                }
+            } else if (movement[i] === "MDD"){    //many diagonal directions
+                let n1 = this.diagSquaresNumber("topLeft", cx, cy);   //kolko ma na lavo hore policok
+                let n2 = this.diagSquaresNumber("topRight", cx, cy);  //kolko ma na pravo hore policok
+                let n3 = this.diagSquaresNumber("botRight", cx, cy);  //kolko ma na pravo dole policok
+                let n4 = this.diagSquaresNumber("botLeft", cx, cy);   //kolko ma na lavo dole policok
+                let k, bx, by;
+                for (let i = 1; i <= n1; i++) {
+                    k = 38*i;
+                    bx = cx-k;
+                    by = cy-k;
+                    let newRect =  this.blueRect({
+                        'x':bx, 'y':by,
+                        'width': 38, 'height': 38,
+                        'fill': "none",
+                        'stroke-width': 3, 'stroke': "blue",
+                        'pointer-events': "visible",
+                    }, bx, by);
+                    svg.appendChild(newRect);
+                }
+                for (let i = 1; i <= n2; i++) {
+                    k = 38*i;
+                    bx = cx+k;
+                    by = cy-k;
+                    let newRect =  this.blueRect({
+                        'x':bx, 'y':by,
+                        'width': 38, 'height': 38,
+                        'fill': "none",
+                        'stroke-width': 3, 'stroke': "blue",
+                        'pointer-events': "visible",
+                    }, bx, by);
+                    svg.appendChild(newRect);
+                }
+                for (let i = 1; i <= n3; i++) {
+                    k = 38*i;
+                    bx = cx+k;
+                    by = cy+k;
+                    let newRect =  this.blueRect({
+                        'x':bx, 'y':by,
+                        'width': 38, 'height': 38,
+                        'fill': "none",
+                        'stroke-width': 3, 'stroke': "blue",
+                        'pointer-events': "visible",
+                    }, bx, by);
+                    svg.appendChild(newRect);
+                }
+                for (let i = 1; i <= n4; i++) {
+                    k = 38*i;
+                    bx = cx-k;
+                    by = cy+k;
+                    let newRect =  this.blueRect({
+                        'x':bx, 'y':by,
+                        'width': 38, 'height': 38,
+                        'fill': "none",
+                        'stroke-width': 3, 'stroke': "blue",
+                        'pointer-events': "visible",
+                    }, bx, by);
                     svg.appendChild(newRect);
                 }
             }
@@ -263,51 +367,70 @@ class Board1 extends React.Component {
     }
 
     newPos(nx, ny) {
-        const svg = document.querySelector("svg");
-        while (svg.childNodes[25]) { //25 pretoze tam mame nakreslenych 25 veci a potom su uz len tie modre stvorce
-            svg.removeChild(svg.childNodes[25]);
-        }
+        this.deleteMovement();
 
-        let allPieces = this.state.pieces;
         let name = this.state.clicked;
         let markType = this.state.pieces[name];
-        let canMove = true;
-        for(let pieceN in allPieces){
-            let pieceClass = allPieces[pieceN];
-            if(pieceClass.getX() === nx && pieceClass.getY() === ny){
-                if(pieceClass.getColor() !== markType.getColor()){
-                    let enemyN = pieceClass.getName();
-                    let enemyP = document.getElementById(pieceN);
-                    enemyP.setAttribute("href", "images/normal/"+enemyN+".png");
-                    enemyP.setAttribute("x", 480 + "px");
-                    enemyP.setAttribute("y", 230 + "px");
-                }else{
-                    canMove = false;
-                    break;
-                }
-            }
-        }
+        markType.setX(nx);
+        markType.setY(ny);
+        let p = document.getElementById(name);
+        p.setAttribute("x", nx + "px");
+        p.setAttribute("y", ny + "px");
 
-        if(canMove){
-            markType.setX(nx);
-            markType.setY(ny);
-            let p = document.getElementById(name);
-            p.setAttribute("x", nx + "px");
-            p.setAttribute("y", ny + "px");
-        }
         this.setState({
             clicked: ""
         });
     }
 
+    deleteMovement(){
+        const svg = document.querySelector("svg");
+        while (svg.childNodes[32]) { //32 pretoze tam mame nakreslenych 32 veci a potom su uz len tie modre stvorce
+            svg.removeChild(svg.childNodes[32]);
+        }
+    }
+    boardClick(){
+        this.setState({
+            clicked: ""
+        });
+        this.deleteMovement();
+    }
+
+    diagSquaresNumber(direction, x, y){
+        let nx;
+        let ny;
+        if(direction === "topLeft"){
+            nx = (x-120)/38; //na lavo
+            ny = (y-5)/38; //hore
+        } else if (direction === "topRight"){
+            nx = (462-38-x)/38; //na pravo
+            ny = (y-5)/38; //hore
+        } else if (direction === "botRight"){
+            nx = (462-38-x)/38; //na pravo
+            ny = (347-38-y)/38; //dole
+        } else if (direction === "botLeft"){
+            nx = (x-120)/38; //na lavo
+            ny = (347-38-y)/38; //dole
+        }
+
+        if(nx <= ny){
+            return nx;
+        } else {
+            return ny;
+        }
+    }
 
     render() {
         return (
             <div className="tutorialBoard">
                 <svg width="582px" height="360px" viewBox="0 0 582 360" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="5px" y="5px" width="100px" height="120px" fill="bisque" stroke="black" />
-                    <rect id="mainBoard" x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
-                    <rect x="477px" y="227px" width="100px" height="120px" fill="bisque" stroke="black" />
+                    <rect x="5px" y="5px" width="100px" height="342px" fill="bisque" stroke="black" />
+                    <rect id="mainBoard" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
+
+                    <text x="10" y="24" fontWeight="bold" fontSize="18px" >Pešiak</text>
+                    <text x="10" y="94" fontWeight="bold" fontSize="18px" >Strelec</text>
+                    <text x="10" y="164" fontWeight="bold" fontSize="18px" >Kráľ</text>
+                    <text x="10" y="234" fontWeight="bold" fontSize="18px" >Veža</text>
+                    <text x="10" y="304" fontWeight="bold" fontSize="18px" >Oštep</text>
 
                     <line x1="158px" y1="5px" x2="158px" y2="347px" stroke="black" strokeWidth="1px" />
                     <line x1="196px" y1="5px" x2="196px" y2="347px" stroke="black" strokeWidth="1px" />
@@ -332,12 +455,16 @@ class Board1 extends React.Component {
                     <circle cx="348px" cy="119px" r="3px" fill="black" />
                     <circle cx="348px" cy="233px" r="3px" fill="black" />
 
-                    <image id="silver_white" onClick={() => this.mark("silver", "white")} href="images/normal/silver.png" x="272" y="157" height="38px" width="38px" />
-                    <image id="pawn_black" href="images/rotate/pawn.png" x="234" y="119" height="38px" width="38px" />
+                    <image id="pawn_white" onClick={() => this.mark("pawn", "white")} href="images/normal/pawn.png" x="36" y="27" height="38px" width="38px" cursor="pointer" />
+                    <image id="bishop_white" onClick={() => this.mark("bishop", "white")} href="images/normal/bishop.png" x="36" y="97" height="38px" width="38px" cursor="pointer" />
+                    <image id="king_white" onClick={() => this.mark("king", "white")} href="images/normal/king.png" x="36" y="167" height="38px" width="38px" cursor="pointer" />
+                    <image id="rook_white" onClick={() => this.mark("rook", "white")} href="images/normal/rook.png" x="36" y="237" height="38px" width="38px" cursor="pointer" />
+                    <image id="lance_white" onClick={() => this.mark("lance", "white")} href="images/normal/lance.png" x="36" y="307" height="38px" width="38px" cursor="pointer" />
                 </svg>
             </div>
         );
     }
 }
 
-ReactDOM.render(<Board1 />, document.getElementById('hracia_plocha'));
+ReactDOM.render(<Board1 />, document.getElementById('hracia_plocha1'));
+

@@ -176,14 +176,7 @@
                     </div>
 
                     <div class="column-two">
-                        <table>
-                            <tr>
-                                <th class="col2 table-top">Hracia plocha</th>
-                            </tr>
-                            <tr>
-                                <td class="col2">vzdy je na ploche iba jedna figúrka a začína priamo v strede plochy</td>
-                            </tr>
-                        </table>
+                        <section id="hracia_plocha1"></section>
                     </div>
                 </div>
 
@@ -224,17 +217,7 @@
                     </div>
 
                     <div class="column-two">
-                        <table>
-                            <tr>
-                                <th class="col1 table-top"></th>
-                                <th class="col2 table-top">Hracia plocha</th>
-                            </tr>
-                            <tr>
-                                <td class="col1">
-                                </td>
-                                <td class="col2">tak ako je definovna v interakcii</td>
-                            </tr>
-                        </table>
+                        <section id="hracia_plocha2"></section>
                     </div>
                 </div>
 
@@ -463,9 +446,15 @@
 <footer>
     <p>&copy; 2020 Dominika Kincelová, Samuel Kubala, Dominika Mihálová, Filip Novák</p>
 </footer>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossOrigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossOrigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+<script src="ShogiPiece.js"></script>
+<script src="Square.js"></script>
+<script type="text/babel" src="Board1.js"></script>
 
-<script>
+<script type="text/babel">
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -491,6 +480,12 @@
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
+        /*if(n === 5){
+            document.getElementById("board1").type = "text/babel";
+        } else if (n === 7){
+            document.getElementById("board2").type = "text/babel";
+            ReactDOM.render(<Board2 />, document.getElementById('hracia_plocha2'));
+        }*/
     }
 </script>
 
