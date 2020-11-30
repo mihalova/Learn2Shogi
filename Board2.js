@@ -85,7 +85,7 @@ class Board2 extends React.Component {
     }
 
     possibleMov(movement, currentColor, rectColor, cx, cy){
-        const svg = document.querySelector("svg");
+        const svg = document.querySelector(".svgBoard2");
 
         for (let i = 0; i < movement.length; i++) {
             if(movement[i] === "AllDD"){    //diagonal directions
@@ -590,7 +590,7 @@ class Board2 extends React.Component {
     }
 
     deleteMovement(){
-        const svg = document.querySelector("svg");
+        const svg = document.querySelector(".svgBoard2");
         while (svg.childNodes[31]) { //31 pretoze tam mame nakreslenych 31 veci a potom su uz len tie modre stvorce
             svg.removeChild(svg.childNodes[31]);
         }
@@ -693,7 +693,7 @@ class Board2 extends React.Component {
     render() {
         return (
             <div className="tutorialBoard">
-                <svg width="582px" height="360px" viewBox="0 0 582 360" xmlns="http://www.w3.org/2000/svg">
+                <svg className="svgBoard2" width="582px" height="360px" viewBox="0 0 582 360" xmlns="http://www.w3.org/2000/svg">
                     <rect x="5px" y="5px" width="100px" height="120px" fill="bisque" stroke="black" />
                     <rect id="mainBoard" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
                     <rect x="477px" y="227px" width="100px" height="120px" fill="bisque" stroke="black" />
@@ -745,4 +745,3 @@ class Board2 extends React.Component {
 }
 
 ReactDOM.render(<Board2 />, document.getElementById('hracia_plocha2'));
-

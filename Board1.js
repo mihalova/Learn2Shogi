@@ -3,10 +3,10 @@
 class Board1 extends React.Component {
     state = {
         pieces: {pawn_white: new ShogiPiece("pawn", 0, "white", 36, 27),
-            bishop_white: new ShogiPiece("bishop", 0, "white", 36, 97),
-            king_white: new ShogiPiece("king", 0, "white", 36, 167),
-            rook_white: new ShogiPiece("rook", 0, "white", 36, 237),
-            lance_white: new ShogiPiece("lance", 0, "white", 36, 307),
+                 bishop_white: new ShogiPiece("bishop", 0, "white", 36, 97),
+                 king_white: new ShogiPiece("king", 0, "white", 36, 167),
+                 rook_white: new ShogiPiece("rook", 0, "white", 36, 237),
+                 lance_white: new ShogiPiece("lance", 0, "white", 36, 307),
         },
         clicked: "",
         startX: 0,
@@ -97,7 +97,7 @@ class Board1 extends React.Component {
     }
 
     possibleMov(movement, currentColor, cx, cy){
-        const svg = document.querySelector("svg");
+        const svg = document.querySelector(".svgBoard1");
 
         for (let i = 0; i < movement.length; i++) {
             if(movement[i] === "AllDD"){    //diagonal directions
@@ -383,7 +383,7 @@ class Board1 extends React.Component {
     }
 
     deleteMovement(){
-        const svg = document.querySelector("svg");
+        const svg = document.querySelector(".svgBoard1");
         while (svg.childNodes[32]) { //32 pretoze tam mame nakreslenych 32 veci a potom su uz len tie modre stvorce
             svg.removeChild(svg.childNodes[32]);
         }
@@ -422,7 +422,7 @@ class Board1 extends React.Component {
     render() {
         return (
             <div className="tutorialBoard">
-                <svg width="582px" height="360px" viewBox="0 0 582 360" xmlns="http://www.w3.org/2000/svg">
+                <svg className="svgBoard1" width="582px" height="360px" viewBox="0 0 582 360" xmlns="http://www.w3.org/2000/svg">
                     <rect x="5px" y="5px" width="100px" height="342px" fill="bisque" stroke="black" />
                     <rect id="mainBoard" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
 
@@ -467,4 +467,3 @@ class Board1 extends React.Component {
 }
 
 ReactDOM.render(<Board1 />, document.getElementById('hracia_plocha1'));
-
