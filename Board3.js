@@ -361,10 +361,10 @@ class Board3 extends React.Component {
             let w = document.getElementById("promoteW");
             w.style.display = "block";
         } else if(type === "goodEnd"){
-            let w = document.getElementById("goodEndW");
+            let w = document.getElementById("goodEndW_B3");
             w.style.display = "block";
         } else if(type === "badEnd"){
-            let w = document.getElementById("badEndW");
+            let w = document.getElementById("badEndW_B3");
             w.style.display = "block";
         }
     }
@@ -415,10 +415,10 @@ class Board3 extends React.Component {
         p.setAttribute("y", 5 + "px");
 
         if(end === "good"){
-            let w = document.getElementById("goodEndW");    //ukry okno
+            let w = document.getElementById("goodEndW_B3");    //ukry okno
             w.style.display = "none";
         } else if(end === "bad"){
-            let w = document.getElementById("badEndW");    //ukry okno
+            let w = document.getElementById("badEndW_B3");    //ukry okno
             w.style.display = "none";
         }
     }
@@ -464,11 +464,11 @@ class Board3 extends React.Component {
                     <p>Povýšený Oštep</p>
                     <button onClick={() => this.promoteP()}>OK</button>
                 </div>
-                <div id="goodEndW">
+                <div id="goodEndW_B3">
                     <p>Dobrá práca, zvládli ste to!</p>
                     <button onClick={() => this.resetBoard("good")}>Resetovať</button>
                 </div>
-                <div id="badEndW">
+                <div id="badEndW_B3">
                     <p>Boli ste vyhodený!</p>
                     <p>Nepodarilo sa Vám splniť úlohu.</p>
                     <button onClick={() => this.resetBoard("bad")}>Skúste znova</button>

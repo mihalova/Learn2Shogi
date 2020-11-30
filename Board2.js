@@ -646,10 +646,10 @@ class Board2 extends React.Component {
 
     modalWindows(type){
         if(type === "goodEnd"){
-            let w = document.getElementById("goodEndW");
+            let w = document.getElementById("goodEndW_B2");
             w.style.display = "block";
         } else if(type === "badEnd"){
-            let w = document.getElementById("badEndW");
+            let w = document.getElementById("badEndW_B2");
             w.style.display = "block";
         }
     }
@@ -687,10 +687,10 @@ class Board2 extends React.Component {
         p.setAttribute("y", 271 + "px");
 
         if(end === "good"){
-            let w = document.getElementById("goodEndW");    //ukry okno
+            let w = document.getElementById("goodEndW_B2");    //ukry okno
             w.style.display = "none";
         } else if(end === "bad"){
-            let w = document.getElementById("badEndW");    //ukry okno
+            let w = document.getElementById("badEndW_B2");    //ukry okno
             w.style.display = "none";
         }
     }
@@ -736,11 +736,11 @@ class Board2 extends React.Component {
 
                     <text id="textField_B2" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
                 </svg>
-                <div id="goodEndW">
+                <div id="goodEndW_B2">
                     <p>Dobrá práca, zvládli ste to!</p>
                     <button onClick={() => this.resetBoard("good")}>Resetovať</button>
                 </div>
-                <div id="badEndW">
+                <div id="badEndW_B2">
                     <p>Zlý ťah, boli ste vyhodený!</p>
                     <p>Nepodarilo sa Vám splniť úlohu.</p>
                     <button onClick={() => this.resetBoard("bad")}>Skúste znova</button>
