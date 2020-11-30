@@ -2,9 +2,9 @@
 class Board3 extends React.Component {
     state = {
         //onBoard tu bude znamenat ze ci je v ploche kde sa da povysit
-        pieces: {lance_white: new ShogiPiece("lance", 0, "white", 310, 271),
-            promLance_white: new ShogiPiece("promLance", 1, "white", 0, 0),
-            king_black: new ShogiPiece("king", 1, "black", 234, 5)
+        pieces: {lance_white_B3: new ShogiPiece("lance", 0, "white", 310, 271),
+            promLance_white_B3: new ShogiPiece("promLance", 1, "white", 0, 0),
+            king_black_B3: new ShogiPiece("king", 1, "black", 234, 5)
         },
         clicked: "",
         KPath: ["AllDD", "AllSD"],
@@ -16,7 +16,7 @@ class Board3 extends React.Component {
     };
 
     mark(type, color){
-        let name = type + "_" + color;
+        let name = type + "_" + color + "_B3";
         if(this.state.clicked !== name) {   //zaklikni
             this.deleteMovement();
             this.setState({
@@ -243,7 +243,7 @@ class Board3 extends React.Component {
                 p.setAttribute("x", nx + "px");
                 p.setAttribute("y", ny + "px");
 
-                let pLance = this.state.pieces["promLance_white"];
+                let pLance = this.state.pieces["promLance_white_B3"];
                 pLance.setX(nx); //v pieces davame promLance x a y
                 pLance.setY(ny);
 
@@ -307,7 +307,7 @@ class Board3 extends React.Component {
     }
 
     changeTextField(name){
-        let field = document.getElementById("textField");
+        let field = document.getElementById("textField_B3");
         if(name === "king"){
             field.textContent = "Kráľ";
         } else if(name === "lance") {
@@ -321,8 +321,8 @@ class Board3 extends React.Component {
 
     kingMov(){
         let kingStep = this.state.kingStep;
-        let king = this.state.pieces["king_black"];
-        let p = document.getElementById("king_black");
+        let king = this.state.pieces["king_black_B3"];
+        let p = document.getElementById("king_black_B3");
 
         let newY;
         if(kingStep === -1) {
@@ -339,11 +339,11 @@ class Board3 extends React.Component {
         king.setY(newY); //pohyb cieneho krala,tu staci zmenit len y kedze chodi dole, hore
         p.setAttribute("y",  newY + "px"); //aj tu staci menit len y
 
-        let enemy = this.state.pieces["promLance_white"];
+        let enemy = this.state.pieces["promLance_white_B3"];
         if((enemy.getX() === king.getX()) && (enemy.getY() === king.getY())){
             enemy.setX(8);
             enemy.setY(84);
-            let enemyP = document.getElementById("promLance_white");
+            let enemyP = document.getElementById("promLance_white_B3");
             enemyP.setAttribute("href", "images/rotate/lance.png"); //strati povysenie tak sa da na lance,
             // ale zatial tu nepremiename id, ani state, ani origin. lanceho
             enemyP.setAttribute("x", 8 + "px");
@@ -377,9 +377,9 @@ class Board3 extends React.Component {
         this.setState({
             markTypeParameter: "promLance"
         });
-        let p = document.getElementById("lance_white");
+        let p = document.getElementById("lance_white_B3");
         p.setAttribute("href", "images/normal/promLance.png");
-        p.id = "promLance_white";
+        p.id = "promLance_white_B3";
 
         //pohneme kralom
         setTimeout(() => {
@@ -387,35 +387,40 @@ class Board3 extends React.Component {
         }, 500);
     }
 
-    resetBoard(){
+    resetBoard(end){
         this.setState({
             clicked: "",
             kingStep: -1,
             markTypeParameter: "lance"
         });
-        this.state.pieces["lance_white"].setX(310);
-        this.state.pieces["lance_white"].setY(271);
-        this.state.pieces["lance_white"].setOnBoard(0);
+        this.state.pieces["lance_white_B3"].setX(310);
+        this.state.pieces["lance_white_B3"].setY(271);
+        this.state.pieces["lance_white_B3"].setOnBoard(0);
 
-        this.state.pieces["promLance_white"].setX(0);
-        this.state.pieces["promLance_white"].setY(0);
+        this.state.pieces["promLance_white_B3"].setX(0);
+        this.state.pieces["promLance_white_B3"].setY(0);
 
-        this.state.pieces["king_black"].setX(234);
-        this.state.pieces["king_black"].setY(5);
+        this.state.pieces["king_black_B3"].setX(234);
+        this.state.pieces["king_black_B3"].setY(5);
 
-        let p = document.getElementById("promLance_white");
+        let p = document.getElementById("promLance_white_B3");
         p.setAttribute("href", "images/normal/lance.png");
         p.setAttribute("x", 310 + "px");
         p.setAttribute("y", 271 + "px");
-        p.id = "lance_white";
+        p.id = "lance_white_B3";
 
-        p = document.getElementById("king_black");
+        p = document.getElementById("king_black_B3");
         p.setAttribute("href", "images/rotate/king.png");
         p.setAttribute("x", 234 + "px");
         p.setAttribute("y", 5 + "px");
 
-        let w = document.getElementById("badEndW");    //ukry okno
-        w.style.display = "none";
+        if(end === "good"){
+            let w = document.getElementById("goodEndW");    //ukry okno
+            w.style.display = "none";
+        } else if(end === "bad"){
+            let w = document.getElementById("badEndW");    //ukry okno
+            w.style.display = "none";
+        }
     }
 
     render() {
@@ -423,7 +428,7 @@ class Board3 extends React.Component {
             <div className="tutorialBoard">
                 <svg className="svgBoard3" width="582px" height="360px" viewBox="0 0 582 360" xmlns="http://www.w3.org/2000/svg">
                     <rect x="5px" y="5px" width="100px" height="120px" fill="bisque" stroke="black" />
-                    <rect id="mainBoard" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
+                    <rect id="mainBoard_B3" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
                     <rect x="477px" y="227px" width="100px" height="120px" fill="bisque" stroke="black" />
 
                     <line x1="158px" y1="5px" x2="158px" y2="347px" stroke="black" strokeWidth="1px" />
@@ -449,10 +454,10 @@ class Board3 extends React.Component {
                     <circle cx="348px" cy="119px" r="3px" fill="black" />
                     <circle cx="348px" cy="233px" r="3px" fill="black" />
 
-                    <image id="lance_white" onClick={() => this.mark(this.state.markTypeParameter, "white")} href="images/normal/lance.png" x="310" y="271" height="38px" width="38px" cursor="pointer" />
-                    <image id="king_black" onClick={() => this.mark("king", "black")} href="images/rotate/king.png" x="234" y="5" height="38px" width="38px" cursor="pointer" />
+                    <image id="lance_white_B3" onClick={() => this.mark(this.state.markTypeParameter, "white")} href="images/normal/lance.png" x="310" y="271" height="38px" width="38px" cursor="pointer" />
+                    <image id="king_black_B3" onClick={() => this.mark("king", "black")} href="images/rotate/king.png" x="234" y="5" height="38px" width="38px" cursor="pointer" />
 
-                    <text id="textField" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
+                    <text id="textField_B3" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
                 </svg>
                 <div id="promoteW">
                     <p>Vaša figúrka sa teraz môže povýšiť na:</p>
@@ -461,11 +466,12 @@ class Board3 extends React.Component {
                 </div>
                 <div id="goodEndW">
                     <p>Dobrá práca, zvládli ste to!</p>
+                    <button onClick={() => this.resetBoard("good")}>Resetovať</button>
                 </div>
                 <div id="badEndW">
                     <p>Boli ste vyhodený!</p>
                     <p>Nepodarilo sa Vám splniť úlohu.</p>
-                    <button onClick={() => this.resetBoard()}>Skúste znova</button>
+                    <button onClick={() => this.resetBoard("bad")}>Skúste znova</button>
                 </div>
 
             </div>

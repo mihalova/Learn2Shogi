@@ -1,13 +1,13 @@
 
 class Board2 extends React.Component {
     state = {
-        pieces: {rook_black: new ShogiPiece("rook", 1, "black", 120, 309),
-            bishop_black: new ShogiPiece("bishop", 1, "black", 120, 195),
-            pawn_black: new ShogiPiece("pawn", 1, "black", 158, 233),
-            pawn2_black: new ShogiPiece("pawn2", 1, "black", 196, 195),
-            pawn3_black: new ShogiPiece("pawn3", 1, "black", 234, 233),
-            lance_black: new ShogiPiece("lance", 1, "black", 272, 195),
-            king_white: new ShogiPiece("king", 1, "white", 196, 271)
+        pieces: {rook_black_B2: new ShogiPiece("rook", 1, "black", 120, 309),
+            bishop_black_B2: new ShogiPiece("bishop", 1, "black", 120, 195),
+            pawn_black_B2: new ShogiPiece("pawn", 1, "black", 158, 233),
+            pawn2_black_B2: new ShogiPiece("pawn2", 1, "black", 196, 195),
+            pawn3_black_B2: new ShogiPiece("pawn3", 1, "black", 234, 233),
+            lance_black_B2: new ShogiPiece("lance", 1, "black", 272, 195),
+            king_white_B2: new ShogiPiece("king", 1, "white", 196, 271)
         },
         squares: [
             [new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
@@ -15,10 +15,10 @@ class Board2 extends React.Component {
             [new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
             [new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
             [new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
-            [new SQ("bishop_black","black"), new SQ("",""), new SQ("pawn2_black","black"), new SQ("",""), new SQ("lance_black","black"), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
-            [new SQ("",""), new SQ("pawn_black","black"), new SQ("",""), new SQ("pawn3_black","black"), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
-            [new SQ("",""), new SQ("",""), new SQ("king_white","white"), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
-            [new SQ("rook_black","black"), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")]
+            [new SQ("bishop_black_B2","black"), new SQ("",""), new SQ("pawn2_black_B2","black"), new SQ("",""), new SQ("lance_black_B2","black"), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
+            [new SQ("",""), new SQ("pawn_black_B2","black"), new SQ("",""), new SQ("pawn3_black_B2","black"), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
+            [new SQ("",""), new SQ("",""), new SQ("king_white_B2","white"), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")],
+            [new SQ("rook_black_B2","black"), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("",""), new SQ("","")]
         ],
         clicked: "",
         PPath: ["F"],
@@ -29,7 +29,7 @@ class Board2 extends React.Component {
     };
 
     mark(type, color){
-        let name = type + "_" + color;
+        let name = type + "_" + color + "_B2";
         if(this.state.clicked !== name) {   //zaklikni
             this.deleteMovement();
             this.setState({
@@ -512,7 +512,7 @@ class Board2 extends React.Component {
         let conclusion;
         if(enemy === "rook"){
             setTimeout(() => {
-                let e = document.getElementById("rook_black");
+                let e = document.getElementById("rook_black_B2");
                 e.setAttribute("x", nx + "px");
                 e.setAttribute("y", ny + "px");
 
@@ -524,7 +524,7 @@ class Board2 extends React.Component {
             conclusion = "badEnd";
         } else if(enemy === "pawn"){
             setTimeout(() => {
-                let e = document.getElementById("pawn_black");
+                let e = document.getElementById("pawn_black_B2");
                 e.setAttribute("x", nx + "px");
                 e.setAttribute("y", ny + "px");
 
@@ -535,13 +535,13 @@ class Board2 extends React.Component {
 
             conclusion = "badEnd";
         } else if(enemy === "bishop"){
-            let e = document.getElementById("pawn_black");
+            let e = document.getElementById("pawn_black_B2");
             e.setAttribute("href", "images/normal/pawn.png");
             e.setAttribute("x", 480 + "px");
             e.setAttribute("y", 230 + "px");
 
             setTimeout(() => {
-                e = document.getElementById("bishop_black");
+                e = document.getElementById("bishop_black_B2");
                 e.setAttribute("x", nx + "px");
                 e.setAttribute("y", ny + "px");
 
@@ -553,7 +553,7 @@ class Board2 extends React.Component {
             conclusion = "badEnd";
         } else if(enemy === "pawn2"){
             setTimeout(() => {
-                let e = document.getElementById("pawn2_black");
+                let e = document.getElementById("pawn2_black_B2");
                 e.setAttribute("x", nx + "px");
                 e.setAttribute("y", ny + "px");
 
@@ -564,7 +564,7 @@ class Board2 extends React.Component {
 
             conclusion = "badEnd";
         } else if(enemy === ""){
-            let e = document.getElementById("pawn3_black");
+            let e = document.getElementById("pawn3_black_B2");
             e.setAttribute("href", "images/normal/pawn.png");
             e.setAttribute("x", 480 + "px");
             e.setAttribute("y", 230 + "px");
@@ -572,7 +572,7 @@ class Board2 extends React.Component {
             conclusion = "goodEnd";
         } else if(enemy === "pawn3"){
             setTimeout(() => {
-                let e = document.getElementById("pawn3_black");
+                let e = document.getElementById("pawn3_black_B2");
                 e.setAttribute("x", nx + "px");
                 e.setAttribute("y", ny + "px");
 
@@ -628,7 +628,7 @@ class Board2 extends React.Component {
     }
 
     changeTextField(name){
-        let field = document.getElementById("textField");
+        let field = document.getElementById("textField_B2");
         if(name === "king"){
             field.textContent = "Kráľ";
         } else if(name === "rook") {
@@ -654,40 +654,45 @@ class Board2 extends React.Component {
         }
     }
 
-    resetBoard(){
+    resetBoard(end){
         this.setState({
             clicked: ""
         });
 
-        let p = document.getElementById("rook_black");
+        let p = document.getElementById("rook_black_B2");
         p.setAttribute("x", 120 + "px");
         p.setAttribute("y", 309 + "px");
 
-        p = document.getElementById("bishop_black");
+        p = document.getElementById("bishop_black_B2");
         p.setAttribute("x", 120 + "px");
         p.setAttribute("y", 195 + "px");
 
-        p = document.getElementById("pawn_black");
+        p = document.getElementById("pawn_black_B2");
         p.setAttribute("href", "images/rotate/pawn.png");
         p.setAttribute("x", 158 + "px");
         p.setAttribute("y", 233 + "px");
 
-        p = document.getElementById("pawn2_black");
+        p = document.getElementById("pawn2_black_B2");
         p.setAttribute("x", 196 + "px");
         p.setAttribute("y", 195 + "px");
 
-        p = document.getElementById("pawn3_black");
+        p = document.getElementById("pawn3_black_B2");
         p.setAttribute("href", "images/rotate/pawn3.png");
         p.setAttribute("x", 234 + "px");
         p.setAttribute("y", 233 + "px");
 
-        p = document.getElementById("king_white");
+        p = document.getElementById("king_white_B2");
         p.setAttribute("href", "images/normal/king.png");
         p.setAttribute("x", 196 + "px");
         p.setAttribute("y", 271 + "px");
 
-        let w = document.getElementById("badEndW");    //ukry okno
-        w.style.display = "none";
+        if(end === "good"){
+            let w = document.getElementById("goodEndW");    //ukry okno
+            w.style.display = "none";
+        } else if(end === "bad"){
+            let w = document.getElementById("badEndW");    //ukry okno
+            w.style.display = "none";
+        }
     }
 
     render() {
@@ -695,7 +700,7 @@ class Board2 extends React.Component {
             <div className="tutorialBoard">
                 <svg className="svgBoard2" width="582px" height="360px" viewBox="0 0 582 360" xmlns="http://www.w3.org/2000/svg">
                     <rect x="5px" y="5px" width="100px" height="120px" fill="bisque" stroke="black" />
-                    <rect id="mainBoard" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
+                    <rect id="mainBoard_B2" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
                     <rect x="477px" y="227px" width="100px" height="120px" fill="bisque" stroke="black" />
 
                     <line x1="158px" y1="5px" x2="158px" y2="347px" stroke="black" strokeWidth="1px" />
@@ -721,23 +726,24 @@ class Board2 extends React.Component {
                     <circle cx="348px" cy="119px" r="3px" fill="black" />
                     <circle cx="348px" cy="233px" r="3px" fill="black" />
 
-                    <image id="rook_black" onClick={() => this.mark("rook", "black")} href="images/rotate/rook.png" x="120" y="309" height="38px" width="38px" cursor="pointer" />
-                    <image id="bishop_black" onClick={() => this.mark("bishop", "black")} href="images/rotate/bishop.png" x="120" y="195" height="38px" width="38px" cursor="pointer" />
-                    <image id="pawn_black" onClick={() => this.mark("pawn", "black")} href="images/rotate/pawn.png" x="158" y="233" height="38px" width="38px" cursor="pointer" />
-                    <image id="pawn2_black" onClick={() => this.mark("pawn2", "black")} href="images/rotate/pawn2.png" x="196" y="195" height="38px" width="38px" cursor="pointer" />
-                    <image id="pawn3_black" onClick={() => this.mark("pawn3", "black")} href="images/rotate/pawn3.png" x="234" y="233" height="38px" width="38px" cursor="pointer" />
-                    <image id="lance_black" onClick={() => this.mark("lance", "black")} href="images/rotate/lance.png" x="272" y="195" height="38px" width="38px" cursor="pointer" />
-                    <image id="king_white" onClick={() => this.mark("king", "white")} href="images/normal/king.png" x="196" y="271" height="38px" width="38px" cursor="pointer" />
+                    <image id="rook_black_B2" onClick={() => this.mark("rook", "black")} href="images/rotate/rook.png" x="120" y="309" height="38px" width="38px" cursor="pointer" />
+                    <image id="bishop_black_B2" onClick={() => this.mark("bishop", "black")} href="images/rotate/bishop.png" x="120" y="195" height="38px" width="38px" cursor="pointer" />
+                    <image id="pawn_black_B2" onClick={() => this.mark("pawn", "black")} href="images/rotate/pawn.png" x="158" y="233" height="38px" width="38px" cursor="pointer" />
+                    <image id="pawn2_black_B2" onClick={() => this.mark("pawn2", "black")} href="images/rotate/pawn2.png" x="196" y="195" height="38px" width="38px" cursor="pointer" />
+                    <image id="pawn3_black_B2" onClick={() => this.mark("pawn3", "black")} href="images/rotate/pawn3.png" x="234" y="233" height="38px" width="38px" cursor="pointer" />
+                    <image id="lance_black_B2" onClick={() => this.mark("lance", "black")} href="images/rotate/lance.png" x="272" y="195" height="38px" width="38px" cursor="pointer" />
+                    <image id="king_white_B2" onClick={() => this.mark("king", "white")} href="images/normal/king.png" x="196" y="271" height="38px" width="38px" cursor="pointer" />
 
-                    <text id="textField" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
+                    <text id="textField_B2" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
                 </svg>
                 <div id="goodEndW">
                     <p>Dobrá práca, zvládli ste to!</p>
+                    <button onClick={() => this.resetBoard("good")}>Resetovať</button>
                 </div>
                 <div id="badEndW">
                     <p>Zlý ťah, boli ste vyhodený!</p>
                     <p>Nepodarilo sa Vám splniť úlohu.</p>
-                    <button onClick={() => this.resetBoard()}>Skúste znova</button>
+                    <button onClick={() => this.resetBoard("bad")}>Skúste znova</button>
                 </div>
             </div>
         );

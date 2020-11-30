@@ -2,11 +2,11 @@
 
 class Board1 extends React.Component {
     state = {
-        pieces: {pawn_white: new ShogiPiece("pawn", 0, "white", 36, 27),
-                 bishop_white: new ShogiPiece("bishop", 0, "white", 36, 97),
-                 king_white: new ShogiPiece("king", 0, "white", 36, 167),
-                 rook_white: new ShogiPiece("rook", 0, "white", 36, 237),
-                 lance_white: new ShogiPiece("lance", 0, "white", 36, 307),
+        pieces: {pawn_white_B1: new ShogiPiece("pawn", 0, "white", 36, 27),
+                 bishop_white_B1: new ShogiPiece("bishop", 0, "white", 36, 97),
+                 king_white_B1: new ShogiPiece("king", 0, "white", 36, 167),
+                 rook_white_B1: new ShogiPiece("rook", 0, "white", 36, 237),
+                 lance_white_B1: new ShogiPiece("lance", 0, "white", 36, 307),
         },
         clicked: "",
         startX: 0,
@@ -19,7 +19,7 @@ class Board1 extends React.Component {
     };
 
     mark(type, color){
-        let name = type + "_" + color;
+        let name = type + "_" + color + "_B1";
         let isPlaying = this.state.pieces[name].getOnBoard();
 
         if(isPlaying === 1) {
@@ -424,7 +424,7 @@ class Board1 extends React.Component {
             <div className="tutorialBoard">
                 <svg className="svgBoard1" width="582px" height="360px" viewBox="0 0 582 360" xmlns="http://www.w3.org/2000/svg">
                     <rect x="5px" y="5px" width="100px" height="342px" fill="bisque" stroke="black" />
-                    <rect id="mainBoard" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
+                    <rect id="mainBoard_B1" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
 
                     <text x="10" y="24" fontWeight="bold" fontSize="18px" >Pešiak</text>
                     <text x="10" y="94" fontWeight="bold" fontSize="18px" >Strelec</text>
@@ -455,11 +455,11 @@ class Board1 extends React.Component {
                     <circle cx="348px" cy="119px" r="3px" fill="black" />
                     <circle cx="348px" cy="233px" r="3px" fill="black" />
 
-                    <image id="pawn_white" onClick={() => this.mark("pawn", "white")} href="images/normal/pawn.png" x="36" y="27" height="38px" width="38px" cursor="pointer" />
-                    <image id="bishop_white" onClick={() => this.mark("bishop", "white")} href="images/normal/bishop.png" x="36" y="97" height="38px" width="38px" cursor="pointer" />
-                    <image id="king_white" onClick={() => this.mark("king", "white")} href="images/normal/king.png" x="36" y="167" height="38px" width="38px" cursor="pointer" />
-                    <image id="rook_white" onClick={() => this.mark("rook", "white")} href="images/normal/rook.png" x="36" y="237" height="38px" width="38px" cursor="pointer" />
-                    <image id="lance_white" onClick={() => this.mark("lance", "white")} href="images/normal/lance.png" x="36" y="307" height="38px" width="38px" cursor="pointer" />
+                    <image id="pawn_white_B1" onClick={() => this.mark("pawn", "white")} href="images/normal/pawn.png" x="36" y="27" height="38px" width="38px" cursor="pointer" />
+                    <image id="bishop_white_B1" onClick={() => this.mark("bishop", "white")} href="images/normal/bishop.png" x="36" y="97" height="38px" width="38px" cursor="pointer" />
+                    <image id="king_white_B1" onClick={() => this.mark("king", "white")} href="images/normal/king.png" x="36" y="167" height="38px" width="38px" cursor="pointer" />
+                    <image id="rook_white_B1" onClick={() => this.mark("rook", "white")} href="images/normal/rook.png" x="36" y="237" height="38px" width="38px" cursor="pointer" />
+                    <image id="lance_white_B1" onClick={() => this.mark("lance", "white")} href="images/normal/lance.png" x="36" y="307" height="38px" width="38px" cursor="pointer" />
                 </svg>
             </div>
         );
