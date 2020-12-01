@@ -50,6 +50,10 @@ section {
     text-align: center;
 }
 
+.text-align-right {
+    text-align: right;
+}
+
 .paragraph-center {
     width: 50%;
     margin: auto;
