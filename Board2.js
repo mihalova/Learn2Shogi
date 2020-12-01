@@ -652,6 +652,8 @@ class Board2 extends React.Component {
             let w = document.getElementById("badEndW_B2");
             w.style.display = "block";
         }
+        let w = document.getElementById("transparent_B2");    //ukry okno
+        w.style.display = "block";
     }
 
     resetBoard(end){
@@ -693,6 +695,8 @@ class Board2 extends React.Component {
             let w = document.getElementById("badEndW_B2");    //ukry okno
             w.style.display = "none";
         }
+        let w = document.getElementById("transparent_B2");    //ukry okno
+        w.style.display = "none";
     }
 
     render() {
@@ -736,14 +740,17 @@ class Board2 extends React.Component {
 
                     <text id="textField_B2" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
                 </svg>
+                <svg id="transparent_B2" width="582px" height="360px">
+                    <rect width="582px" height="360px" fill-opacity="0"/>
+                </svg>
                 <div id="goodEndW_B2">
                     <p>Dobrá práca, zvládli ste to!</p>
-                    <button onClick={() => this.resetBoard("good")}>Resetovať</button>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("good")}>Resetovať</a>
                 </div>
                 <div id="badEndW_B2">
                     <p>Zlý ťah, boli ste vyhodený!</p>
                     <p>Nepodarilo sa Vám splniť úlohu.</p>
-                    <button onClick={() => this.resetBoard("bad")}>Skúste znova</button>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("bad")}>Skúste znova</a>
                 </div>
             </div>
         );
