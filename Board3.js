@@ -367,11 +367,15 @@ class Board3 extends React.Component {
             let w = document.getElementById("badEndW_B3");
             w.style.display = "block";
         }
+        let w = document.getElementById("transparent_B3");
+        w.style.display = "block";
     }
 
     promoteP(){
         let w = document.getElementById("promoteW");    //ukry okno
         w.style.display = "none";
+        let q = document.getElementById("transparent_B3");    //ukry okno
+        q.style.display = "none";
 
         // tu menime prvy parameter v img(lance) onclick funkcia mark
         this.setState({
@@ -421,6 +425,8 @@ class Board3 extends React.Component {
             let w = document.getElementById("badEndW_B3");    //ukry okno
             w.style.display = "none";
         }
+        let w = document.getElementById("transparent_B3");    //ukry okno
+        w.style.display = "none";
     }
 
     render() {
@@ -459,19 +465,22 @@ class Board3 extends React.Component {
 
                     <text id="textField_B3" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
                 </svg>
+                <svg id="transparent_B3" width="582px" height="360px">
+                    <rect width="582px" height="360px" fill-opacity="0"/>
+                </svg>
                 <div id="promoteW">
                     <p>Vaša figúrka sa teraz môže povýšiť na:</p>
                     <p>Povýšený Oštep</p>
-                    <button onClick={() => this.promoteP()}>OK</button>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.promoteP()}>OK</a>
                 </div>
                 <div id="goodEndW_B3">
                     <p>Dobrá práca, zvládli ste to!</p>
-                    <button onClick={() => this.resetBoard("good")}>Resetovať</button>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("good")}>Resetovať</a>
                 </div>
                 <div id="badEndW_B3">
                     <p>Boli ste vyhodený!</p>
                     <p>Nepodarilo sa Vám splniť úlohu.</p>
-                    <button onClick={() => this.resetBoard("bad")}>Skúste znova</button>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("bad")}>Skúste znova</a>
                 </div>
 
             </div>

@@ -5,16 +5,23 @@
     justify-items: center;
     align-items: center;
 }
-.svgBoard2, #goodEndW_B2, #badEndW_B2, #transparent{
+.svgBoard2, #goodEndW_B2, #badEndW_B2, #transparent_B2,
+.svgBoard3, #promoteW, #goodEndW_B3, #badEndW_B3, #transparent_B3 {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
 }
-#goodEndW_B2, #badEndW_B2 {
+#goodEndW_B2, #badEndW_B2,
+#promoteW, #goodEndW_B3, #badEndW_B3 {
     background: white;
     color: black;
     padding: 10px;
     border-radius: 15px;
     border: 2px solid black;
+    display: none;
+}
+
+#transparent_B2, #transparent_B3 {
+    display: none;
 }
