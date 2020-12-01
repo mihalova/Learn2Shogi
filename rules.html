@@ -64,20 +64,21 @@
                             <li class="dot" onclick="currentSlide(3)">Priebeh Kola</li>
                             <li class="dot" onclick="currentSlide(4)">Hracie komponenty 1</li>
                             <li class="dot" onclick="currentSlide(5)">Hracie komponenty 2</li>
-                            <li class="dot" onclick="currentSlide(6)">Zhrnutie</li>
-                            <li class="dot" onclick="currentSlide(7)">Výzva</li>
+                            <li class="dot" onclick="currentSlide(6)">Zajatie figúrok</li>
+                            <li class="dot" onclick="currentSlide(7)">Zhrnutie</li>
+                            <li class="dot" onclick="currentSlide(8)">Výzva</li>
                         </ul>
                     </li>
                     <li><b> Vlastnosti a povýšenie figúrok</b>
                         <ul>
-                            <li class="dot" onclick="currentSlide(8)">Prehľad figúrok</li>
-                            <li class="dot" onclick="currentSlide(9)">Herné figúrky</li>
-                            <li class="dot" onclick="currentSlide(10)">Povýšenie jednotiek 1</li>
-                            <li class="dot" onclick="currentSlide(11)">Povýšenie jednotiek 2</li>
-                            <li class="dot" onclick="currentSlide(12)">Zajatie figúrok</li>
+                            <li class="dot" onclick="currentSlide(9)">Prehľad figúrok</li>
+                            <li class="dot" onclick="currentSlide(10)">Herné figúrky</li>
+                            <li class="dot" onclick="currentSlide(11)">Povýšenie jednotiek 1</li>
+                            <li class="dot" onclick="currentSlide(12)">Povýšenie jednotiek 2</li>
+                            <li class="dot" onclick="currentSlide(13)">Vkladanie figúrok</li>
                             <!--<li class="dot" onclick="currentSlide(13)">zajatie figúrok 2</li>-->
-                            <li class="dot" onclick="currentSlide(13)">Zhrnutie</li>
-                            <li class="dot" onclick="currentSlide(14)">Hra</li>
+                            <li class="dot" onclick="currentSlide(14)">Zhrnutie</li>
+                            <li class="dot" onclick="currentSlide(15)">Hra</li>
                         </ul>
                     </li>
                 </ol>
@@ -156,6 +157,20 @@
 
                     <div id="hracia_plocha1">
                     </div>
+                </article>
+
+                <article class="mySlides">
+                    <header class="sec-header">
+                        <h2>Zajatie figúrok</h2>
+                    </header>
+
+                    <p class="sec-descript">
+                        Ak hráčovova figúrka svojim pohybom dokáže skončiť na políčku so
+                        súperovou figúrkou, môže tak spraviť a figúrku zajať.
+                        <br><br>
+                        Zajatá figúrka sa uloží hráčovi mimo hernú plochu.
+                    </p>
+
                 </article>
 
                 <article class="mySlides">
@@ -294,35 +309,39 @@
 
                 <article class="mySlides">
                     <header class="sec-header">
-                        <h2>Zajatie figúrok</h2>
+                        <h2>Vkladanie figúrok</h2>
                     </header>
 
                     <p class="sec-descript">
-                        Ak hráčovova figúrka svojim pohybom dokáže skončiť na políčku so
-                        súperovou figúrkou, môže tak spraviť a figúrku zajať.
+                        Hráč má možnosť ako svoju akciu za kolo vložiť jednu z figúrok,
+                        ktoré zajal súperovi späť do hry ako vlastnú figúrku na ľubovoľné
+                        prázdne herné políčko.
+                        <br><br>
+                        Teda napríklad môže figúrku vložiť priamo do povyšovacej zóny na súperovej strane.
                         <br>
-                        Zajatá figúrka sa uloží hráčovi mimo hernú plochu.
+                        Pozor, figúrka sa však nemôže povýšiť hneď po vložení, musí vykonať pohyb.
                         <br>
-                        Hráč má možnosť ako svoju akciu za kolo vložiť zajatú figúrku
-                        na ľubovoľne voľne políčko hernej plochy ako svoju figúrku.
+                        Figúrky pešiaka a kópijnika sa nedajú vložiť do poslednej rady,
+                        pretože by nevedeli vykonať žiaden pohyb!
+
                     </p>
 
-                    <!--<div class="column-two">-->
-                    <!--<table>-->
-                    <!--<tr>-->
-                    <!--<th class="col2 ">-->
-                    <!--obrazok figúrky na nepov. strane-->
-                    <!--</th>-->
-                    <!--<th class="col2 ">-->
-                    <!--obrazok figúrky na pov. strane-->
-                    <!--</th>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                    <!--<th class="col1">nepovýšená fig.</th>-->
-                    <!--<th class="col1">povýšená fig.</th>-->
-                    <!--</tr>-->
-                    <!--</table>-->
-                    <!--</div>-->
+                    <div class="row">
+                        <div class="col-6">
+                            <figure>
+                                <img class="shogi-figure" src="pictures/pieces/Shogi_kyosha.svg" alt="Kopijník">
+                            </figure>
+                            <p>figúrka Kopijníka nepovýšená</p>
+                        </div>
+                        <div class="col-6">
+                            <figure>
+                                <img class="shogi-figure" src="pictures/pieces/Shogi_fuhyo.svg" alt="Pešiak">
+                            </figure>
+                            <p>figúrka Pešiaka nepovýšená</p>
+
+                        </div>
+                    </div>
+
                     <p>PS: figúrky sa vkladajú vždy nepovýšenou stranou.</p>
                 </article>
 
