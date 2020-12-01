@@ -250,7 +250,7 @@ class Board3 extends React.Component {
                 //si v cervenej zone vyskoci okno
                 setTimeout(() => {
                     this.modalWindows("promote");
-                }, 500);
+                }, 400);
             }
         }
 
@@ -280,14 +280,14 @@ class Board3 extends React.Component {
                         //zavola sa konecne okno
                         setTimeout(() => {
                             this.modalWindows("goodEnd");
-                        }, 500);
+                        }, 400);
                     }
                 }
             }
             if(canKingMove){
                 setTimeout(() => {
                     this.kingMov();
-                }, 500);
+                }, 400);
             }
         }
     }
@@ -352,7 +352,7 @@ class Board3 extends React.Component {
             //okno ze to zle dopadlo
             setTimeout(() => {
                 this.modalWindows("badEnd");
-            }, 500);
+            }, 400);
         }
     }
 
@@ -388,7 +388,7 @@ class Board3 extends React.Component {
         //pohneme kralom
         setTimeout(() => {
             this.kingMov();
-        }, 500);
+        }, 400);
     }
 
     resetBoard(end){
@@ -463,24 +463,24 @@ class Board3 extends React.Component {
                     <image id="lance_white_B3" onClick={() => this.mark(this.state.markTypeParameter, "white")} href="images/normal/lance.png" x="310" y="271" height="38px" width="38px" cursor="pointer" />
                     <image id="king_black_B3" onClick={() => this.mark("king", "black")} href="images/rotate/king.png" x="234" y="5" height="38px" width="38px" cursor="pointer" />
 
-                    <text id="textField_B3" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
+                    <text id="textField_B3" x="12" y="240" fontWeight="bold" fontSize="25px" strokeWidth="0.5px" stroke="white"> </text>
                 </svg>
                 <svg id="transparent_B3" width="582px" height="360px">
                     <rect width="582px" height="360px" fill-opacity="0"/>
                 </svg>
                 <div id="promoteW">
-                    <p>Vaša figúrka sa teraz môže povýšiť na:</p>
+                    <p>Tvoja figúrka sa teraz môže povýšiť na:</p>
                     <p>Povýšený Oštep</p>
                     <a type="button" className="btn btn-outline-dark" onClick={() => this.promoteP()}>OK</a>
                 </div>
                 <div id="goodEndW_B3">
-                    <p>Dobrá práca, zvládli ste to!</p>
+                    <p>Dobrá práca, zvládol si to!</p>
                     <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("good")}>Resetovať</a>
                 </div>
                 <div id="badEndW_B3">
-                    <p>Boli ste vyhodený!</p>
-                    <p>Nepodarilo sa Vám splniť úlohu.</p>
-                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("bad")}>Skúste znova</a>
+                    <p>Bol si vyhodený!</p>
+                    <p>Nepodarilo sa ti splniť úlohu.</p>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("bad")}>Skús to znova</a>
                 </div>
 
             </div>

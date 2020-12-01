@@ -519,7 +519,7 @@ class Board2 extends React.Component {
                 p.setAttribute("href", "images/rotate/king.png");
                 p.setAttribute("x", 8 + "px");
                 p.setAttribute("y", 84 + "px");
-            }, 500);
+            }, 400);
 
             conclusion = "badEnd";
         } else if(enemy === "pawn"){
@@ -531,7 +531,7 @@ class Board2 extends React.Component {
                 p.setAttribute("href", "images/rotate/king.png");
                 p.setAttribute("x", 8 + "px");
                 p.setAttribute("y", 84 + "px");
-            }, 500);
+            }, 400);
 
             conclusion = "badEnd";
         } else if(enemy === "bishop"){
@@ -548,7 +548,7 @@ class Board2 extends React.Component {
                 p.setAttribute("href", "images/rotate/king.png");
                 p.setAttribute("x", 8 + "px");
                 p.setAttribute("y", 84 + "px");
-            }, 500);
+            }, 400);
 
             conclusion = "badEnd";
         } else if(enemy === "pawn2"){
@@ -560,7 +560,7 @@ class Board2 extends React.Component {
                 p.setAttribute("href", "images/rotate/king.png");
                 p.setAttribute("x", 8 + "px");
                 p.setAttribute("y", 84 + "px");
-            }, 500);
+            }, 400);
 
             conclusion = "badEnd";
         } else if(enemy === ""){
@@ -579,14 +579,14 @@ class Board2 extends React.Component {
                 p.setAttribute("href", "images/rotate/king.png");
                 p.setAttribute("x", 8 + "px");
                 p.setAttribute("y", 84 + "px");
-            }, 500);
+            }, 400);
 
             conclusion = "badEnd";
         }
         //vyhod okno
         setTimeout(() => {
             this.modalWindows(conclusion);
-        }, 900);
+        }, 800);
     }
 
     deleteMovement(){
@@ -652,7 +652,7 @@ class Board2 extends React.Component {
             let w = document.getElementById("badEndW_B2");
             w.style.display = "block";
         }
-        let w = document.getElementById("transparent_B2");    //ukry okno
+        let w = document.getElementById("transparent_B2");
         w.style.display = "block";
     }
 
@@ -738,19 +738,19 @@ class Board2 extends React.Component {
                     <image id="lance_black_B2" onClick={() => this.mark("lance", "black")} href="images/rotate/lance.png" x="272" y="195" height="38px" width="38px" cursor="pointer" />
                     <image id="king_white_B2" onClick={() => this.mark("king", "white")} href="images/normal/king.png" x="196" y="271" height="38px" width="38px" cursor="pointer" />
 
-                    <text id="textField_B2" x="12" y="240" fontWeight="bold" fontSize="25px"> </text>
+                    <text id="textField_B2" x="12" y="240" fontWeight="bold" fontSize="25px" strokeWidth="0.5px" stroke="white"> </text>
                 </svg>
                 <svg id="transparent_B2" width="582px" height="360px">
                     <rect width="582px" height="360px" fill-opacity="0"/>
                 </svg>
                 <div id="goodEndW_B2">
-                    <p>Dobrá práca, zvládli ste to!</p>
+                    <p>Dobrá práca, zvládol si to!</p>
                     <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("good")}>Resetovať</a>
                 </div>
                 <div id="badEndW_B2">
-                    <p>Zlý ťah, boli ste vyhodený!</p>
-                    <p>Nepodarilo sa Vám splniť úlohu.</p>
-                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("bad")}>Skúste znova</a>
+                    <p>Zlý ťah, bol si vyhodený!</p>
+                    <p>Nepodarilo sa ti splniť úlohu.</p>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("bad")}>Skús to znova</a>
                 </div>
             </div>
         );
