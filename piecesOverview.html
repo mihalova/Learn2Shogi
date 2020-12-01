@@ -54,7 +54,7 @@
             </header>
             <p>Vidíš znak figúrky a nevieš si spomenúť na jej význam? Nájdi ju v našom prehľade hracích figúrok.<br><br>
                 V prehľade nájdeš všetky herné figúrky, aj ich možné promócie.<br>
-                Nasmeruj myškou na figúrku aby sa ukázal jej význam.
+                Klikni myškou na figúrku aby sa ukázal jej význam.
             </p>
         </div>
         <div class="column-two">
@@ -341,17 +341,18 @@
 </footer>
 </body>
 <script>
-/*
    $(".hidden").hide(); // hide at beginning
-   $(".showed").hover(
+   $(".showed").click(
        function() {
            $(this).hide();
            $('#'+this.id+'_move').show();
 
-       }, function() {
-           $(this).show();
-           $('#'+this.id+'_move').hide();
-       }
-   );*/
+       });
+   $(".hidden").click(
+       function() {
+           $(this).hide();
+           $('#'+this.id.replace('_move','')).show();
+
+       });
 </script>
 </html>

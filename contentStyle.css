@@ -98,18 +98,6 @@ table {
     margin: 20px;
 }
 
-.hidden {
-    display: none;
-}
-
-.showed:hover + .hidden {
-    display: block;
-}
-
-.showed:hover {
-    display: none;
-}
-
 .big-image {
     width: 100%;
 }
