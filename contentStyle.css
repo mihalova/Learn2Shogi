@@ -11,11 +11,15 @@ main {
 footer {
     width: 100%;
     text-align: center;
-    padding: 3px;
-    background-color: gray;
+    padding: 7px;
+    background-color: #505158;
     color: white;
     bottom: 0;
     position: fixed;
+}
+
+footer p{
+    margin-bottom: 0;
 }
 
 section {
@@ -118,6 +122,10 @@ table {
 
 figure{
     margin: 15px auto;
+}
+
+.game{
+padding-top: 30px    ;
 }
 
 /*.container {
