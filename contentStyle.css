@@ -1,26 +1,27 @@
 /* odsadenie main od navigation */
 
-
 main {
     margin-right: 5%;
     margin-left: 5%;
     margin-top: 100px;
     margin-bottom: 70px;
+    padding-bottom: 50px;
+
 }
 
 footer {
     width: 100%;
     text-align: center;
-    padding: 7px;
-    background-color: #505158;
-    color: white;
+    /*padding-top: 7px;*/
+    /*background-color: #505158;*/
+    /*color: white;*/
     bottom: 0;
     position: fixed;
 }
 
-footer p{
-    margin-bottom: 0;
-}
+/*footer p{*/
+/*    margin-bottom: 0;*/
+/*}*/
 
 section {
     text-align: center;
