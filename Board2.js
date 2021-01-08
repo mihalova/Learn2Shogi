@@ -25,7 +25,9 @@ class Board2 extends React.Component {
         KPath: ["AllDD", "AllSD"],
         LPath: ["MF"],
         RPath: ["MSD"],
-        BPath: ["MDD"]
+        BPath: ["MDD"],
+
+        situationNum: 1
     };
 
     mark(type, color){
@@ -75,6 +77,10 @@ class Board2 extends React.Component {
             let cy = this.state.pieces[name].getY();
 
             this.possibleMov(movement, color, rectColor, cx, cy);
+
+            if(name !== "king_white_B2"){
+                this.nextWindowText(); //zmen text
+            }
         } else { //odklikni
             this.setState({
                 clicked: ""
@@ -505,6 +511,8 @@ class Board2 extends React.Component {
     }
 
     scriptMov(name, nx, ny, enemy){   //tu nam netreba nic robit so squares pretoze aj tak hned to skonci, a ani nic s pieces
+        document.getElementById("green_rect_B2").style.visibility = "hidden"; //zakry zeleny stvorec
+
         let p = document.getElementById(name);
         p.setAttribute("x", nx + "px");
         p.setAttribute("y", ny + "px");
@@ -591,8 +599,8 @@ class Board2 extends React.Component {
 
     deleteMovement(){
         const svg = document.querySelector(".svgBoard2");
-        while (svg.childNodes[31]) { //31 pretoze tam mame nakreslenych 31 veci a potom su uz len tie modre stvorce
-            svg.removeChild(svg.childNodes[31]);
+        while (svg.childNodes[32]) { //32 pretoze tam mame nakreslenych 32 veci a potom su uz len tie modre stvorce
+            svg.removeChild(svg.childNodes[32]);
         }
     }
     boardClick(){
@@ -645,6 +653,9 @@ class Board2 extends React.Component {
     }
 
     modalWindows(type){
+        let iW = document.getElementById("informationW_B2");    //ukryjeme pomocne okno na strane
+        iW.style.display = "none";
+
         if(type === "goodEnd"){
             let w = document.getElementById("goodEndW_B2");
             w.style.display = "block";
@@ -656,9 +667,26 @@ class Board2 extends React.Component {
         w.style.display = "block";
     }
 
+    nextWindowText(){
+        let situation = this.state.situationNum;
+        situation++;
+
+        let wText = document.getElementById("windowText_B2");
+        if(situation === 2){
+            wText.innerHTML = "Figúrky nemôžu vyhadzovať,<br/> ak ich blokuje priateľská figúrka.";
+        } else {
+            situation--;    //ked klikame stale na figurky, tak zmensime situation aby bola tak ako predtym aby sa tam nedaval stale ten isty text
+        }
+
+        this.setState({
+            situationNum: situation
+        });
+    }
+
     resetBoard(end){
         this.setState({
-            clicked: ""
+            clicked: "",
+            situationNum: 1
         });
 
         let p = document.getElementById("rook_black_B2");
@@ -687,6 +715,7 @@ class Board2 extends React.Component {
         p.setAttribute("href", "images/normal/king.png");
         p.setAttribute("x", 196 + "px");
         p.setAttribute("y", 271 + "px");
+        document.getElementById("green_rect_B2").style.visibility = "visible"; //zobraz zeleny stvorec
 
         if(end === "good"){
             let w = document.getElementById("goodEndW_B2");    //ukry okno
@@ -697,6 +726,11 @@ class Board2 extends React.Component {
         }
         let w = document.getElementById("transparent_B2");    //ukry okno
         w.style.display = "none";
+
+        let wText = document.getElementById("windowText_B2");   //zmen text
+        wText.innerHTML = "Môžeš si kliknúť na jednotlivé<br/> figúrky, aby si zistil ich pohyb.";
+        let iW = document.getElementById("informationW_B2");    //zobraz pomocne okno na strane
+        iW.style.display = "block";
     }
 
     render() {
@@ -730,6 +764,7 @@ class Board2 extends React.Component {
                     <circle cx="348px" cy="119px" r="3px" fill="black" />
                     <circle cx="348px" cy="233px" r="3px" fill="black" />
 
+                    <rect id="green_rect_B2" x="196px" y="271px" width="38px" height="38px" fill="none" strokeWidth="3px" stroke="green" />
                     <image id="rook_black_B2" onClick={() => this.mark("rook", "black")} href="images/rotate/rook.png" x="120" y="309" height="38px" width="38px" cursor="pointer" />
                     <image id="bishop_black_B2" onClick={() => this.mark("bishop", "black")} href="images/rotate/bishop.png" x="120" y="195" height="38px" width="38px" cursor="pointer" />
                     <image id="pawn_black_B2" onClick={() => this.mark("pawn", "black")} href="images/rotate/pawn.png" x="158" y="233" height="38px" width="38px" cursor="pointer" />
@@ -743,6 +778,10 @@ class Board2 extends React.Component {
                 <svg id="transparent_B2" width="582px" height="360px">
                     <rect width="582px" height="360px" fill-opacity="0"/>
                 </svg>
+                <div id="informationW_B2">
+                    <p id="windowText_B2">Môžeš si kliknúť na jednotlivé<br/> figúrky, aby si zistil ich pohyb.</p>
+                </div>
+
                 <div id="goodEndW_B2">
                     <p>Dobrá práca, zvládol si to!</p>
                     <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("good")}>Resetovať</a>

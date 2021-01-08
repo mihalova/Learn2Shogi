@@ -12,7 +12,9 @@ class Board3 extends React.Component {
         promLPath: ["AllSD", "FD"],
         kingStep: -1,
 
-        markTypeParameter: "lance"
+        markTypeParameter: "lance",
+
+        situationNum: 1
     };
 
     mark(type, color){
@@ -225,6 +227,7 @@ class Board3 extends React.Component {
     newPos(nx, ny) {
         this.deleteMovement();
         this.changeTextField(""); //zmen meno v txt poli
+        document.getElementById("green_rect_B3").style.visibility = "hidden"; //ukry zeleny stvorec
 
         let name = this.state.clicked;
         this.setState({
@@ -236,6 +239,7 @@ class Board3 extends React.Component {
         if ((markType.getColor() === "white") && markType.getOnBoard() === 0) {
             if(ny < 119){
                 canMove = false;
+                document.getElementById("green_zone_B3").style.display = "none"; //ukry zelenu zonu
 
                 markType.setX(0);   //stary lance lebo sa to zmeni na novy tak davame tomuto 0 0
                 markType.setY(0);
@@ -247,7 +251,7 @@ class Board3 extends React.Component {
                 pLance.setX(nx); //v pieces davame promLance x a y
                 pLance.setY(ny);
 
-                //si v cervenej zone vyskoci okno
+                //si v povysovacej zone vyskoci okno
                 setTimeout(() => {
                     this.modalWindows("promote");
                 }, 400);
@@ -294,8 +298,8 @@ class Board3 extends React.Component {
 
     deleteMovement(){
         const svg = document.querySelector(".svgBoard3");
-        while (svg.childNodes[26]) { //26 pretoze tam mame nakreslenych 26 veci a potom su uz len tie modre stvorce
-            svg.removeChild(svg.childNodes[26]);
+        while (svg.childNodes[28]) { //28 pretoze tam mame nakreslenych 28 veci a potom su uz len tie modre stvorce
+            svg.removeChild(svg.childNodes[28]);
         }
     }
     boardClick(){
@@ -361,9 +365,15 @@ class Board3 extends React.Component {
             let w = document.getElementById("promoteW");
             w.style.display = "block";
         } else if(type === "goodEnd"){
+            let iW = document.getElementById("informationW_B3");    //ukryjeme pomocne okno na strane
+            iW.style.display = "none";
+
             let w = document.getElementById("goodEndW_B3");
             w.style.display = "block";
         } else if(type === "badEnd"){
+            let iW = document.getElementById("informationW_B3");    //ukryjeme pomocne okno na strane
+            iW.style.display = "none";
+
             let w = document.getElementById("badEndW_B3");
             w.style.display = "block";
         }
@@ -376,6 +386,8 @@ class Board3 extends React.Component {
         w.style.display = "none";
         let q = document.getElementById("transparent_B3");    //ukry okno
         q.style.display = "none";
+
+        this.nextWindowText(); //zmen text
 
         // tu menime prvy parameter v img(lance) onclick funkcia mark
         this.setState({
@@ -391,11 +403,28 @@ class Board3 extends React.Component {
         }, 400);
     }
 
+    nextWindowText(){
+        let situation = this.state.situationNum;
+        situation++;
+
+        let wText = document.getElementById("windowText_B3");
+        if(situation === 2){
+            wText.innerHTML = "Tvoja figúrka sa povýšila a<br/> získala nový pohyb. Vyhoď<br/> nepriateľského <b>Kráľa</b>.";
+        } else {
+            situation--;    // zmensime situation aby bola tak ako predtym, sem sa asi nikdy nedostaneme
+        }
+
+        this.setState({
+            situationNum: situation
+        });
+    }
+
     resetBoard(end){
         this.setState({
             clicked: "",
             kingStep: -1,
-            markTypeParameter: "lance"
+            markTypeParameter: "lance",
+            situationNum: 1
         });
         this.state.pieces["lance_white_B3"].setX(310);
         this.state.pieces["lance_white_B3"].setY(271);
@@ -412,11 +441,14 @@ class Board3 extends React.Component {
         p.setAttribute("x", 310 + "px");
         p.setAttribute("y", 271 + "px");
         p.id = "lance_white_B3";
+        document.getElementById("green_rect_B3").style.visibility = "visible"; //zobraz zeleny stvorec
 
         p = document.getElementById("king_black_B3");
         p.setAttribute("href", "images/rotate/king.png");
         p.setAttribute("x", 234 + "px");
         p.setAttribute("y", 5 + "px");
+
+        document.getElementById("green_zone_B3").style.display = "block"; //zobraz zelenu zonu
 
         if(end === "good"){
             let w = document.getElementById("goodEndW_B3");    //ukry okno
@@ -427,6 +459,11 @@ class Board3 extends React.Component {
         }
         let w = document.getElementById("transparent_B3");    //ukry okno
         w.style.display = "none";
+
+        let wText = document.getElementById("windowText_B3");   //zmen text
+        wText.innerHTML = "Pohni figúrku <b>Oštep</b><br/> do povyšovacej zóny<br/> (blikajúca plocha).";
+        let iW = document.getElementById("informationW_B3");    //zobraz pomocne okno na strane
+        iW.style.display = "block";
     }
 
     render() {
@@ -436,6 +473,16 @@ class Board3 extends React.Component {
                     <rect x="5px" y="5px" width="100px" height="120px" fill="bisque" stroke="black" />
                     <rect id="mainBoard_B3" onClick={() => this.boardClick()} x="120px" y="5px" width="342px" height="342px" fill="wheat" stroke="black" />
                     <rect x="477px" y="227px" width="100px" height="120px" fill="bisque" stroke="black" />
+
+                    <rect id="green_zone_B3" x="120px" y="5px" width="342px" height="114px" fill="none" >
+                        <animate
+                            attributeName="fill"
+                            attributeType="XML"
+                            values="transparent; green; transparent"
+                            dur="3.75s"
+                            repeatCount="indefinite"
+                        />
+                    </rect>
 
                     <line x1="158px" y1="5px" x2="158px" y2="347px" stroke="black" strokeWidth="1px" />
                     <line x1="196px" y1="5px" x2="196px" y2="347px" stroke="black" strokeWidth="1px" />
@@ -460,6 +507,7 @@ class Board3 extends React.Component {
                     <circle cx="348px" cy="119px" r="3px" fill="black" />
                     <circle cx="348px" cy="233px" r="3px" fill="black" />
 
+                    <rect id="green_rect_B3" x="310px" y="271px" width="38px" height="38px" fill="none" strokeWidth="3px" stroke="green" />
                     <image id="lance_white_B3" onClick={() => this.mark(this.state.markTypeParameter, "white")} href="images/normal/lance.png" x="310" y="271" height="38px" width="38px" cursor="pointer" />
                     <image id="king_black_B3" onClick={() => this.mark("king", "black")} href="images/rotate/king.png" x="234" y="5" height="38px" width="38px" cursor="pointer" />
 
@@ -468,6 +516,10 @@ class Board3 extends React.Component {
                 <svg id="transparent_B3" width="582px" height="360px">
                     <rect width="582px" height="360px" fill-opacity="0"/>
                 </svg>
+                <div id="informationW_B3">
+                    <p id="windowText_B3">Pohni figúrku <b>Oštep</b><br/> do povyšovacej zóny<br/> (blikajúca plocha).</p>
+                </div>
+
                 <div id="promoteW">
                     <p>Tvoja figúrka sa teraz môže povýšiť na:</p>
                     <p>Povýšený Oštep</p>

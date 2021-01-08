@@ -6,6 +6,8 @@
     align-items: center;
 }
 
+.svgBoard0, #goodEndW_B0, #badEndW_B0, #transparent_B0,
+.svgBoard1,
 .svgBoard2, #goodEndW_B2, #badEndW_B2, #transparent_B2,
 .svgBoard3, #promoteW, #goodEndW_B3, #badEndW_B3, #transparent_B3,
 .svgBoard4, #goodEndW_B4, #badEndW_B4, #transparent_B4 {
@@ -15,6 +17,7 @@
     grid-column-end: 2;
 }
 
+#goodEndW_B0, #badEndW_B0,
 #goodEndW_B2, #badEndW_B2,
 #promoteW, #goodEndW_B3, #badEndW_B3,
 #goodEndW_B4, #badEndW_B4 {

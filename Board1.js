@@ -1,5 +1,4 @@
 
-
 class Board1 extends React.Component {
     state = {
         pieces: {pawn_white_B1: new ShogiPiece("pawn", 0, "white", 36, 27),
@@ -15,7 +14,9 @@ class Board1 extends React.Component {
         KPath: ["AllDD", "AllSD"],
         LPath: ["MF"],
         RPath: ["MSD"],
-        BPath: ["MDD"]
+        BPath: ["MDD"],
+
+        situationNum: 1
     };
 
     mark(type, color){
@@ -58,6 +59,8 @@ class Board1 extends React.Component {
                 let cy = this.state.pieces[name].getY();
 
                 this.possibleMov(movement, color, cx, cy);
+
+                this.nextWindowText("clickP"); //zmen text
             }
         } else if (isPlaying === 0){
             let allPieces = this.state.pieces;
@@ -93,6 +96,8 @@ class Board1 extends React.Component {
             let newPID = document.getElementById(name);
             newPID.setAttribute("x", 272 + "px");
             newPID.setAttribute("y", 157 + "px");
+
+            this.nextWindowText("pickP"); //zmen text
         }
     }
 
@@ -377,6 +382,8 @@ class Board1 extends React.Component {
         p.setAttribute("x", nx + "px");
         p.setAttribute("y", ny + "px");
 
+        this.nextWindowText("moveP"); //zmen text
+
         this.setState({
             clicked: ""
         });
@@ -417,6 +424,26 @@ class Board1 extends React.Component {
         } else {
             return ny;
         }
+    }
+
+    nextWindowText(phase){
+        let situation = this.state.situationNum;
+        situation++;
+
+        let wText = document.getElementById("windowText_B1");
+        if(situation === 2 && phase === "pickP"){
+            wText.innerHTML = "Kliknutím na vloženú figúrku<br/> sa ti ukážu možnosti jej pohybu.";
+        } else if(situation === 3 && phase === "clickP") {
+            wText.innerHTML = "Figúrku pohneš tým, že klikneš<br/> na jedno z vyznačených políčok.";
+        } else if(situation === 4 && phase === "moveP") {
+            wText.innerHTML = "Môžes pokračovať v skúšaní<br/> pohybu alebo si vyskúšať aj<br/> ostatné figúrky z ľavej ponuky.";
+        } else {
+            situation--;    //stalo sa nieco necakane v poradi udalosti, tak zmensime situation aby bola tak ako predtym
+        }
+
+        this.setState({
+            situationNum: situation
+        });
     }
 
     render() {
@@ -461,6 +488,10 @@ class Board1 extends React.Component {
                     <image id="rook_white_B1" onClick={() => this.mark("rook", "white")} href="images/normal/rook.png" x="36" y="237" height="38px" width="38px" cursor="pointer" />
                     <image id="lance_white_B1" onClick={() => this.mark("lance", "white")} href="images/normal/lance.png" x="36" y="307" height="38px" width="38px" cursor="pointer" />
                 </svg>
+
+                <div id="informationW_B1">
+                    <p id="windowText_B1">Vyber si a klikni na jednu<br/> z figúrok v ľavej ponuke.</p>
+                </div>
             </div>
         );
     }

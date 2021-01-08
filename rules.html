@@ -86,8 +86,11 @@
         </div>
 
 
-        <section class="col-md-12 col-lg-8 col-xl-6" >
-            <div class="sl-cont ">
+        <section class="col-md-12 col-lg-8 col-xl-6" id="slides" >
+            <a onclick="plusSlides(-1)" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"/>
+            </a>
+            <div >
 
                 <article class="mySlides">
                     <header class="sec-header">
@@ -96,8 +99,12 @@
                     <p class="sec-descript">Dvaja hráči hrajú na drevenej doske s 9x9 políčkami.
                         Jednotlivé políčka dosky nie sú farebne odlíšené.
                     </p>
+                    <!--
                     <img src="pictures/rules/rozestaveni.png" alt="" class="img-thumbnail" width="200px">
                     <p>Ukážka rozostavania hernej plochy</p>
+                    -->
+                    <div id="hracia_plocha0">
+                    </div>
                 </article>
 
                 <article class="mySlides">
@@ -377,17 +384,15 @@
                     <button><a class="nav-link" href="play.html">Hraj</a></button>
                 </article>
 
-                <a onclick="plusSlides(-1)" class="carousel-control-prev" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a onclick="plusSlides(1)" class="carousel-control-next" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
+
 
                 <!--                <a class="prev" onclick="plusSlides(-1)">back</a>-->
                 <!--                <a class="next" onclick="plusSlides(1)">next</a>-->
 
             </div>
+            <a onclick="plusSlides(1)" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"/>
+            </a>
         </section>
 
         <div class="col-xl-2">
@@ -455,6 +460,7 @@
 
 <script src="ShogiPiece.js"></script>
 <script src="Square.js"></script>
+<script type="text/babel" src="Board0.js"></script>
 <script type="text/babel" src="Board1.js"></script>
 <script type="text/babel" src="Board2.js"></script>
 <script type="text/babel" src="Board3.js"></script>

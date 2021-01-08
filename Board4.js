@@ -25,7 +25,9 @@ class Board4 extends React.Component {
         RPath: ["MSD"],
         kingStep: -1,
 
-        markTypeParameter: "black"
+        markTypeParameter: "black",
+
+        situationNum: 1
     };
 
     mark(type, color){
@@ -40,6 +42,8 @@ class Board4 extends React.Component {
             //ak je vyradeny
             if(this.state.pieces[name].getOnBoard() === 0){
                 this.possiblePlaces(color);  //sprav plochu na vyber polozenia figurky
+
+                this.nextWindowText("clickRook"); //zmen text
             } else {        //ak sa to rovna 1
 
                 let rectColor;
@@ -400,6 +404,10 @@ class Board4 extends React.Component {
         squares[i1_New][i2_New].setName(markType.getName());
         squares[i1_New][i2_New].setColor(markType.getColor());
 
+        if(markType.getOnBoard() === 0){           //ked pokladame vezu na plochu
+            this.nextWindowText("placeRook"); //zmen text
+        }
+
         markType.setX(nx);      //pohyb figurky
         markType.setY(ny);
         markType.setOnBoard(1); //moze sa dostat figurka na hraciu plochu ked bola vyhodena
@@ -429,6 +437,8 @@ class Board4 extends React.Component {
                             this.modalWindows("goodEnd");
                         }, 400);
                     } else {
+                        document.getElementById("green_rect_B4").style.visibility = "hidden"; //ukry zeleny stvorec
+
                         pieceClass.setX(0);
                         pieceClass.setY(0);
 
@@ -441,6 +451,8 @@ class Board4 extends React.Component {
                         enemyP.setAttribute("x", 480 + "px");
                         enemyP.setAttribute("y", 230 + "px");
                         enemyP.id = "rook_white_B4";
+
+                        this.nextWindowText("killRook"); //zmen text
                     }
                 }
             }
@@ -454,8 +466,8 @@ class Board4 extends React.Component {
 
     deleteMovement(){
         const svg = document.querySelector(".svgBoard4");
-        while (svg.childNodes[27]) { //27 pretoze tam mame nakreslenych 27 veci a potom su uz len tie modre alebo zelene stvorce
-            svg.removeChild(svg.childNodes[27]);
+        while (svg.childNodes[28]) { //28 pretoze tam mame nakreslenych 28 veci a potom su uz len tie modre alebo zelene stvorce
+            svg.removeChild(svg.childNodes[28]);
         }
     }
     boardClick(){
@@ -547,6 +559,9 @@ class Board4 extends React.Component {
     }
 
     modalWindows(type){
+        let iW = document.getElementById("informationW_B4");    //ukryjeme pomocne okno na strane
+        iW.style.display = "none";
+
         if(type === "goodEnd"){
             let w = document.getElementById("goodEndW_B4");
             w.style.display = "block";
@@ -558,11 +573,32 @@ class Board4 extends React.Component {
         w.style.display = "block";
     }
 
+    nextWindowText(phase){
+        let situation = this.state.situationNum;
+        situation++;
+
+        let wText = document.getElementById("windowText_B4");
+        if(situation === 2 && phase === "killRook"){
+            wText.innerHTML = "Klikni na figúrku <b>Veže</b>, ktorá<br/> sa ti pridala na malú plochu<br/> dole napravo.";
+        } else if(situation === 3 && phase === "clickRook") {
+            wText.innerHTML = "Rozumne si vyber miesto na<br/> hracej ploche, kde vybratú<br/> figúrku položíš.";
+        } else if(situation === 4 && phase === "placeRook") {
+            wText.innerHTML = "Pomocou vloženej figúrky<br/> <b>Veže</b>, vyhoď nepriateľského<br/> <b>Kráľa</b>.";
+        } else {
+            situation--;    //stalo sa nieco necakane v poradi udalosti, tak zmensime situation aby bola tak ako predtym
+        }
+
+        this.setState({
+            situationNum: situation
+        });
+    }
+
     resetBoard(end){
         this.setState({
             clicked: "",
             kingStep: -1,
-            markTypeParameter: "black"
+            markTypeParameter: "black",
+            situationNum: 1
         });
         let squares = this.state.squares;
         let i, j;
@@ -617,6 +653,7 @@ class Board4 extends React.Component {
         p = document.getElementById("pawn_white_B4");
         p.setAttribute("x", 348 + "px");
         p.setAttribute("y", 233 + "px");
+        document.getElementById("green_rect_B4").style.visibility = "visible"; //zobraz zeleny stvorec
 
         if(end === "good"){
             let w = document.getElementById("goodEndW_B4");    //ukry okno
@@ -627,6 +664,11 @@ class Board4 extends React.Component {
         }
         let w = document.getElementById("transparent_B4");    //ukry okno
         w.style.display = "none";
+
+        let wText = document.getElementById("windowText_B4");   //zmen text
+        wText.innerHTML = "Klikni na svoju figúrku<br/> <b>Pešiaka</b> a zajmi figúrku<br/> <b>Veže</b>, ktorá je oproti.";
+        let iW = document.getElementById("informationW_B4");    //zobraz pomocne okno na strane
+        iW.style.display = "block";
     }
 
     render() {
@@ -660,6 +702,7 @@ class Board4 extends React.Component {
                     <circle cx="348px" cy="119px" r="3px" fill="black" />
                     <circle cx="348px" cy="233px" r="3px" fill="black" />
 
+                    <rect id="green_rect_B4" x="348px" y="233px" width="38px" height="38px" fill="none" strokeWidth="3px" stroke="green" />
                     <image id="king_black_B4" onClick={() => this.mark("king", "black")} href="images/rotate/king.png" x="424" y="157" height="38px" width="38px" cursor="pointer" />
                     <image id="rook_black_B4" onClick={() => this.mark("rook", this.state.markTypeParameter)} href="images/rotate/rook.png" x="348" y="195" height="38px" width="38px" cursor="pointer" />
                     <image id="pawn_white_B4" onClick={() => this.mark("pawn", "white")} href="images/normal/pawn.png" x="348" y="233" height="38px" width="38px" cursor="pointer" />
@@ -669,6 +712,10 @@ class Board4 extends React.Component {
                 <svg id="transparent_B4" width="582px" height="360px">
                     <rect width="582px" height="360px" fill-opacity="0"/>
                 </svg>
+                <div id="informationW_B4">
+                    <p id="windowText_B4">Klikni na svoju figúrku<br/> <b>Pešiaka</b> a zajmi figúrku<br/> <b>Veže</b>, ktorá je oproti.</p>
+                </div>
+
                 <div id="goodEndW_B4">
                     <p>Dobrá práca, zvládol si to!</p>
                     <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("good")}>Resetovať</a>
