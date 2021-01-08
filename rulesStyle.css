@@ -45,21 +45,31 @@ ul{
 }
 
 
-section{
+section {
     /*display: block;*/
     /*height: 560px;*/
     /*width: 700px;*/
     /*padding: 0 100px;*/
-    color:black;
-    margin:0 auto;
+    color: black;
+    margin: 10px;
     background-image: url("pictures/00.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
 }
-.slides{
+
+#slides {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
+
+.arrow_slides {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
 .mySlides{
     margin-bottom: 30px;
     min-height: 300px;

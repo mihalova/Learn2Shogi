@@ -29,6 +29,14 @@
     display: none;
 }
 
+#informationW_B0, #informationW_B4, #informationW_B3, #informationW_B2, #informationW_B1 {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
 #transparent_B0, #transparent_B2, #transparent_B3, #transparent_B4 {
     display: none;
 }
