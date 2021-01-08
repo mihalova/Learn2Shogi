@@ -10,11 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="GoroShogi/TemplateData/favicon.ico">
     <link rel="stylesheet" href="GoroShogi/TemplateData/style.css">
-    <script src="GoroShogi/TemplateData/UnityProgress.js"></script>
-    <script src="GoroShogi/Build/UnityLoader.js"></script>
-    <script>
-        var unityInstance = UnityLoader.instantiate("unityContainer", "GoroShogi/Build/Build.json", {onProgress: UnityProgress});
-    </script>
     <link rel="stylesheet" href="navbarStyle.css">
     <link rel="stylesheet" href="contentStyle.css">
 </head>
@@ -58,21 +53,13 @@
             <h1>Zahraj si Shogi</h1>
         </header>
         <p>Rozumieš už pravidlám? Tak otestuj svoje znalosti proti svojmu kamarátovi.
-        </p>
-        <p>Vyskušaj si Shogi pre 2 hráčov.
+        <br>
+            Vyskušaj si Shogi pre 2 hráčov.
         </p>
 
     </section>
     <section class="game">
-        <div class="webgl-content">
-            <div id="unityContainer" style="width: 960px; height: 540px" class="m-auto"></div>
-            <div class="footer">
-                <div class="webgl-logo"></div>
-                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-                <div class="title">GoroGoro Shogi</div>
-            </div>
-        </div>
-
+        <iframe src="GoroShogi/index.html" style="border:0px #000000 none;" name="Shogi" scrolling="no" frameborder="1" height="583px" width="960px"></iframe>
     </section>
 
 </main>
