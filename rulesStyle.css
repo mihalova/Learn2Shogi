@@ -2,16 +2,31 @@
 /*    outline: 3px solid black;*/
 /*}*/
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0;}
+body {font-family: Verdana, sans-serif; margin:0; display: flex;}
 
-.active, .dot:hover {
-    background-color: #717171;
-    color: #fff;
+.menu-item.active, .menu-item:hover {
+    background-color: black;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
-main{
+menu {
+    height: 100%;
+    flex: 20%;
+    background-color: white;
+    margin-left: 8px;
+    padding: 0;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+}
+.menu-column {
+    padding-top: 40px;
+}
+main {
+    flex: 80%;
     display: inline-block;
     margin-bottom: 20px;
+    margin-left: 0;
 }
 
 .row{
@@ -19,16 +34,16 @@ main{
     margin: 0 auto;
 }
 
-aside{
+/*aside{
     /*display: block !important;*/
-    max-height: 650px;
+    /*max-height: 650px;
     /*position: fixed !important;*/
     /*z-index: 1;*/
-    overflow: auto;
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+    /*overflow: auto;
+    /*box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
 
     /*display: none;*/
-}
+/*}*/
 
 ol{
     padding-top: 10px;
@@ -40,10 +55,19 @@ ul{
     list-style: none;
 }
 
-.dot {
-    padding-left: 4px;
+.menu-item {
+    padding: 8px 8px 8px 8px;
+    font-size: 18px;
+    color: black;
 }
-
+.menu-chapter{
+    padding: 16px 8px 8px 8px;
+    font-size: 22px;
+    color: white;
+    background: gray;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
 
 section {
     /*display: block;*/
@@ -92,17 +116,23 @@ article{
     margin: 0 auto;
 }
 
-aside .aside-activ{
+/*aside .aside-activ{
     background-color: black;
     color: #fff;
     padding: 2px 5px 3px 5px;
     border-radius: 5px;
 }
-
+*/
 @media only screen and (max-width: 1200px) {
     .pitko{
         display: none;
     }
 }
 
-
+@media only screen and (max-width: 768px) {
+    body{display: block;}
+}
+@media only screen and (max-width: 992px) {
+    menu{flex: 30%}
+    main{flex: 70%}
+}
