@@ -11,4 +11,4 @@ Teda hráč sa snaží dostať súperovho kráľa do takej situácie, aby ho sú
  **_Poznámka:_** Na rozdiel od klasického šachu, hráč nie je povinný oznámiť súperovi, že jeho kráľ je ohrozený. Ak si to hráč neuvedomí, tak v ďalšom kole jednoducho prehral.
 
 ##Spoznaj hernú plochu
-![Gameplay](/pictures/tmp/r1.png)
+![HP](/pictures/tmp/r1.png)
