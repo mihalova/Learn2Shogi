@@ -1,9 +1,9 @@
-## Herná plocha
+### Herná plocha
 Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 - 9x9 políčok, 
 - políčka **nie sú** farebne odlíšené.
 
-## Cieľ hry
+### Cieľ hry
 **Cieľom hry** je **dať súperovi mat** (japonsky „Tsumi”).
 
 Teda hráč sa snaží dostať súperovho kráľa do takej situácie, aby ho súper nevedel v ďalšom ťahu zachrániť pred vyradením.
