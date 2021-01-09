@@ -21,6 +21,7 @@ menu {
 }
 .menu-column {
     padding-top: 40px;
+    list-style: none;
 }
 main {
     flex: 80%;
@@ -51,10 +52,6 @@ ol{
     /*box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);*/
 }
 
-ul{
-    list-style: none;
-}
-
 .menu-item {
     padding: 8px 8px 8px 8px;
     font-size: 18px;
@@ -74,41 +71,63 @@ section {
     /*height: 560px;*/
     /*width: 700px;*/
     /*padding: 0 100px;*/
-    color: black;
-    margin: 10px;
-    background-image: url("pictures/00.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
+
 }
 
 #slides {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+    margin: 10px;
+    /*background-image: url("pictures/00.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    border-radius: 10px;
 }
 
 .arrow_slides {
     width: 20px;
     height: 20px;
-    margin: 5px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
 }
 
 .mySlides{
     margin-bottom: 30px;
     min-height: 300px;
+    text-align: left;
 }
 
 .sec-header h2{
     margin-top: 30px;
     padding-bottom: 5px;
-    border-bottom: 5px solid whitesmoke;
-    font-weight: 700;
+    border-bottom: 2px solid grey;
+    font-weight: bold;
+    text-align: center;
 }
 
-.sec-descript{
+.sec-header h5{
+    margin-top: 30px;
+    padding-bottom: 5px;
+    font-weight: bold;
+
+}
+
+.sec-descript, .sec-ul{
     margin: 20px 25px;
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.note {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    color: #6a737d;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+    background-color: whitesmoke;
+    border-left: 6px solid #6a737d;
 }
 
 article{
