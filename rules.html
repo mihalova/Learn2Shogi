@@ -55,7 +55,7 @@
     <div class="collapse navbar-collapse" id="navbarSupported">
         <ul class="nav flex-column menu-column">
             <li class="menu-chapter"><b>ZÁKLADY HRY SHOGY</b></li>
-            <li class="menu-item active" onclick="currentSlide(1)">Cieľ hry</li>
+            <li class="menu-item active" onclick="currentSlide(1)">Ako čítať pravidlá?</li>
             <li class="menu-item" onclick="currentSlide(2)">Cieľ hry</li>
             <li class="menu-item" onclick="currentSlide(3)">Priebeh Kola</li>
             <li class="menu-item" onclick="currentSlide(4)">Hracie komponenty 1</li>
@@ -81,8 +81,18 @@
 <main>
     <div class="row">
         <section class="col-md-12 col-lg-12 col-xl-9" id="slides">
-            <img class="arrow_slides" onclick="plusSlides(-1)" border="0" alt="left" src="pictures/left.png">
-            <div>
+
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h2>Ako čítať pravidlá?</h2>
+                </header>
+                <article>
+                <p class="sec-descript">Pravidlá sú písané tak, aby si <b>postupne spoznával hru</b> shogi, preskakovanie <u>neodporúčame</u>.<br>
+                    Ak <b>nerád čítaš</b>, ale shogi hrať chceš, nezúfaj. Smelo <b>text preskoč</b> a na konci každého <b>pravidla si ho môžeš osvojiť priamo na hernej ploche!</b></p>
+                    <p class="note"><b><i>Poznámka:</i></b> V poznámkach sa dozvieš všetky potrebné doplnkové informácie aby si bol pripravený na každú situáciu.</p>
+                </article>
+            </section>
+
                 <section class="mySlides">
                     <header class="sec-header">
                         <h2>Cieľ hry</h2>
@@ -115,17 +125,6 @@
                     <div id="hracia_plocha0"></div>
                     </article>
                 </section>
-
-                <article class="mySlides">
-                    <header class="sec-header">
-                        <h2>Cieľ hry</h2>
-                    </header>
-                    <p class="sec-descript">Cieľom hry je dať súperovi mat (japonsky „Tsumi”).<br>
-                        Teda hráč sa snaží dostať súperovho kráľa do takej situácie,
-                        aby ho súper nevedel v ďalšom ťahu zachrániť pred vyradením.</p>
-                    <img src="pictures/rules/Shogi_osho.png" alt="" class="img-thumbnail" width="200px">
-                    <p>Figúrka kráľa</p>
-                </article>
 
                 <article class="mySlides">
                     <header class="sec-header">
@@ -393,12 +392,10 @@
                     <button><a class="nav-link" href="play.html">Hraj</a></button>
                 </article>
 
-
-                <!--                <a class="prev" onclick="plusSlides(-1)">back</a>-->
-                <!--                <a class="next" onclick="plusSlides(1)">next</a>-->
-
-            </div>
-            <img class="arrow_slides" onclick="plusSlides(1)" border="0" alt="right" src="pictures/right.png">
+                <div class="sec-button">
+                               <a class="btn btn-outline-dark" type="button" onclick="plusSlides(-1)">&#8249; Predchádzajúce pravidlo</a>
+                               <a class="btn btn-outline-dark" type="button" onclick="plusSlides(1)">Ďalšie pravidlo &#8250;</a>
+                </div>
         </section>
 
         <div class="pitko col-xl-2">
@@ -424,6 +421,7 @@
 
     function plusSlides(n) {
         showSlides(slideIndex += n);
+        window.scrollTo(0, 0);
     }
 
     function currentSlide(n) {

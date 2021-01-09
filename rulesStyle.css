@@ -12,7 +12,6 @@ body {font-family: Verdana, sans-serif; margin:0; display: flex;}
 }
 
 menu {
-    height: 100%;
     flex: 20%;
     background-color: white;
     margin-left: 8px;
@@ -75,9 +74,6 @@ section {
 }
 
 #slides {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: black;
     margin: 10px;
     /*background-image: url("pictures/00.jpg");*/
@@ -133,6 +129,18 @@ section {
 article{
     /*display: block;*/
     margin: 0 auto;
+}
+
+.sec-button > .btn {
+    background-color: gray;
+    border-color: gray;
+    color: white;
+}
+
+.sec-button > .btn:hover {
+    background-color: black;
+    border-color: black;
+    color: white;
 }
 
 /*aside .aside-activ{
