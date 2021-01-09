@@ -1,3 +1,9 @@
+# Ako čítať pravidlá?
+Pravidlá sú písané tak, aby si postupne spoznával hru shogi, preskakovanie <ins>neodporúčame</ins>.
+Ak nerád čítaš, ale shogi hrať chceš, nezúfaj. Smelo text preskoč a na konci každého pravidla si ho môžeš osvojiť priamo na hernej ploche!
+>**_Poznámka:_** V poznámkach sa dozvieš všetky potrebné doplnkové informácie aby si bol pripravený na každú situáciu.
+
+
 # Cieľ hry
 ### Herná plocha
 Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
@@ -15,5 +21,6 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ![HP](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r1.PNG)
 
 # Hracie komponenty
+### Set figúrok
 - Každý hráč má k dispozícii 20 figúrok, ktoré majú tvar klinu.
 - O aký typ figúrky ide je dané znakom napísaným na jej najväčšiu plochu.
