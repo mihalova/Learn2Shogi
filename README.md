@@ -1,6 +1,6 @@
 # Ako čítať pravidlá?
-Pravidlá sú písané tak, aby si postupne spoznával hru shogi, preskakovanie <ins>neodporúčame</ins>.
-Ak nerád čítaš, ale shogi hrať chceš, nezúfaj. Smelo text preskoč a na konci každého pravidla si ho môžeš osvojiť priamo na hernej ploche!
+Pravidlá sú písané tak, aby si **postupne spoznával hru** shogi, preskakovanie <ins>neodporúčame</ins>.
+Ak **nerád čítaš**, ale shogi hrať chceš, nezúfaj. Smelo **text preskoč** a na konci každého **pravidla si ho môžeš osvojiť priamo na hernej ploche!**
 >**_Poznámka:_** V poznámkach sa dozvieš všetky potrebné doplnkové informácie aby si bol pripravený na každú situáciu.
 
 
