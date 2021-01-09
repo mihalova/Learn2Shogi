@@ -5,7 +5,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 - políčka **nie sú** farebne odlíšené.
 
 ### Ako vyhrať?
-**Cieľom hráča** je **dať súperovi mat** (japonsky „Tsumi”).
+Cieľom hráča je **dať súperovi mat** (japonsky „Tsumi”).
 
 Teda hráč sa snaží dostať súperovho kráľa do takej situácie, aby ho súper nevedel v ďalšom ťahu zachrániť pred vyradením.
 
