@@ -70,3 +70,30 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ### Pohyb figúrok
 * Vyskúšaj si pohyb niektorých vybraných figúrok na interaktivnej ploche.
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r2.PNG)
+
+# Rozloženie figúrok 
+### Postup rozkladania pred hrou
+* Hráči si sadnú tak, aby **sedeli oproti sebe**. 
+* Každý hráč rozostavuje jeho figúrky s tým, že **hrot figúry smeruje na protivníka**
+* Do **najspodnejšieho** radu hráč ukladá figúrky:
+  1. kráľa do stredu,
+  2. dvoch zlatých generálov po strane kráľa,
+  3. dvoch strieborných generálov vedľa zlatého, 
+  4. dvoch jazdcov vedľa strieborného generála, 
+  5. dva oštepy do rohov. 
+* Do radu **nad** ním hráč ukladá:
+  1. strelca priamo nad ľavého jazdca
+  2. vežu priamo nad pravého jazdca,
+  3. zvyšok radu je prázdny.
+* Ďaľší a už **posledný rad** tvorí 9 pešiakov.
+
+![Rozloženie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/Shogi.webp)
+
+*Rozloženie tradičných Shogi.*
+
+# Zajatie figúrok
+1. Ak hráčovova figúrka svojim pohybom dokáže **skončiť na políčku** so **superovou figúrkou**, môže tak spraviť a figúrku zajať.
+2. Zajatá figúrka sa uloží **mimo hraciu plochu** hráčovi, ktorí ju zajal. 
+3. Figúrka ktorá zajala súperovú sa teraz bude nachádzať na mieste, kde predtým stála súperova figúrka.
+
+>**_Oplatí sa to?:_** Hráč nie je povinný vyradiť súperovú figúrku, aj keď má takú možnosť. Často krát sa stáva, že môže byť pre hráča dôležitejšie dostať inú svojú figúrku do vhodnej pozície, než zajať bezbranného pešiaka.
