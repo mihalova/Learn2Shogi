@@ -51,12 +51,12 @@ ol{
 }
 
 .menu-item {
-    padding: 8px 8px 8px 8px;
+    padding: 8px 8px 8px 16px;
     font-size: 16px;
     color: black;
 }
 .menu-chapter{
-    padding: 16px 8px 8px 8px;
+    padding: 16px 8px 8px 16px;
     font-size: 20px;
     color: white;
     background: gray;
