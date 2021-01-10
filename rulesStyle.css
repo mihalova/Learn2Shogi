@@ -108,9 +108,12 @@ section {
     padding-bottom: 5px;
 }
 
-.sec-descript, .sec-list{
-    margin: 20px 25px;
-    text-align: justify;
+.sec-descript {
+    margin: 16px 0
+}
+
+.sec-list {
+    padding-left: 30px;
 }
 
 .sec-note {
@@ -120,7 +123,6 @@ section {
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
     background-color: whitesmoke;
     border-left: 6px solid #6a737d;
-    text-align: justify;
 }
 
 .sec-figure {
