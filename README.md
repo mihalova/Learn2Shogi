@@ -60,4 +60,5 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
   * 1 kráľa (ōshō)
   
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/prehlad.png)
+
 *Celkový set figúrok*
