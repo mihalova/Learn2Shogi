@@ -72,6 +72,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r2.PNG)
 
 # Rozloženie figúrok 
+### Postup rozkladania pred hrou
 * Hráči si sadnú tak, aby **sedeli oproti sebe**. 
 * Každý hráč rozostavuje jeho figúrky s tým, že **hrot figúry smeruje na protivníka**
 * Do **najspodnejšieho** radu hráč ukladá figúrky:
@@ -89,3 +90,10 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ![Rozloženie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/Shogi.webp)
 
 *Rozloženie tradičných Shogi.*
+
+# Zajatie figúrok
+1. Ak hráčovova figúrka svojim pohybom dokáže **skončiť na políčku** so **superovou figúrkou**, môže tak spraviť a figúrku zajať.
+2. Zajatá figúrka sa uloží **mimo hraciu plochu** hráčovi, ktorí ju zajal. 
+3. Figúrka ktorá zajala súperovú sa teraz bude nachádzať na mieste, kde predtým stála súperova figúrka.
+
+>**_Oplatí sa to?:_** Hráč nema povinnosť vyradiť súperovú figúrku, aj keď ma takú možnosť. Často krát sa stáva, že môže byť pre hráča dôležitejšie dostať inú svojú figúrku do vhodnej pozície, než zajať bezbranného pešiaka.
