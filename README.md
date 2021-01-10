@@ -38,7 +38,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 *Shogi stopky (toto je label k obr)*
 
 # Hracie komponenty
-### Set figúrok
+### Herné Figúrky
 - Každý hráč má k dispozícii **20 figúrok**, ktoré majú tvar klinu.
 - O aký typ figúrky ide je dané znakom napísaným na jej najväčšiu plochu.
 - Figúrky <ins>nie su</ins> farebne rozlíšené.
@@ -66,3 +66,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/prehlad.png)
 
 *Celkový set figúrok* (label)
+
+### Pohyb figúrok
+* Vyskúšaj si pohyb niektorých vybraných figúrok na interaktivnej ploche.
+![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r2.PNG)
