@@ -118,7 +118,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ### Ako vzniklo povýšenie?
 * Každá z figúrok predstavuje bojovníka v generálovej armáde.
 * Figúrky môžu za svoje „*zásluhy*“ v boji získať povýšenie.
-* Všetky figúrky okrem kráľa a zlatého generála majú na opačnej strane klínovej figúrky iný znak. 
+* Všetky figúrky <ins>okrem</ins> **kráľa** a **zlatého generála** majú na opačnej strane klínovej figúrky **iný znak**. 
 * Ten predstavuje povýšenu verziu rovnakého bojivníka.
  >**_Amatéri:_** V amateŕskych setoch býva nepovýšena strana figúrky čierna a povýšena červená, aby boli strany lahšie rozlíšitelne. V tradičných setoch sa strany líšia sa iba v znakoch.
 
@@ -129,3 +129,18 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ![Tokin](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/f2.png)
 
 *Povýšeny pešiak* (label, obrazky dat vedla seba, nie pod sebou)
+
+### Povyšovacia zóna
+* Pre každého hráča existuje takzvaná **povyšovacia zóna**. 
+* Ta sa skladá z **1/3 celkových riadkov**.
+* Každý hráč má svoju povyšovaciu zónu na inom mieste ako súper.
+* Náchadza sa presne na **opačnej strane** dosky.
+* Teda pre hráča sediaceho na spodnej strane, tvoria povyšovaciu zóna 3 najvrchnješie riadky.
+
+### Možnosť povýšenia
+Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní pohybu v povyšovacej zóne, môže sa hráč na konci svojho kola rozhodnúť povýšiť svoju jednotku.
+* Teda povýšena môže byť <ins>iba</ins> taká figúrka, ktorá sa počas ťahu pohla. 
+* **Hráč sa sám rozhoduje**, či figúrku povýši alebo nie.
+* Povýšená figúrka **získava nový spôsob pohybu**.
+* Povýšené figúrky sa už nevedia vrátiť do nepovýšenej podoby.
+
