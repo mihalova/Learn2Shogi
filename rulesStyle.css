@@ -163,6 +163,11 @@ article{
     flex: 50%;
 }
 
+.sec-button {
+    display: flex;
+    justify-content: center;
+}
+
 .sec-button > .btn{
     margin: 8px;
     background-color: white;
