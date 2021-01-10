@@ -105,25 +105,39 @@ section {
     text-align: center;
 }
 
-.sec-header h5{
+.sec-header h4{
     margin-top: 30px;
     padding-bottom: 5px;
     font-weight: bold;
 
 }
 
-.sec-descript, .sec-ul{
+.sec-descript, .sec-list{
     margin: 20px 25px;
     font-size: 20px;
 }
 
-.note {
+.sec-note {
     margin-bottom: 15px;
     padding: 4px 12px;
     color: #6a737d;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
     background-color: whitesmoke;
     border-left: 6px solid #6a737d;
+}
+
+.sec-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec-figure img {
+    max-width: 100%;
+}
+
+.sec-figure figcaption {
+    font-style: italic;
 }
 
 article{
