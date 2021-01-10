@@ -53,13 +53,13 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ### Zoznam figúrok
 * Každa z figúrok v hre ma svoj **jedinečný typ pohybu**.
 * Celkový set figúrok pozostáva z:
-  * 9 pešiakov (fuhyō)
-  * 2 jazdcov (keima)
-  * 2 strieborných generálov (ginshō)
-  * 2 zlatých generálov (kinshō)
-  * 1 strelca (kakugyō)
-  * 1 vežu (hisha)
-  * 1 kráľa (ōshō)
+  * 9 pešiakov (fuhyō),
+  * 2 jazdcov (keima),
+  * 2 strieborných generálov (ginshō),
+  * 2 zlatých generálov (kinshō),
+  * 1 strelca (kakugyō),
+  * 1 vežu (hisha),
+  * 1 kráľa (ōshō).
   
 >**_Pomenovanie figúrok:_** „Názov figúrky je hrubým prekladom kanji znaku, v zátvorke uvádzame japonské čítanie figúrok.
 
