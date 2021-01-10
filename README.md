@@ -176,3 +176,10 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Využi vloženie figúrky tak aby si dokázal zajať súperovho kráľa.
 
 ![Vloženie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r5.PNG)
+
+# Zhrnutie
+* Každá figúrka <ins>okrem</ins> **kráľa** a **zlatého generála** má aj svojú povýšenu stranu (niekedy označenú červenou).
+* Hráč sa **môže** rozhodnúť povýšiť figúrku, ak figúrka začína alebo končí ťah v povyšovacej zóne.
+* Vyradené figúrky sa stávaju zajatcami a hráč, ktorý ich zajal ich **môže vrátiť do hry** ako svoje.
+* Ak chceš spoznať všetky rôzne figúrky a ich povýšenia alebo si vyskúšať zjedodušenú verziu Goro Goro Shogi, pokračuj sem:
+(Sem daj ten button ktory hodí človeka na prehľad figúrok)      (Veďla neho button ktorý hodí hráča do hry)
