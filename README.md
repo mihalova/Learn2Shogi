@@ -46,5 +46,18 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 - Hrot figúrky **vždy smeruje na súpera**.
 ![King](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/king-rules.png)
 
-*Figúrka kráľa*
+*Figúrka kráľa* (label, obrazok zmensit podla pocitu)
 
+### Zoznam figúrok
+* Každa z figúrok v hre ma svoj vlastný typ pohybu.
+* Celkový set figúrok pozostáva z:
+  * 9 pešiakov (fuhyō)
+  * 2 jazdcov (keima)
+  * 2 strieborných generálov (ginshō)
+  * 2 zlatých generálov (kinshō)
+  * 1 strelca (kakugyō)
+  * 1 vežu (hisha)
+  * 1 kráľa (ōshō)
+  
+![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/prehlad.png)
+*Celkový set figúrok*
