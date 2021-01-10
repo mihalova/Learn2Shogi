@@ -117,10 +117,12 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 # Povýšenie figúrok
 ### Ako vzniklo povýšenie?
 * Každá z figúrok predstavuje bojovníka v generálovej armáde.
-* Figúrky môžu za svoje „*zásluhy*“ v boji získať povýšenie.
+* Figúrky môžu za svoje „*zásluhy v boji*“ získať povýšenie.
 * Všetky figúrky <ins>okrem</ins> **kráľa** a **zlatého generála** majú na opačnej strane klínovej figúrky **iný znak**. 
 * Ten predstavuje povýšenu verziu rovnakého bojivníka.
  >**_Amatéri:_** V amateŕskych setoch býva nepovýšena strana figúrky čierna a povýšena červená, aby boli strany lahšie rozlíšitelne. V tradičných setoch sa strany líšia sa iba v znakoch.
+ 
+ >**_Zlato:_** Zlatý generál predstavuje pravú ruku kráľa a preto už nevie byť viac povýšený. Keď sa neskôr budeš učit pohyby figúrok, tak si všimneš, že veľa povýšených jednotiek sa hýbe práve tak ako zlatý generál, lebo sa povýšením defacto dostávajú na jeho úroveň. 
 
 ![Pesiak](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/f1.png)
 
