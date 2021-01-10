@@ -147,7 +147,7 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Figúrka sa mení na povýšenú vždy až **na konci ťahu**.
 * Povýšené figúrky sa už <ins>nevedia</ins> vrátiť do nepovýšenej podoby.
  
- >**_Nutnosť povýšenia:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že ak sa dostanú na posledné políčko hernej plochy musia byť nutne povýšené, lebo by sa inak už nevedeli ďalej hýbať.
+ >**_Nutnosť povýšenia:_** Pre jednotky(pešiak, jazdec, oštep), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že ak sa dostanú na posledné políčko hernej plochy musia byť nutne povýšené, lebo by sa inak už nevedeli ďalej hýbať.
 
 ### Vyskúšaj si povýšenie
 * Ak sa ti zdá, že toho bolo priveľa, vyskúšaj povýšenie na tomto ľahko príklade a pochopíš, že to nie je žiadna veda. 
@@ -170,7 +170,7 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Figúrky sa vkladajú vždy v ich **nepovýšenej** podobe.
 * Aj zajatá povýšená superova figúrka sa vkladá v pôvodnej forme.
 
->**_Nevhodné vloženie:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že nesmú byť vložené do poslednej rady, lebo by sa inak už nevedeli ďalej hýbať.
+>**_Nevhodné vloženie:_** Pre jednotky(pešiak, jazdec, oštep), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že nesmú byť vložené do poslednej rady, lebo by sa inak už nevedeli ďalej hýbať.
  
 >**_Problém dvoch pešiakov:_** Aby sa v hre shogi nestávala situácia, kedy si hráč chráni jedného pešiaka sériou iných pešiakov, zaviedlo sa pravidlo, že hráč nemôže vložiť pešiaka do takého stĺpca, kde sa nachádza iný jeho nepovýšený pešiak.
 
