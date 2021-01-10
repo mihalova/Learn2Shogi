@@ -96,8 +96,12 @@ section {
     text-align: left;
 }
 
+.sec-header {
+    padding-bottom: 24px;
+}
+
 .sec-header h1{
-    padding-bottom: 5px;
+    padding-bottom: 16px;
     border-bottom: 2px solid grey;
     text-align: center;
 }
@@ -108,11 +112,11 @@ section {
 }
 
 .sec-descript {
-    margin: 16px 0
+    margin: 16px 0 16px 24px
 }
 
 .sec-list {
-    padding-left: 30px;
+    padding-left: 70px;
 }
 
 .sec-note {
@@ -201,6 +205,10 @@ article{
     menu{flex: 100%}
     main{flex: 100%}
     .sec-two-figures > .sec-figure {flex: 100%;}
+    .sec-list {padding-left: 30px;}
+    .sec-descript {margin: 16px 0 16px 0px}
+    .sec-header {padding-bottom: 12px;}
+    .sec-header h1{padding-bottom: 8px;}
 }
 @media only screen and (max-width: 992px) {
     menu{flex: 30%}
