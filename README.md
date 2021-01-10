@@ -96,4 +96,4 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 2. Zajatá figúrka sa uloží **mimo hraciu plochu** hráčovi, ktorí ju zajal. 
 3. Figúrka ktorá zajala súperovú sa teraz bude nachádzať na mieste, kde predtým stála súperova figúrka.
 
->**_Oplatí sa to?:_** Hráč nema povinnosť vyradiť súperovú figúrku, aj keď ma takú možnosť. Často krát sa stáva, že môže byť pre hráča dôležitejšie dostať inú svojú figúrku do vhodnej pozície, než zajať bezbranného pešiaka.
+>**_Oplatí sa to?:_** Hráč nie je povinný vyradiť súperovú figúrku, aj keď má takú možnosť. Často krát sa stáva, že môže byť pre hráča dôležitejšie dostať inú svojú figúrku do vhodnej pozície, než zajať bezbranného pešiaka.
