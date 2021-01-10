@@ -22,8 +22,10 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
  >**_Trochu inak ako šach:_** Na rozdiel od klasického šachu, hráč nie je povinný oznámiť súperovi, že jeho kráľ je ohrozený. Ak si to hráč neuvedomí, tak v ďalšom kole jednoducho prehral.
  
 ### Spoznaj hernú plochu
+* Vyskúšaj si zajatie kráľa na interaktívnej hernej ploche.
 
 ![HP](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r1.PNG)
+
 # Priebeh Kola
 * V hre Shogi sa hráči striedajú vždy po vykonaní práve jednej akcie.
 * Ako akcia sa počíta:
