@@ -70,13 +70,13 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 *Celkový set figúrok* (label)
 
 ### Pohyb figúrok
-* Vyskúšaj si pohyb niektorých vybraných figúrok na interaktivnej ploche.
+* Spoznaj pohyb niektorých vybraných figúrok na interaktivnej ploche.
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r2.PNG)
 
 # Rozloženie figúrok 
 ### Postup rozkladania pred hrou
 * Hráči si sadnú tak, aby **sedeli oproti sebe**. 
-* Každý hráč rozostavuje jeho figúrky s tým, že **hrot figúry smeruje na protivníka**
+* Každý hráč rozostavuje svoje figúrky s tým, že **hrot figúry smeruje na protivníka**
 * Do **najspodnejšieho** radu hráč ukladá figúrky:
   1. kráľa do stredu,
   2. dvoch zlatých generálov po strane kráľa,
@@ -91,7 +91,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 
 ![Rozloženie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/Shogi.webp)
 
-*Rozloženie tradičných Shogi.*
+*Rozloženie tradičných Shogi.* (label)
 
 # Zajatie figúrok
 1. Ak hráčovova figúrka svojim pohybom dokáže **skončiť na políčku** so **superovou figúrkou**, môže tak spraviť a figúrku zajať.
@@ -101,10 +101,10 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 >**_Oplatí sa to?:_** Hráč nie je povinný vyradiť súperovú figúrku, aj keď má takú možnosť. Často krát sa stáva, že môže byť pre hráča dôležitejšie dostať inú svojú figúrku do vhodnej pozície, než zajať bezbranného pešiaka.
 
 # Zhrnutie a Výzva
-* Hrá sa na 9x9 ploche a každý hráč má 20 figúrok
-* Cieľom hry je vyradiť súperovho kráľa.
-* Hráči sa striedaju vždy po vykonaní 1 akcie.
-* Každá figúrka ma svoj typ pohybu.
+* Hrá sa na **9x9 ploche** každý hráč má **20 figúrok**.
+* Cieľom hry je **vyradiť súperovho kráľa**.
+* Hráči sa striedaju vždy **po vykonaní 1 akcie**.
+* Každá figúrka ma svoj **jedinečný typ pohybu**.
 * Figúrky smeruju ostrím hrotom vždy na protisediacého súpera.
 
 ### Výzva
