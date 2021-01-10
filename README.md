@@ -42,4 +42,9 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 - Každý hráč má k dispozícii **20 figúrok**, ktoré majú tvar klinu.
 - O aký typ figúrky ide je dané znakom napísaným na jej najväčšiu plochu.
 - Figúrky <ins>nie su</ins> farebne rozlíšené.
-- Vlastník figúrky je určený tým, ako je figúrka otočená, **vždy smeruje na súpera**.
+- Vlastník figúrky je určený tým, ako je figúrka otočená. 
+- Hrot figúrky **vždy smeruje na súpera**.
+![King](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/king-rules.png)
+
+*Figúrka kráľa*
+
