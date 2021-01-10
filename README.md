@@ -4,7 +4,7 @@
 >**_Poznámka:_** V poznámkach sa dozvieš všetky potrebné doplnkové informácie aby si bol pripravený na každú situáciu, ale zaobídeš sa aj bez nich. 
 
 - A aby si sa veľmi nenudil tak sem tam sa ťa pokúsime zabaviť nejakým tématický obrázkom. 
-
+![CAT](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/cat.jpg)
 
 # Cieľ hry
 ### Herná plocha
