@@ -148,6 +148,6 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
  >**_Nutnosť povýšenia:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že ak sa dostanú na posledné políčko hernej plochy musia byť nutne povýšené, lebo by sa inak už nevedeli ďalej hýbať.
 
 ### Vyskúšaj si povýšenie
-* Ak sa ti zdá, že toho bolo priveľa, vyskúšaj si to na tomto ľahko príklade a pochopíš, že to nie je žiadna veda. 
+* Ak sa ti zdá, že toho bolo priveľa, vyskúšaj povýšenie na tomto ľahko príklade a pochopíš, že to nie je žiadna veda. 
 
 ![Povyšenie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r4.PNG)
