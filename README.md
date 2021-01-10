@@ -113,3 +113,41 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 * Držíme ti palce a neboj sa zlyhania!
 
 ![Rozloženie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r3.PNG)
+
+# Povýšenie figúrok
+### Ako vzniklo povýšenie?
+* Každá z figúrok predstavuje bojovníka v generálovej armáde.
+* Figúrky môžu za svoje „*zásluhy*“ v boji získať povýšenie.
+* Všetky figúrky <ins>okrem</ins> **kráľa** a **zlatého generála** majú na opačnej strane klínovej figúrky **iný znak**. 
+* Ten predstavuje povýšenu verziu rovnakého bojivníka.
+ >**_Amatéri:_** V amateŕskych setoch býva nepovýšena strana figúrky čierna a povýšena červená, aby boli strany lahšie rozlíšitelne. V tradičných setoch sa strany líšia sa iba v znakoch.
+
+![Pesiak](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/f1.png)
+
+*Figúrka pešiaka* (label)
+
+![Tokin](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/f2.png)
+
+*Povýšeny pešiak* (label, obrazky dat vedla seba, nie pod sebou)
+
+### Povyšovacia zóna
+* Pre každého hráča existuje takzvaná **povyšovacia zóna**. 
+* Ta sa skladá z **1/3 celkových riadkov**.
+* Každý hráč má svoju povyšovaciu zónu na inom mieste ako súper.
+* Náchadza sa presne na **opačnej strane** dosky.
+* Teda pre hráča sediaceho na spodnej strane, tvoria povyšovaciu zóna 3 najvrchnješie riadky.
+
+### Možnosť povýšenia
+Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní pohybu v povyšovacej zóne, môže sa hráč na konci svojho kola rozhodnúť povýšiť svoju jednotku.
+* Teda povýšena môže byť <ins>iba</ins> taká figúrka, ktorá sa počas ťahu pohla. 
+* **Hráč sa sám rozhoduje**, či figúrku povýši alebo nie.
+* Povýšená figúrka **získava nový spôsob pohybu**.
+* Figúrka sa mení na povýšenú vždy až **na konci ťahu**.
+* Povýšené figúrky sa už <ins>nevedia</ins> vrátiť do nepovýšenej podoby.
+ 
+ >**_Nutnosť povýšenia:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že ak sa dostanú na posledné políčko hernej plochy musia byť nutne povýšené, lebo by sa inak už nevedeli ďalej hýbať.
+
+### Vyskúšaj si povýšenie
+* Ak sa ti zdá, že toho bolo priveľa, vyskúšaj si to na tomto ľahko príklade a pochopíš, že to nie je žiadna veda. 
+
+![Povyšenie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r4.PNG)
