@@ -7,7 +7,7 @@
 - A aby si sa veľmi nenudil tak sem tam sa ťa pokúsime zabaviť nejakým tématický obrázkom.
 
 ![CAT](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/cat.jpg)
-*            Mačka hrajúca domino z tradičných Shogi figúrok.*
+* Mačka hrajúca domino z tradičných Shogi figúrok.*
 
 # Cieľ hry
 ### Herná plocha
