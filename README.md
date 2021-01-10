@@ -3,7 +3,7 @@
 - Ak **nerád čítaš**, ale shogi hrať chceš, nezúfaj. Smelo **text preskoč** a na konci každého **pravidla si ho môžeš osvojiť priamo na hernej ploche!**
 >**_Poznámka:_** V poznámkach sa dozvieš všetky potrebné doplnkové informácie aby si bol pripravený na každú situáciu, ale zaobídeš sa aj bez nich. 
 
-A aby si sa veľmi nenudil tak sem tam sa ťa pokúsime zabaviť nejakým tématický obrázkom. 
+- A aby si sa veľmi nenudil tak sem tam sa ťa pokúsime zabaviť nejakým tématický obrázkom. 
 
 
 # Cieľ hry
