@@ -110,6 +110,7 @@ section {
 
 .sec-descript, .sec-list{
     margin: 20px 25px;
+    text-align: justify;
 }
 
 .sec-note {
@@ -119,6 +120,7 @@ section {
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
     background-color: whitesmoke;
     border-left: 6px solid #6a737d;
+    text-align: justify;
 }
 
 .sec-figure {
@@ -140,11 +142,38 @@ article{
     margin: 0 auto;
 }
 
-.sec-button > .btn {
+.rules-button > .btn {
     margin: 8px;
     background-color: gray;
     border-color: gray;
     color: white;
+    border-radius: 15px;
+}
+
+.rules-button > .btn:hover {
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+.sec-two-figures {
+    display: flex;
+}
+.sec-two-figures > .sec-figure {
+    flex: 50%;
+}
+
+.sec-button {
+    display: flex;
+    justify-content: center;
+}
+
+.sec-button > .btn{
+    margin: 8px;
+    background-color: white;
+    border-color: black;
+    color: black;
+    border-radius: 15px;
 }
 
 .sec-button > .btn:hover {
@@ -170,6 +199,7 @@ article{
     body{display: block;}
     menu{flex: 100%}
     main{flex: 100%}
+    .sec-two-figures > .sec-figure {flex: 100%;}
 }
 @media only screen and (max-width: 992px) {
     menu{flex: 30%}

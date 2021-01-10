@@ -13,6 +13,10 @@
     padding-left: 20px;
 }
 
+.navbar-brand img {
+    width: 200px;
+}
+
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
     color: black;
