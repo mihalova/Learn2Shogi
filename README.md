@@ -161,4 +161,16 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Zajatím kráľa **hra končí**.
 
 ### Možnost návratu
+* Hráč má **možnosť vložiť** jednu z figúrok, ktoré zajal súperovi späť do hry.
+* Takéto vloženie ho **stojí celý ťah**, po vložení je na rade súper. 
+* Vložiť figúrku môže iba na **prázdne políčko**. 
+* Prázdne políčko sa môže nachádzať **lubovoľne na hernej ploche**, aj na súperovej strane.
 
+>**_Nevhodné vloženie:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že nesmú byť vložené do poslednej rady, lebo by sa inak už nevedeli ďalej hýbať.
+ 
+>**_Problém dvoch pešiakov:_** Aby sa v hre shogi nestávala situácia, kedy si hráč chráni jedného pešiaka sériou iných pešiakov, zaviedlo sa pravidlo, že hráč nemôže vložiť pešiaka do takého stĺpca, kde sa nachádza iný jeho nepovýšený pešiak.
+
+### Vyskúšaj si vloženie figúrky
+* Využi vloženie figúrky tak aby si dokázal zajať súperovho kráľa.
+
+![Vloženie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r5.PNG)
