@@ -49,7 +49,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 *Figúrka kráľa* (label, obrazok zmensit podla pocitu)
 
 ### Zoznam figúrok
-* Každa z figúrok v hre ma svoj vlastný typ pohybu.
+* Každa z figúrok v hre ma svoj **jedinečný typ pohybu**.
 * Celkový set figúrok pozostáva z:
   * 9 pešiakov (fuhyō)
   * 2 jazdcov (keima)
@@ -60,6 +60,8 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
   * 1 kráľa (ōshō)
   
 >**_Pomenovanie figúrok:_** „Názov figúrky je hrubým prekladom kanji znaku, v zátvorke uvádzame japonské čítanie figúrok.
+
+>**_Dvaja králi:_** V skutočnosti sa v Shogi figúrky dvoch kráľov jemne líšia v znaku a jeho japonskom čítanií. Jeden znak sa číta ako *ōshō*(patrí vyšie hodnotenému hráčovi) a druhý ako *gyokushō*(patrí nižšie hodnotenému alebo vyzívajúcemu hráčovi).   
 
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/prehlad.png)
 
