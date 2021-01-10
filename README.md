@@ -24,6 +24,16 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ### Spoznaj hernú plochu
 
 ![HP](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r1.PNG)
+# Priebeh Kola
+* V hre Shogi sa hráči striedajú vždy po vykonaní práve jednej akcie.
+* Ako akcia sa počíta:
+  * pohyb jednej z hráčových figúrok,
+  * vloženie jednej zo zajatých figúrok do hry.
+* Hráči nie sú časovo limitovaný na vykonanie svojho ťahu.
+* Nemôžu sa však rozhodnúť svoj ťah preskočiť.
+>**_Historické motto:_** „V Shogi ide o česť a úmyselne zdržavanie nie je bežnou praktikou.“ Napriek tomu sa však aspoň v amatérskych turnajoch používaju podobné podobné stopky ako v profesionálnom šachu.*
+![HP](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/budik.png)
+*Shogi stopky (toto je label k obr)
 
 # Hracie komponenty
 ### Set figúrok
