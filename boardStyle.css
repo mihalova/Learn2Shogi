@@ -44,8 +44,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .svgBoard0, .svgBoard1, .svgBoard2, .svgBoard3, .svgBoard4 {
-        height: 180px;
-        width: 291px
+    .svgBoard0, .svgBoard1, .svgBoard2, .svgBoard3, .svgBoard4,
+    #transparent_B0, #transparent_B2, #transparent_B3, #transparent_B4 {
+        height: 240px;
+        width: 388px
     }
 }
