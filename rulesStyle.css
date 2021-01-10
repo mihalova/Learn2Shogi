@@ -2,7 +2,7 @@
 /*    outline: 3px solid black;*/
 /*}*/
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0; display: flex;}
+body {margin:0; display: flex;}
 
 .menu-item.active, .menu-item:hover {
     background-color: black;
@@ -14,7 +14,6 @@ body {font-family: Verdana, sans-serif; margin:0; display: flex;}
 menu {
     flex: 20%;
     background-color: white;
-    margin-left: 8px;
     padding: 0;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
 }
@@ -53,12 +52,12 @@ ol{
 
 .menu-item {
     padding: 8px 8px 8px 8px;
-    font-size: 18px;
+    font-size: 16px;
     color: black;
 }
 .menu-chapter{
     padding: 16px 8px 8px 8px;
-    font-size: 22px;
+    font-size: 20px;
     color: white;
     background: gray;
     border-top: 1px solid white;
@@ -97,11 +96,10 @@ section {
     text-align: left;
 }
 
-.sec-header h2{
-    margin-top: 30px;
+.sec-header h1{
+    margin-top: 10px;
     padding-bottom: 5px;
     border-bottom: 2px solid grey;
-    font-weight: bold;
     text-align: center;
 }
 
@@ -114,7 +112,6 @@ section {
 
 .sec-descript, .sec-list{
     margin: 20px 25px;
-    font-size: 20px;
 }
 
 .sec-note {
