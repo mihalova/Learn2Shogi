@@ -165,6 +165,8 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Takéto vloženie ho **stojí celý ťah**, po vložení je na rade súper. 
 * Vložiť figúrku môže iba na **prázdne políčko**. 
 * Prázdne políčko sa môže nachádzať **lubovoľne na hernej ploche**, aj na súperovej strane.
+* Figúrky sa vkladajú vždy v ich **nepovýšenej** podobe.
+* Aj zajatá povýšená superova figúrka sa vkladá v pôvodnej forme.
 
 >**_Nevhodné vloženie:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že nesmú byť vložené do poslednej rady, lebo by sa inak už nevedeli ďalej hýbať.
  
