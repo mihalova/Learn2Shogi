@@ -151,3 +151,14 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Ak sa ti zdá, že toho bolo priveľa, vyskúšaj povýšenie na tomto ľahko príklade a pochopíš, že to nie je žiadna veda. 
 
 ![Povyšenie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r4.PNG)
+
+# Vloženie figúrok
+### Zajatí bojovníci
+* V hre Shogi nie je zvykom zabiť súperových bojovníkov.
+* Miesto smrti majú bojovníci **možnosť pokračovať v boji**.
+* Samozrejme iba pod kontrolou hráča, ktorý figúrku zajal.
+* To platí pre všetky figúrky, aj povýšené <ins>okrem</ins> **kráľa**.
+* Zajatím kráľa **hra končí**.
+
+### Možnost návratu
+
