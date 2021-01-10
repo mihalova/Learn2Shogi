@@ -2,7 +2,7 @@
 - Pravidlá sú písané tak, aby si **postupne spoznával hru** shogi, preskakovanie <ins>neodporúčame</ins>.
 - Ak **nerád čítaš**, ale shogi hrať chceš, nezúfaj a smelo **text preskoč**. 
 - Všetky **pravidla sa môžeš naučiť priamo na hernej ploche!**
->**_Poznámka:_** V poznámkach sa dozvieš všetky potrebné doplnkové informácie aby si bol pripravený na každú situáciu, ale zaobídeš sa aj bez nich. 
+>**_Poznámka:_** Ak ti záleži na detailoch, tak v poznámkach sa dozvieš všetky potrebné doplnkové informácie, ale zaobídeš sa aj bez nich. 
 
 - A aby si sa veľmi nenudil tak sem tam sa ťa pokúsime zabaviť nejakým tématický obrázkom.
 
