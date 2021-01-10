@@ -27,6 +27,7 @@
     border-radius: 15px;
     border: 2px solid black;
     display: none;
+    text-align: center;
 }
 
 #informationW_B0, #informationW_B4, #informationW_B3, #informationW_B2, #informationW_B1 {
@@ -40,4 +41,10 @@
 
 #transparent_B0, #transparent_B2, #transparent_B3, #transparent_B4 {
     display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .svgBoard0, .svgBoard1, .svgBoard2, .svgBoard3, .svgBoard4 {
+        height: 180px
+    }
 }
