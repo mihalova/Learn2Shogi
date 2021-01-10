@@ -59,6 +59,8 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
   * 1 vežu (hisha)
   * 1 kráľa (ōshō)
   
+>**_Pomenovanie figúrok:_** „Názov figúrky je hrubým prekladom kanji znaku, v zátvorke uvádzame japonské čítanie figúrok.
+
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/prehlad.png)
 
-*Celkový set figúrok*
+*Celkový set figúrok* (label)
