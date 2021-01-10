@@ -20,6 +20,7 @@ menu {
 .menu-column {
     padding-top: 40px;
     list-style: none;
+    width: 100%
 }
 main {
     flex: 80%;
@@ -28,7 +29,7 @@ main {
     margin-left: 0;
 }
 
-.row{
+.row {
     width: 95%;
     margin: 0 auto;
 }
@@ -44,7 +45,7 @@ main {
     /*display: none;*/
 /*}*/
 
-ol{
+ol {
     padding-top: 10px;
     padding-bottom: 10px;
     /*box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);*/
@@ -74,7 +75,6 @@ section {
 
 #slides {
     color: black;
-    margin: 10px;
     /*background-image: url("pictures/00.jpg");*/
     /*background-repeat: no-repeat;*/
     /*background-size: cover;*/
@@ -97,7 +97,6 @@ section {
 }
 
 .sec-header h1{
-    margin-top: 10px;
     padding-bottom: 5px;
     border-bottom: 2px solid grey;
     text-align: center;
