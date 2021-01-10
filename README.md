@@ -70,3 +70,22 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 ### Pohyb figúrok
 * Vyskúšaj si pohyb niektorých vybraných figúrok na interaktivnej ploche.
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r2.PNG)
+
+# Rozloženie figúrok 
+* Hráči si sadnú tak aby sedeli oproti sebe. 
+* Každý hráč rozostavuje jeho figúrky tak aby hrot figúry smeroval na protivníka.
+* Do najspodnejšieho radu hráč ukladá figúrky:
+  1. kráľa do stredu,
+  2. dvoch zlatých generálov po strane kráľa,
+  3. dvoch strieborných generálov vedľa zlatého, 
+  4. dvoch jazdcov vedľa strieborného generála, 
+  5. dva oštepy do rohov. 
+* Do radu nad ním hráč ukladá:
+  1. strelca priamo nad ľavého jazdca
+  2. vežu priamo nad pravého jazdca,
+  3. zvyšok radu je prázdny.
+* Ďaľší a už posledný rad tvorí 9 pešiakov.
+
+![Rozloženie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/Shogi.webp)
+
+*Rozloženie tradičných Shogi.*
