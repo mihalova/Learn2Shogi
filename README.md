@@ -143,4 +143,5 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * **Hráč sa sám rozhoduje**, či figúrku povýši alebo nie.
 * Povýšená figúrka **získava nový spôsob pohybu**.
 * Povýšené figúrky sa už nevedia vrátiť do nepovýšenej podoby.
-
+ 
+ >**_Nutnosť povýšenia:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že ak sa dostanú na posledné políčko hernej plochy musia byť nutne povýšené, lebo by sa inak už nevedeli ďalej hýbať.
