@@ -51,12 +51,12 @@ ol{
 }
 
 .menu-item {
-    padding: 8px 8px 8px 8px;
+    padding: 8px 8px 8px 16px;
     font-size: 16px;
     color: black;
 }
 .menu-chapter{
-    padding: 16px 8px 8px 8px;
+    padding: 16px 8px 8px 16px;
     font-size: 20px;
     color: white;
     background: gray;
@@ -106,8 +106,6 @@ section {
 .sec-header h4{
     margin-top: 30px;
     padding-bottom: 5px;
-    font-weight: bold;
-
 }
 
 .sec-descript, .sec-list{
@@ -143,6 +141,7 @@ article{
 }
 
 .sec-button > .btn {
+    margin: 8px;
     background-color: gray;
     border-color: gray;
     color: white;
@@ -169,6 +168,8 @@ article{
 
 @media only screen and (max-width: 768px) {
     body{display: block;}
+    menu{flex: 100%}
+    main{flex: 100%}
 }
 @media only screen and (max-width: 992px) {
     menu{flex: 30%}

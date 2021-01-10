@@ -142,6 +142,23 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Teda povýšena môže byť <ins>iba</ins> taká figúrka, ktorá sa počas ťahu pohla. 
 * **Hráč sa sám rozhoduje**, či figúrku povýši alebo nie.
 * Povýšená figúrka **získava nový spôsob pohybu**.
-* Povýšené figúrky sa už nevedia vrátiť do nepovýšenej podoby.
+* Figúrka sa mení na povýšenú vždy až **na konci ťahu**.
+* Povýšené figúrky sa už <ins>nevedia</ins> vrátiť do nepovýšenej podoby.
  
  >**_Nutnosť povýšenia:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že ak sa dostanú na posledné políčko hernej plochy musia byť nutne povýšené, lebo by sa inak už nevedeli ďalej hýbať.
+
+### Vyskúšaj si povýšenie
+* Ak sa ti zdá, že toho bolo priveľa, vyskúšaj povýšenie na tomto ľahko príklade a pochopíš, že to nie je žiadna veda. 
+
+![Povyšenie](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r4.PNG)
+
+# Vloženie figúrok
+### Zajatí bojovníci
+* V hre Shogi nie je zvykom zabiť súperových bojovníkov.
+* Miesto smrti majú bojovníci **možnosť pokračovať v boji**.
+* Samozrejme iba pod kontrolou hráča, ktorý figúrku zajal.
+* To platí pre všetky figúrky, aj povýšené <ins>okrem</ins> **kráľa**.
+* Zajatím kráľa **hra končí**.
+
+### Možnost návratu
+
