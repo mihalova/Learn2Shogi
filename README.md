@@ -142,7 +142,8 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Teda povýšena môže byť <ins>iba</ins> taká figúrka, ktorá sa počas ťahu pohla. 
 * **Hráč sa sám rozhoduje**, či figúrku povýši alebo nie.
 * Povýšená figúrka **získava nový spôsob pohybu**.
-* Povýšené figúrky sa už nevedia vrátiť do nepovýšenej podoby.
+* Figúrka sa mení na povýšenú vždy až **na konci ťahu**.
+* Povýšené figúrky sa už <ins>nevedia</ins> vrátiť do nepovýšenej podoby.
  
  >**_Nutnosť povýšenia:_** Pre jednotky(pešiak, jazdec), ktoré sa vedia hýbať iba smerom vpred platí pravidlo, že ak sa dostanú na posledné políčko hernej plochy musia byť nutne povýšené, lebo by sa inak už nevedeli ďalej hýbať.
 
