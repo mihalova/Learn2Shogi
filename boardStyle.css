@@ -45,6 +45,7 @@
 
 @media only screen and (max-width: 768px) {
     .svgBoard0, .svgBoard1, .svgBoard2, .svgBoard3, .svgBoard4 {
-        height: 180px
+        height: 180px;
+        width: 291px
     }
 }
