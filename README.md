@@ -20,8 +20,6 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 - Teda hráč sa snaží dostať súperovho kráľa do takej situácie, aby ho súper nevedel v ďalšom ťahu zachrániť pred vyradením.
 
  >**_Trochu inak ako šach:_** Na rozdiel od klasického šachu, hráč nie je povinný oznámiť súperovi, že jeho kráľ je ohrozený. Ak si to hráč neuvedomí, tak v ďalšom kole jednoducho prehral.
-
- >**_Trochu inak ako šach:_** Na rozdiel od klasického šachu, hráč nie je povinný oznámiť súperovi, že jeho kráľ je ohrozený. Ak si to hráč neuvedomí, tak v ďalšom kole jednoducho prehral.
  
 ### Spoznaj hernú plochu
 
@@ -29,5 +27,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 
 # Hracie komponenty
 ### Set figúrok
-- Každý hráč má k dispozícii 20 figúrok, ktoré majú tvar klinu.
+- Každý hráč má k dispozícii **20 figúrok**, ktoré majú tvar klinu.
 - O aký typ figúrky ide je dané znakom napísaným na jej najväčšiu plochu.
+- Figúrky <ins>nie su</ins> farebne rozlíšené.
+- Vlastník figúrky je určený tým, ako je figúrka otočená, **smeruje na súpera**.
