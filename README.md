@@ -33,7 +33,7 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
   * **vloženie** jednej zo zajatých figúrok do hry.
 * Hráči nie sú časovo limitovaný na vykonanie svojho ťahu.
 * Nemôžu sa však rozhodnúť svoj ťah preskočiť.
->**_Historické motto:_** „V Shogi ide o česť a úmyselne zdržavanie nie je bežnou praktikou.“ Napriek tomu sa však aspoň v amatérskych turnajoch používaju podobné podobné stopky ako v profesionálnom šachu.
+>**_Historické motto:_** „V Shogi ide o česť a úmyselne zdržavanie nie je bežnou praktikou.“ Napriek tomu sa z praktických dôvodov v amatérskych turnajoch používaju stopky ako v profesionálnom šachu.
 
 ![Stopky](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/budik.png)
 
