@@ -68,6 +68,5 @@ Japonská hra shogi sa tradične odohráva na drevenej doske. Shogi doska má:
 *Celkový set figúrok* (label)
 
 ### Pohyb figúrok
-Každá z figúrok má v hre svoj vlastný spôsob pohybu.
-Vyskúšaj si pohyb rôznych figúrok na interaktivnej ploche.
+* Každá z figúrok má v hre svoj vlastný spôsob pohybu. Vyskúšaj si pohyb rôznych figúrok na interaktivnej ploche.
 ![prehlad](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/r2.PNG)
