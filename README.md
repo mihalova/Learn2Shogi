@@ -219,6 +219,6 @@ Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite p
 **Sennichite**(千日手) je stav, ktorý dosiahnu hráči, ak sa po štvrtý krát zopakuje presne **rovnaká situácia hry**. Hra v takomto príade končí **remízou**. Rovnaká sitúacia hry znamená:
 * Všetky **figúrky** su v **rovnakej pozícii** na hernej doske.
 * **Zajaté figúrky**, ktoré môžu hráči vložiť sú pre oboch hráčov rovnaké. 
-* Na začiatku ťahu, v ktoróm sa herný stav opakoval je vždy ten istý hráč.
+* Pre každú opakovanú situáciu je **na ťahu ten istý hráč**.
 
 >**_Remíza dohodou:_** Na rozdiel od šachu v Shogi je remíza dohodou považovaná za neuctivú a hráči ju nepraktizujú.  
