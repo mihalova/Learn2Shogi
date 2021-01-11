@@ -97,7 +97,7 @@ section {
 }
 
 .sec-header {
-    padding-bottom: 16px;
+    padding-bottom: 6px;
 }
 
 .sec-header h1{
@@ -107,12 +107,11 @@ section {
 }
 
 .sec-header h4{
-    padding-top: 20px;
-    padding-bottom: 0px;
+    padding-top: 18px;
 }
 
 .sec-descript {
-    margin: 2px 0 12px 24px
+    margin: 2px 0 4px 24px
 }
 
 .sec-list {
