@@ -188,8 +188,8 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 (Sem daj ten button ktory hodí človeka na prehľad figúrok)      (Veďla neho button ktorý hodí hráča do hry)
 
 # Začínajúci hráč
-###  Vhodenie pešiakov(振り駒 Furigoma)
-**Furigoma** je stará japónska tradícia, pomocou ktorej sa pred začiatkom hry **určí začínajúci hráč**. Jej postup vieme zosumarizovať do následujúcich krokov:
+###  Furigoma
+**Vhodenie figúrok**(振り駒 furigoma) je stará japónska tradícia, pomocou ktorej sa pred začiatkom hry **určí začínajúci hráč**. Jej postup vieme zosumarizovať do následujúcich krokov:
 1. Vyššie postavený hráč zoberie do hrsti **5 figúrok pešiaka**. 
 2. Figúrky schová v dlaniach a potrasie nimi, tak aby mali šancu sa otočiť na svoju druhú stranu.
 3. Zamiešané figúrky vrhne na stôl. 
@@ -213,7 +213,12 @@ Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite p
 * Vloženie pešiaka do stĺpca s **iným** tvojím **nepovýšeným pešiakom**. 
 * Vloženie pešiaka tak aby spôsobil súperoví **šachmat**. 
 
+>**_Večný šach:_** Poslednou netradičnou možnosťou ako môže byť hráč diskvalifikovaný je opakovane(večne) ohrozovať súperovho kráľa tak, že nejde o šachmat, ale súper je iba nútený posunúť kráľa na inú pozíciu.
 
-### Remíza opakovaním herného stavu(千日手 Sennichite)
+### Remíza opakovaním herného stavu
+**Sennichite**(千日手) je stav, ktorý dosiahnu hráči, ak sa po štvrtý krát zopakuje presne **rovnaká situácia hry**. Hra v takomto príade končí **remízou**. Rovnaká sitúacia hry znamená:
+* Všetky **figúrky** su v **rovnakej pozícii** na hernej doske.
+* **Zajaté figúrky**, ktoré môžu hráči vložiť sú pre oboch hráčov rovnaké. 
+* Na začiatku ťahu, v ktoróm sa herný stav opakoval je vždy ten istý hráč.
 
-
+>**_Remíza dohodou:_** Na rozdiel od šachu v Shogi je remíza dohodou považovaná za neuctivú a hráči ju nepraktizujú.  
