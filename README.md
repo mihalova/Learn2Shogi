@@ -212,7 +212,7 @@ Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite p
 * Vloženie pešiaka do stĺpca s **iným** tvojím **nepovýšeným pešiakom**. 
 * Vloženie pešiaka tak aby spôsobil súperoví **šachmat**. 
 
->**_Večný šach:_** Poslednou netradičnou možnosťou ako môže byť hráč diskvalifikovaný je opakovane(večne) ohrozovať súperovho kráľa tak, že nejde o šachmat, ale súper je iba nútený posunúť kráľa na inú pozíciu.
+>**_Večný šach:_** Poslednou netradičnou možnosťou ako môže byť hráč diskvalifikovaný je opakovane(večne) ohrozovať súperovho kráľa tak, že nejde o šachmat, ale súper je iba nútený posunúť kráľa na inú pozíciu. V tomto prípade ide o prehru hráča, ktorý kráľa opakovane ohrozuje.
 
 ### Remíza opakovaním herného stavu
 **Sennichite**(千日手) je stav, ktorý dosiahnu hráči, ak sa po štvrtý krát zopakuje presne **rovnaká situácia hry**. Hra v takomto príade končí **remízou**. Rovnaká sitúacia hry znamená:
