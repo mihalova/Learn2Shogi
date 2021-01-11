@@ -238,7 +238,7 @@ class Board0 extends React.Component {
 
     modalWindows(type){
         let iW = document.getElementById("informationW_B0");    //ukryjeme pomocne okno na strane
-        iW.style.display = "none";
+        iW.style.visibility = "hidden";
 
         if(type === "takeKingEnd"){
             let w = document.getElementById("goodEndW_B0");
@@ -292,6 +292,47 @@ class Board0 extends React.Component {
         });
     }
 
+    resetBoard(end){
+        this.setState({
+            clicked: "",
+            situationNum: 1,
+            canMove: false
+        });
+
+        this.state.pieces["king_white_B0"].setX(272);
+        this.state.pieces["king_white_B0"].setY(195);
+
+        this.state.pieces["king_black_B0"].setX(272);
+        this.state.pieces["king_black_B0"].setY(119);
+
+        let p = document.getElementById("king_white_B0");
+        p.setAttribute("x", 272 + "px");
+        p.setAttribute("y", 195 + "px");
+        p.style.visibility = "hidden";
+
+        p = document.getElementById("king_black_B0");
+        p.setAttribute("href", "images/rotate/king.png");
+        p.setAttribute("x", 272 + "px");
+        p.setAttribute("y", 119 + "px");
+        p.style.visibility = "hidden";
+
+        if(end === "good"){
+            let w = document.getElementById("goodEndW_B0");    //ukry okno
+            w.style.display = "none";
+        } else if(end === "bad"){
+            let w = document.getElementById("badEndW_B0");    //ukry okno
+            w.style.display = "none";
+        }
+        let w = document.getElementById("transparent_B0");    //ukry okno
+        w.style.display = "none";
+
+        let wText = document.getElementById("windowText_B0");   //zmen text
+        wText.innerHTML = "Predstavenie hernej plochy<br/> s 9x9 políčkami.";
+        document.getElementById("infButton_B0").style.display = "block";     //zobraz button lebo uz je potrebny
+        let iW = document.getElementById("informationW_B0");    //zobraz pomocne okno na strane
+        iW.style.visibility = "visible";
+    }
+
     render() {
         return (
             <div className="tutorialBoard">
@@ -341,10 +382,12 @@ class Board0 extends React.Component {
                 <div id="goodEndW_B0">
                     <p>Dobrá práca, zvládol si to!</p>
                     <p>Zvolil si si zajatie<br/> súperovho <b>Kráľa</b>.</p>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("good")}>Resetovať</a>
                 </div>
                 <div id="badEndW_B0">
                     <p>Dobrá práca, zvládol si to!</p>
                     <p>Zvolil si si pohyb na iné<br/> políčko. Pozor, keď zmeškáš<br/> v Shogi šancu na zajatie figúrky,<br/> ďalšiu už nemusíš dostať.</p>
+                    <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("bad")}>Resetovať</a>
                 </div>
             </div>
         );
