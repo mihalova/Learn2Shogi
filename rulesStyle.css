@@ -97,26 +97,26 @@ section {
 }
 
 .sec-header {
-    padding-bottom: 24px;
+    padding-bottom: 16px;
 }
 
 .sec-header h1{
-    padding-bottom: 16px;
+    padding-bottom: 10px;
     border-bottom: 2px solid grey;
     text-align: center;
 }
 
 .sec-header h4{
-    margin-top: 30px;
-    padding-bottom: 5px;
+    padding-top: 20px;
+    padding-bottom: 0px;
 }
 
 .sec-descript {
-    margin: 16px 0 16px 24px
+    margin: 2px 0 12px 24px
 }
 
 .sec-list {
-    padding-left: 70px;
+    padding-left: 60px;
 }
 
 .sec-note {
