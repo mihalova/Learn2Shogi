@@ -194,5 +194,7 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 3. Zamiešané figúrky vrhne na stôl. 
 4. Hráči spočítaju počet figúriek v povýšenej podobe, ak je tento **počet 3 a viac**, začínať bude protihráč. 
 
+ >**_Veľké turnaje:_** Ako súčasť profesionálnych a vysoko sledovaných Shogi zápasov je zvykom, že Furigomu nevykonávaju hráči, ale je pozvaná známa japónska osobnosť.
+ 
 ![Furigoma](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/furigoma.jpg)
 *Japónsky herec Kamiki Ryuunosuke vykonávajúci Furigomu.* (label, obrazok zmensit asi na taku velkost ako ta figurka)
