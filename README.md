@@ -199,8 +199,20 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 ![Furigoma](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/furigoma.jpg)
 *Japónsky herec Kamiki Ryuunosuke vykonávajúci Furigomu.* (label, obrazok zmensit asi na taku velkost ako ta figurka)
 
-# Remíza
-Tak ako v tradičnom šachu aj v Shogi je možnosť dosať stav hry do situácie, kedy ani jeden z hráčov sa nedokáže stať víťazom. V Shogi nastáva remíza podstatne menej často ako v šachu, ale stále je pre hráča dôležite vedieť tento stav identifikovať.
+#  Koniec hry
+Najčastejším zakončením Shogi hry je výhra jedného z hráčov. Však v malom percente hier sa môže herný stav dosať do situácie, kedy sa ani jeden z hráčov sa nedokáže stať víťazom. V Shogi nastáva remíza podstatne menej často ako v šachu, ale stále je pre hráča dôležite vedieť tento stav identifikovať.
+
+### Nelegálny ťah
+Ak hráč spraví nelegálny ťah v profesionálnom Shogi, hru okamžite prehráva. Ak si pozorne následoval pravidla, tak mal by si poznať všetky povolené akcie. Aby sme ti pomholi uvedomiť si tie nepovolené, tak patrí sem:
+* Pohyb figúrkou **mimo hráčového kola**. 
+* Pohyb figúrkou **inak** ako umožnuje jej **definovaný pohyb**.
+* Pohyb **kráľom** do takej pozície v ktorej je **ohrozený** inou figúrkou.
+* Vloženie figúrky v jej **povýšenej forme**. 
+* Vloženie figúrky **pešiaka**, **jazdca** alebo **oštepu** do poslednej rady, v ktorej sa **nedokáže hýbať**.
+* Vloženie pešiaka do stĺpca s **iným** tvojím **nepovýšeným pešiakom**. 
+* Vloženie pešiaka tak aby spôsobil súperoví **šachmat**. 
+
+
 ### Podmienky remízi
 * **Remíza** nastáva v Shogi ak sa v hre objaví **štyry krát rovnaké rozloženie figúrok**.
 
