@@ -235,7 +235,7 @@ Hra dovrší **uviaznutie**(持将棋 jishōgi) ak **obaja kráľi** sa dostali 
 * Ak nejaký z hráčov nemá 24 bodov, zvykom je, že sa vzdá alebo pokračuje v hre so snahou vyhrať alebo nazbierať 24.
 
 # Koniec pravidiel
-**Gratulujeme!!!** Si jeden z mála vyvolených, ktorý vytrval až do konca a môže sa chváliť ovládaním pravidel tradičných Shogi. Tím Japončatá z fakulty **FMFI Univerzity Komenského** ti **ďakuje** za tvoj čas a praje ti veľa **úspechov a zábavy** :).
+**Gratulujeme!!!** Si jeden z mála vyvolených, ktorý vytrval až do konca a môže sa chváliť ovládaním pravidel tradičných Shogi. Tím Japončatá z fakulty **FMFI Univerzity Komenského** ti ďakuje za tvoj čas a praje ti veľa **úspechov a zábavy** :).
 
 ![Caaat](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/cat.gif)
 
