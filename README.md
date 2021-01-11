@@ -193,3 +193,6 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 2. Figúrky schová v dlaniach a potrasie nimi, tak aby mali šancu sa otočiť na svoju druhú stranu.
 3. Zamiešané figúrky vrhne na stôl. 
 4. Hráči spočítaju počet figúriek v povýšenej podobe, ak je tento **počet 3 a viac**, začínať bude protihráč. 
+
+![Furigoma](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/rules/furigoma.jpg)
+*Japónsky herec Kamiki Ryuunosuke vykonávajúci Furigomu.* (label, obrazok zmensit asi na taku velkost ako ta figurka)
