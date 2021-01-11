@@ -238,4 +238,5 @@ Hra dovrší uviaznutie(持将棋 jishōgi) ak **obaja kráľi** sa dostali do *
 Gratulujeme ti, si jeden z mála, ktorý vytrval až do konca a môže sa chváliť, že ovláda pravidla tradičných Shogi. Tím japončatá z fakulty FMFI Univerzity Komenského ti ďakuje za tvoj čas a praje veľa úspechov a zábavy :).
 
 ![Caaat](https://github.com/mihalova/Learn2Shogi/blob/master/pictures/tmp/cat.gif)
+
 *Dôležité je najsť si vhodného súpera* (label, obrázok mozno daj na pravu stranu alebo uvidis kde sa bude hodit)
