@@ -227,6 +227,7 @@ Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite p
 ### Uviaznutie
 Hra dovrší uviaznutie(持将棋 jishōgi) ak **obaja kráľi** sa dostali do **povyšovacej zóny** na opačnej strane dosky a hráči <ins>nevidia</ins> spôsob akým by mohli súperovho kráľa vyradiť. Dôvodom je útočna natura Shogi figúrok, ktorá neumožnuje figúrkam pohyb vzad. Ak sa hráči zhodnú na tom, že ide o jishōgi následuje počítanie bodov.
 * Hra končí **výhrou** hráča alebo **remízou**.
+* Na **začiatku hry** má každý hráč **27 bodov**.
 * Každý hráč si **spočíta body** za svoje figúrky:
   * **Veža** alebo **strelec**, povýšení či nie poskytuje vlastníkovi **5 bodov**.
   * **Ostatné figúrky** poskytujú vlastníkom **1 bod**.
