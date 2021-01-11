@@ -221,4 +221,6 @@ Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite p
 * **Zajaté figúrky**, ktoré môžu hráči vložiť sú pre oboch hráčov rovnaké. 
 * Pre každú opakovanú situáciu je **na ťahu ten istý hráč**.
 
+>**_Remízou to nekončí:_** V profesionálnych hrách nie je remíza akceptovaná ako finálny výsledok zápasu. Hráči si vymenia role žacínajúceho hráča a hrajú ďaľší zápas.
+
 >**_Remíza dohodou:_** Na rozdiel od šachu v Shogi je remíza dohodou považovaná za neuctivú a hráči ju nepraktizujú.  
