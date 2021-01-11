@@ -223,3 +223,13 @@ Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite p
 >**_Remízou to nekončí:_** V profesionálnych hrách nie je remíza akceptovaná ako finálny výsledok zápasu. Hráči si vymenia role žacínajúceho hráča a hrajú ďaľší zápas.
 
 >**_Remíza dohodou:_** Na rozdiel od šachu v Shogi je remíza dohodou považovaná za neuctivú a hráči ju nepraktizujú.  
+
+### Uviaznutie
+Hra dovrší uviaznutie(持将棋 jishōgi) ak **obaja kráľi** sa dostali do **povyšovacej zóny** na opačnej strane dosky a hráči <ins>nevidia</ins> spôsob akým by mohli súperovho kráľa vyradiť. Dôvodom je útočna natura Shogi figúrok, ktorá neumožnuje figúrkam pohyb vzad. Ak sa hráči zhodnú na tom, že ide o jishōgi následuje počítanie bodov.
+* Hra končí **výhrou** hráča alebo **remízou**.
+* Každý hráč si **spočíta body** za svoje figúrky:
+  * **Veža** alebo **strelec**, povýšení či nie poskytuje vlastníkovi **5 bodov**.
+  * **Ostatné figúrky** poskytujú vlastníkom **1 bod**.
+  * Ak obaja hráči majú aspoň **24 bodov** ide o **remízu**.
+* Ak nejaký z hráčov nemá 24 bodov, zvykom je, že sa vzdá alebo pokračuje v hre so snahou vyhrať alebo nazbierať 24.
+
