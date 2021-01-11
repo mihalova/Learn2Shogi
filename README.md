@@ -203,7 +203,7 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 Najčastejším zakončením Shogi hry je výhra jedného z hráčov. Však v malom percente hier sa môže herný stav dosať do situácie, kedy sa ani jeden z hráčov sa nedokáže stať víťazom. V Shogi nastáva remíza podstatne menej často ako v šachu, ale stále je pre hráča dôležite vedieť tento stav identifikovať.
 
 ### Nelegálny ťah
-Ak hráč spraví nelegálny ťah v profesionálnom Shogi, hru okamžite prehráva. Ak si pozorne následoval pravidla, tak mal by si poznať všetky povolené akcie. Aby sme ti pomholi uvedomiť si tie nepovolené, tak patrí sem:
+Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite prehráva**. Ak si pozorne následoval pravidla, tak mal by si poznať všetky povolené akcie. Aby sme ti pomholi uvedomiť si tie nepovolené, tak patrí sem:
 * Pohyb figúrkou **mimo hráčového kola**. 
 * Pohyb figúrkou **inak** ako umožnuje jej **definovaný pohyb**.
 * Pohyb **kráľom** do takej pozície v ktorej je **ohrozený** inou figúrkou.
