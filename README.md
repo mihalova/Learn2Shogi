@@ -186,3 +186,10 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 * Ak chceš spoznať všetky rôzne figúrky a ich povýšenia alebo si vyskúšať zjedodušenú verziu Goro Goro Shogi, pokračuj sem:
 
 (Sem daj ten button ktory hodí človeka na prehľad figúrok)      (Veďla neho button ktorý hodí hráča do hry)
+
+# Furigoma
+**Furigoma** je stará japónska tradícia, pomocou ktorej sa pred začiatkom hry **určí začínajúci hráč**. Jej postup vieme zosumarizovať do následujúcich krokov:
+1. Vyššie postavený hráč zoberie do hrsti **5 figúrok pešiaka**. 
+2. Figúrky schová v dlaniach a potrasie nimi, tak aby mali šancu sa otočiť na svoju druhú stranu.
+3. Zamiešané figúrky vrhne na stôl. 
+4. Hráči spočítaju počet figúriek v povýšenej podobe, ak je tento **počet 3 a viac**, začínať bude protihráč. 
