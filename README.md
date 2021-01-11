@@ -187,7 +187,8 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 
 (Sem daj ten button ktory hodí človeka na prehľad figúrok)      (Veďla neho button ktorý hodí hráča do hry)
 
-# Furigoma
+# Začínajúci hráč
+###  Vhodenie pešiakov(振り駒 Furigoma)
 **Furigoma** je stará japónska tradícia, pomocou ktorej sa pred začiatkom hry **určí začínajúci hráč**. Jej postup vieme zosumarizovať do následujúcich krokov:
 1. Vyššie postavený hráč zoberie do hrsti **5 figúrok pešiaka**. 
 2. Figúrky schová v dlaniach a potrasie nimi, tak aby mali šancu sa otočiť na svoju druhú stranu.
@@ -200,7 +201,7 @@ Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu po vykonaní p
 *Japónsky herec Kamiki Ryuunosuke vykonávajúci Furigomu.* (label, obrazok zmensit asi na taku velkost ako ta figurka)
 
 #  Koniec hry
-Najčastejším zakončením Shogi hry je výhra jedného z hráčov. Však v malom percente hier sa môže herný stav dosať do situácie, kedy sa ani jeden z hráčov sa nedokáže stať víťazom. V Shogi nastáva remíza podstatne menej často ako v šachu, ale stále je pre hráča dôležite vedieť tento stav identifikovať.
+Najčastejším zakončením Shogi hry je výhra jedného z hráčov. Malé percento hier končí v hernom stave, kedy sa ani jeden z hráčov sa nedokáže stať víťazom. V Shogi nastáva remíza podstatne menej často ako v šachu, ale stále je pre hráča dôležite vedieť tento stav identifikovať.
 
 ### Nelegálny ťah
 Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite prehráva**. Ak si pozorne následoval pravidla, tak mal by si poznať všetky povolené akcie. Aby sme ti pomholi uvedomiť si tie nepovolené, tak patrí sem:
@@ -213,6 +214,6 @@ Ak hráč spraví **nelegálny ťah** v profesionálnom Shogi, hru **okamžite p
 * Vloženie pešiaka tak aby spôsobil súperoví **šachmat**. 
 
 
-### Podmienky remízi
-* **Remíza** nastáva v Shogi ak sa v hre objaví **štyry krát rovnaké rozloženie figúrok**.
+### Remíza opakovaním herného stavu(千日手 Sennichite)
+
 
