@@ -263,7 +263,7 @@ class Board0 extends React.Component {
         if(situation === 2){
             document.getElementById("green_rect_B0").style.visibility = "visible";
             document.getElementById("king_white_B0").style.visibility = "visible";
-            wText.innerHTML = "Predstavenie vašej figúrky,<br/> je to figúrka <b>Kráľa</b>. Hráč<br/> prehráva ak ju stratí.";
+            wText.innerHTML = "Predstavenie vašej figúrky,<br/> je to figúrka <b>Kráľa</b>. Hráč<br/> prehráva, ak ju stratí.";
         } else if(situation === 3) {
             document.getElementById("red_rect_B0").style.visibility = "visible";
             document.getElementById("king_black_B0").style.visibility = "visible";
