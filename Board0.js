@@ -278,7 +278,7 @@ class Board0 extends React.Component {
             p.setAttribute("y", 157 + "px");
         } else if(situation === 5) {
             wText.innerHTML = 
-                "<u>Pohyb</u> - klikni na svojho<br/> <b>Kráľa</b> a následne zvoľ<br/> jedno z vyznačených políčok.";
+                "<u>Pohyb</u> - <b>klikni</b> na svojho<br/> <b>Kráľa</b> a následne zvoľ<br/> jedno z vyznačených políčok.";
             document.getElementById("infButton_B0").style.display = "none";     //ukry button lebo neni potrebny
 
             this.setState({
@@ -380,13 +380,13 @@ class Board0 extends React.Component {
                 </div>
 
                 <div id="goodEndW_B0">
-                    <p>Dobrá práca, vyhral si!</p>
-                    <p>Zajal si<br/> súperovho <b>Kráľa</b>.<br/>V skutočnej hre to tak ľahké nebude,<br/>ale si na dobrej ceste.</p>
+                    <p>Dobrá práca, <b>vyhral si!</b></p>
+                    <p>Zajal si súperovho <b>Kráľa</b>.<br/>V skutočnej hre to <br/>tak ľahké nebude,<br/>ale si na dobrej ceste.</p>
                     <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("good")}>Resetovať</a>
                 </div>
                 <div id="badEndW_B0">
-                    <p>Pozor, zmeškal si šancu!</p>
-                    <p>Mal si šancu zajať kráľa,<br/> no rozhodol si sa ustúpiť.<br/>Keď zmeškáš v Shogi šancu na zajatie figúrky,<br/> ďalšiu už nemusíš dostať.</p>
+                    <p>Pozor, <b>zmeškal si šancu!</b></p>
+                    <p>Mal si šancu <b>zajať kráľa</b>,<br/> no rozhodol si sa ustúpiť.<br/>Keď zmeškáš v Shogi šancu,<br/> ďalšiu už nemusíš dostať.</p>
                     <a type="button" className="btn btn-outline-dark" onClick={() => this.resetBoard("bad")}>Resetovať</a>
                 </div>
             </div>
