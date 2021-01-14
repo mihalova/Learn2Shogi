@@ -366,13 +366,13 @@ class Board3 extends React.Component {
             w.style.display = "block";
         } else if(type === "goodEnd"){
             let iW = document.getElementById("informationW_B3");    //ukryjeme pomocne okno na strane
-            iW.style.display = "none";
+            iW.style.visibility = "hidden";
 
             let w = document.getElementById("goodEndW_B3");
             w.style.display = "block";
         } else if(type === "badEnd"){
             let iW = document.getElementById("informationW_B3");    //ukryjeme pomocne okno na strane
-            iW.style.display = "none";
+            iW.style.visibility = "hidden";
 
             let w = document.getElementById("badEndW_B3");
             w.style.display = "block";
@@ -461,9 +461,9 @@ class Board3 extends React.Component {
         w.style.display = "none";
 
         let wText = document.getElementById("windowText_B3");   //zmen text
-        wText.innerHTML = "Pohni figúrku <b>Oštep</b><br/> do povyšovacej zóny<br/> (blikajúca plocha).";
+        wText.innerHTML = "Pohni figúrku <b>Oštep</b><br/> do povýšovacej zóny<br/> (blikajúca plocha).";
         let iW = document.getElementById("informationW_B3");    //zobraz pomocne okno na strane
-        iW.style.display = "block";
+        iW.style.visibility = "visible";
     }
 
     render() {
@@ -517,7 +517,7 @@ class Board3 extends React.Component {
                     <rect width="582px" height="360px" fill-opacity="0"/>
                 </svg>
                 <div id="informationW_B3">
-                    <p id="windowText_B3">Pohni figúrku <b>Oštep</b><br/> do povyšovacej zóny<br/> (blikajúca plocha).</p>
+                    <p id="windowText_B3">Pohni figúrku <b>Oštep</b><br/> do povýšovacej zóny<br/> (blikajúca plocha).</p>
                 </div>
 
                 <div id="promoteW">

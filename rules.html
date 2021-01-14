@@ -21,7 +21,7 @@
         &#9876;
     </button>
     <a class="navbar-brand" href="index.html">
-        <img src="pictures/logo2.png" width="223" height="" alt="Learn2Shogi logo">
+        <img src="pictures/logo2.png" height="" alt="Learn2Shogi logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">&#9776;
@@ -50,353 +50,588 @@
     </div>
 </nav>
 
-<main class="container-fluid">
 
+<menu class="navbar-expand-md">
+    <div class="collapse navbar-collapse" id="navbarSupported">
+        <ul class="nav flex-column menu-column">
+            <li class="menu-chapter">ZÁKLADY HRY SHOGI</li>
+            <li class="menu-item active" onclick="currentSlide(1)">Ako čítať pravidlá?</li>
+            <li class="menu-item" onclick="currentSlide(2)">Cieľ hry</li>
+            <li class="menu-item" onclick="currentSlide(3)">Priebeh kola</li>
+            <li class="menu-item" onclick="currentSlide(4)">Hracie komponenty</li>
+            <li class="menu-item" onclick="currentSlide(5)">Zajatie figúrok</li>
+            <li class="menu-item" onclick="currentSlide(6)">Zhrnutie a výzva</li>
+            <li class="menu-chapter">AKCIE FIGÚROK</li>
+            <li class="menu-item" onclick="currentSlide(7)">Rozloženie figúrok</li>
+            <li class="menu-item" onclick="currentSlide(8)">Povýšenie figúrok</li>
+            <li class="menu-item" onclick="currentSlide(9)">Vkladanie figúrok</li>
+            <li class="menu-item" onclick="currentSlide(10)">Zhrnutie</li>
+            <li class="menu-chapter">HERNÉ STAVY</li>
+            <li class="menu-item" onclick="currentSlide(11)">Začínajúci hráč</li>
+            <li class="menu-item" onclick="currentSlide(12)">Koniec hry</li>
+            <li class="menu-item" onclick="currentSlide(13)">Koniec pravidiel</li>
+        </ul>
+
+    </div>
+</menu>
+
+<main>
     <div class="row">
+        <section class="col-md-12 col-lg-12 col-xl-9" id="slides">
 
-        <div class="navbar-expand-md  col-md-12 col-lg-4 col-xl-3">
-            <aside class=" collapse navbar-collapse" id="navbarSupported">
-                <ol class="w-100">
-                    <li><b>ZÁKLADY HRY SHOGY</b>
-                        <ul>
-                            <li class="dot" onclick="currentSlide(1)">Hracia plocha</li>
-                            <li class="dot" onclick="currentSlide(2)">Cieľ hry</li>
-                            <li class="dot" onclick="currentSlide(3)">Priebeh Kola</li>
-                            <li class="dot" onclick="currentSlide(4)">Hracie komponenty 1</li>
-                            <li class="dot" onclick="currentSlide(5)">Hracie komponenty 2</li>
-                            <li class="dot" onclick="currentSlide(6)">Zajatie figúrok 1</li>
-                            <li class="dot" onclick="currentSlide(7)">Zhrnutie</li>
-                            <li class="dot" onclick="currentSlide(8)">Výzva</li>
-                        </ul>
-                    </li>
-                    <li><b> VLASTNOSTI A POVÝŠENIE FIGÚROK</b>
-                        <ul>
-                            <li class="dot" onclick="currentSlide(9)">Zoznam figúrok</li>
-                            <li class="dot" onclick="currentSlide(10)">Herné figúrky</li>
-                            <li class="dot" onclick="currentSlide(11)">Povýšenie jednotiek 1</li>
-                            <li class="dot" onclick="currentSlide(12)">Povýšenie jednotiek 2</li>
-                            <li class="dot" onclick="currentSlide(13)">Vkladanie figúrok</li>
-                            <li class="dot" onclick="currentSlide(14)">Zajatie figúrok 2</li>
-                            <li class="dot" onclick="currentSlide(15)">Zhrnutie</li>
-                            <li class="dot" onclick="currentSlide(16)">Hra</li>
-                        </ul>
-                    </li>
-                </ol>
-            </aside>
-        </div>
-
-
-        <section class="col-md-12 col-lg-8 col-xl-7" id="slides">
-
-                <img class="arrow_slides" onclick="plusSlides(-1)" border="0" alt="left" src="pictures/left.png">
-            <div>
-                <article class="mySlides">
-                    <header class="sec-header">
-                        <h2>Hracia plocha</h2>
-                    </header>
-                    <p class="sec-descript">Dvaja hráči hrajú na drevenej doske s 9x9 políčkami.
-                        Jednotlivé políčka dosky nie sú farebne odlíšené.
-                    </p>
-                    <!--
-                    <img src="pictures/rules/rozestaveni.png" alt="" class="img-thumbnail" width="200px">
-                    <p>Ukážka rozostavania hernej plochy</p>
-                    -->
-                    <div id="hracia_plocha0">
-                    </div>
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Ako čítať pravidlá?</h1>
+                </header>
+                <article>
+                    <ul class="sec-list">
+                        <li><b>Pravidlá</b> sú písané tak, aby si <b>postupne spoznával hru</b> Shogi, preskakovanie <u>neodporúčame</u>.
+                        </li>
+                        <li>Ak <b>nerád čítaš</b>, ale Shogi hrať chceš, nezúfaj a smelo <b>text preskoč</b>.</li>
+                        <li>Všetky <b>pravidlá sa môžeš naučiť priamo na&nbsp;hernej ploche!</b></li>
+                    </ul>
+                    <p class="sec-note"><b><i>Poznámka:</i></b> Ak ti záleži na&nbsp;detailoch, tak v&nbsp;poznámkach sa
+                        dozvieš
+                        všetky potrebné doplnkové informácie, ale zaobídeš sa aj bez nich.</p>
+                    <ul class="sec-list">
+                        <li>A aby si sa veľmi nenudil tak sem tam sa ťa pokúsime zabaviť nejakým tématický obrázkom.
+                        </li>
+                    </ul>
+                    <figure class="sec-figure">
+                        <img src="pictures/tmp/cat.jpg" alt="" class="img-thumbnail">
+                        <figcaption>Mačka hrajúca domino zo&nbsp;Shogi figúrok.</figcaption>
+                    </figure>
                 </article>
+            </section>
 
-                <article class="mySlides">
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Cieľ hry</h1>
+                </header>
+                <article>
                     <header class="sec-header">
-                        <h2>Cieľ hry</h2>
+                        <h4>Herná plocha</h4>
                     </header>
-                    <p class="sec-descript">Cieľom hry je dať súperovi mat (japonsky „Tsumi”).<br>
-                        Teda hráč sa snaží dostať súperovho kráľa do takej situácie,
-                        aby ho súper nevedel v ďalšom ťahu zachrániť pred vyradením.</p>
-                    <img src="pictures/rules/Shogi_osho.png" alt="" class="img-thumbnail" width="200px">
-                    <p>Figúrka kráľa</p>
+                    <p class="sec-descript">Japonská hra Shogi sa tradične odohráva na drevenej doske. Shogi doska
+                        má:</p>
+                    <ul class="sec-list">
+                        <li>9x9 políčok,</li>
+                        <li>políčka <u>nie sú</u> farebne odlíšené.</li>
+                    </ul>
                 </article>
-
-                <article class="mySlides">
+                <article>
                     <header class="sec-header">
-                        <h2>Priebeh Kola</h2>
+                        <h4>Ako vyhrať?</h4>
                     </header>
-
-                    <p class="sec-descript">
-                        V hre Shogi sa hráči striedajú vždy po vykonaní jednej akcie.
-                        <br>
-                        Ako akcia sa považuje buď pohyb jednej z figúrok alebo vloženie
-                        zajatej figúrky na prázdne políčko.
-                        <br>
-                        Hráči nie sú časovo limitovaný na vykonanie svojho ťahu.
-                        V Shogi ide o česť a úmyselne zdržavanie nie je bežnou praktikou.
-                    </p>
-
-                    <img src="pictures/rules/budik.png" alt="" class="img-thumbnail" width="200px">
-                    <p>V amatérskych hrách sa však často využívajú podobné stopky ako v profesionálnom šachu. </p>
+                    <ul class="sec-list">
+                        <li>Cieľom hráča je <b>dať súperovi mat</b> (japonsky „Tsumi”).</li>
+                        <li>Teda hráč sa snaží dostať súperovho kráľa do&nbsp;takej situácie, aby ho súper nevedel v&nbsp;ďalšom
+                            ťahu zachrániť pred&nbsp;vyradením.
+                        </li>
+                    </ul>
+                    <p class="sec-note"><b><i>Trochu inak ako šach:</i></b> Na&nbsp;rozdiel od&nbsp;klasického šachu,
+                        hráč nie je
+                        povinný oznámiť súperovi, že jeho kráľ je ohrozený. Ak si to hráč neuvedomí, tak v&nbsp;ďalšom
+                        kole
+                        jednoducho prehral.</p>
                 </article>
-
-                <article class="mySlides">
+                <article>
                     <header class="sec-header">
-                        <h2>Hracie komponenty 1</h2>
+                        <h4>Spoznaj hernú plochu</h4>
                     </header>
-
-                    <p class="sec-descript">
-                        Každý hráč má k dispozícii 20 figúrok, ktoré majú tvar klinu.
-
-                        O aký typ figúrky ide je dané znakom napísaným na jej najväčšiu plochu.
-
-                        Ostrý hrot figúrky smeruje vždy na súpera. Takto vieme, ktorému hráčovi figúrka patrí.
-                    </p>
-                    <img class="shogi-figure" src="pictures/king-rules.png" alt="Kráľ" width="250px">
+                    <ul class="sec-list">
+                        <li>Vyskúšaj si zajatie kráľa na&nbsp;interaktívnej hernej ploche.</li>
+                    </ul>
+                    <div id="hracia_plocha0"></div>
                 </article>
+            </section>
 
-                <article class="mySlides">
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Priebeh kola</h1>
+                </header>
+                <article>
+                    <ul class="sec-list">
+                        <li>V hre Shogi sa hráči striedajú vždy po&nbsp;vykonaní <b>práve jednej akcie</b>.</li>
+                        <li>Ako <b>akcia</b> sa počíta:
+                            <ul>
+                                <li><b>pohyb</b> jednej z hráčových figúrok,</li>
+                                <li><b>vloženie</b> jednej zo zajatých figúrok do&nbsp;hry.</li>
+                            </ul>
+                        </li>
+                        <li>Hráči <u>nie sú</u> časovo limitovaný na vykonanie svojho ťahu.</li>
+                        <li>Nemôžu sa však rozhodnúť svoj ťah preskočiť.</li>
+                    </ul>
+                    <p class="sec-note"><b><i>Historické motto:</i></b> „V&nbsp;Shogi ide o česť a úmyselné zdržiavanie
+                        nie je
+                        bežnou praktikou.“ Napriek tomu sa z&nbsp;praktických dôvodov v amatérskych turnajoch používaju
+                        stopky ako v&nbsp;profesionálnom šachu.</p>
+                    <figure class="sec-figure">
+                        <img src="pictures/rules/budik.png" alt="" class="img-thumbnail">
+                        <figcaption>Shogi stopky</figcaption>
+                    </figure>
+
+                </article>
+            </section>
+
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Hracie komponenty</h1>
+                </header>
+                <article>
                     <header class="sec-header">
-                        <h2>Hracie komponenty 2</h2>
+                        <h4>Herné figúrky</h4>
                     </header>
-                    <p class="sec-descript">
-                        Každá z figúrok má v hre svoj vlastný spôsob pohybu.
-                        <br>
-                        Vyskúšaj si pohyb rôznych figúrok na interaktivnej ploche.
-                    </p>
-
+                    <ul class="sec-list">
+                        <li>Každý hráč má k dispozícii <b>20 figúrok</b>, ktoré majú tvar klinu.</li>
+                        <li>O aký <b>typ</b> figúrky ide je dané znakom napísaným na&nbsp;jej najväčšiu plochu.</li>
+                        <li>Figúrky <u>nie sú</u> farebne rozlíšené.</li>
+                        <li><b>Vlastník figúrky</b> je určený tým, ako je figúrka <b>otočená</b>.</li>
+                        <li>Hrot figúrky <b>vždy smeruje na súpera.</b></li>
+                    </ul>
+                    <figure class="sec-figure">
+                        <img src="pictures/king-rules.png" alt="" class="img-thumbnail">
+                        <figcaption>Figúrka kráľa</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <header class="sec-header">
+                        <h4>Zoznam figúrok</h4>
+                    </header>
+                    <ul class="sec-list">
+                        <li>Každa z figúrok v hre má svoj <b>jedinečný typ pohybu.</b></li>
+                        <li>Celkový set figúrok pozostáva z:
+                            <ul>
+                                <li>9 pešiakov (fuhyō),</li>
+                                <li>2 jazdcov (keima),</li>
+								<li>2 oštepy (kyōsha),</li>
+                                <li>2 strieborných generálov (ginshō),</li>
+                                <li>2 zlatých generálov (kinshō),</li>
+                                <li>1 strelca (kakugyō),</li>
+                                <li>1 vežu (hisha),</li>
+                                <li>1 kráľa (ōshō).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="sec-note"><b><i>Pomenovanie figúrok:</i></b> „Názov figúrky je hrubým prekladom kanji
+                        znaku, v&nbsp;zátvorke uvádzame japonské čítanie figúrok.</p>
+                    <p class="sec-note"><b><i>Dvaja králi:</i></b> V skutočnosti sa v&nbsp;Shogi figúrky dvoch kráľov
+                        jemne
+                        líšia v&nbsp;znaku a jeho japonskom čítaní. Jeden znak sa číta ako <i>ōshō</i> (patrí vyšie
+                        hodnotenému hráčovi) a druhý ako <i>gyokushō</i> (patrí nižšie hodnotenému alebo vyzývajúcemu
+                        hráčovi).</p>
+                    <figure class="sec-figure">
+                        <img src="pictures/rules/prehlad.png" alt="" class="img-thumbnail">
+                        <figcaption>Celkový set figúrok</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <header class="sec-header">
+                        <h4>Pohyb figúrok</h4>
+                    </header>
+                    <ul class="sec-list">
+                        <li>Spoznaj pohyb niektorých vybraných figúrok na&nbsp;interaktívnej ploche.</li>
+                    </ul>
                     <div id="hracia_plocha1">
                     </div>
                 </article>
+            </section>
 
-                <article class="mySlides">
-                    <header class="sec-header">
-                        <h2>Zajatie figúrok 1</h2>
-                    </header>
-
-                    <p class="sec-descript">
-                        Ak hráčovova figúrka svojim pohybom dokáže skončiť na políčku so
-                        súperovou figúrkou, môže tak spraviť a figúrku zajať.
-                        <br><br>
-                        Zajatá figúrka sa uloží hráčovi mimo hernú plochu.
-                    </p>
-
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Zajatie figúrok</h1>
+                </header>
+                <article>
+                    <ol class="sec-list" type="1">
+                        <li><b>Hráčová figúrka</b> môže svojím pohybom skočiť na políčko so súperovou figúrkou a <b>zajať ju</b>.
+                        </li>
+                        <li><b>Zajatá figúrka </b>sa uloží <b>mimo hraciu plochu</b> hráčovi, ktorý ju zajal.</li>
+                        <li>Figúrka ktorá zajala súperovú sa teraz bude nachádzať na&nbsp;mieste, kde predtým stála
+                            súperova
+                            figúrka.
+                        </li>
+                    </ol>
+                    <p class="sec-note"><b><i>Oplatí sa to?:</i></b> Hráč nie je povinný vyradiť súperovú figúrku, aj
+                        keď má takú možnosť. Často krát sa stáva, že môže byť pre&nbsp;hráča dôležitejšie dostať inú
+                        svoju
+                        figúrku do&nbsp;vhodnej pozície, než zajať bezbranného pešiaka.</p>
                 </article>
+            </section>
 
-                <article class="mySlides">
-                    <header class="sec-header">
-                        <h2>Zhrnutie</h2>
-                    </header>
-
-                    <p class="sec-descript">
-                        Hrá sa na 9x9 ploche a každý hráč má 20 figúrok.
-                        <br>
-                        Cieľom hry je vyradiť súperovho kráľa.
-                        <br>
-                        Hráči sa striedaju vždy po vykonaní 1 akcie.
-                        <br>
-                        Figúrky sa vedia hýbať rôznymi spôsobmi podľa ich typu.
-                        <br>
-                        Figúrky smeruju ostrím hrotom vždy na protisediacého súpera.
-                    </p>
-
-                    <img src="pictures/rules/rozestaveni.png" alt="" class="img-thumbnail" width="200px">
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Zhrnutie a výzva</h1>
+                </header>
+                <article>
+                    <ul class="sec-list">
+                        <li>Hrá sa na&nbsp;<b>9x9 ploche</b> každý hráč má <b>20 figúrok</b>.</li>
+                        <li><b>Cieľom hry</b> je <b>vyradiť súperovho kráľa</b>.</li>
+                        <li><b>Hráči</b> sa striedaju vždy <b>po&nbsp;vykonaní 1 akcie</b>.</li>
+                        <li><b>Každá figúrka</b> má svoj <b>jedinečný typ pohybu</b>.</li>
+                        <li><b>Figúrky smerujú</b> ostrím hrotom vždy <b>na súpera</b>.</li>
+                    </ul>
                 </article>
-
-                <article class="mySlides">
+                <article>
                     <header class="sec-header">
-                        <h2>Výzva</h2>
+                        <h4>Výzva</h4>
                     </header>
-
-                    <p class="sec-descript">Pohni figúrku kráľa tak, aby nebola v ďaľšom ťahu ohrozená súperovou
-                        figúrkou.</p>
-
+                    <ul class="sec-list">
+                        <li>Otestuj svoje novonadobudnuté Shogi znalosti.</li>
+                        <li>Pohni figúrku kráľa tak, aby nebola v&nbsp;ďaľšom ťahu ohrozená súperovou figúrkou.</li>
+                        <li>Držíme ti palce a neboj sa zlyhania!</li>
+                    </ul>
                     <div id="hracia_plocha2"></div>
                 </article>
+            </section>
 
-                <article class="mySlides">
+            <!-- druha cast -->
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Rozloženie figúrok</h1>
+                </header>
+                <article>
                     <header class="sec-header">
-                        <h2>Zoznam figúrok</h2>
+                        <h4>Postup rozkladania pred&nbsp;hrou</h4>
                     </header>
+                    <ul class="sec-list">
+                        <li>Hráči si sadnú tak, aby <b>sedeli oproti sebe</b>.</li>
+                        <li>Každý hráč rozostavuje svoje figúrky s&nbsp;tým, že <b>hrot figúry smeruje na&nbsp;protivníka</b>.
+                        </li>
+                        <li>Do&nbsp;<b>najspodnejšieho</b> radu hráč ukladá figúrky:
+                            <ol type="i">
+                                <li>kráľa do&nbsp;stredu,</li>
+                                <li>dvoch zlatých generálov po&nbsp;strane kráľa,</li>
+                                <li>dvoch strieborných generálov vedľa zlatého,</li>
+                                <li>dvoch jazdcov vedľa strieborného generála,</li>
+                                <li>dva oštepy do&nbsp;rohov.</li>
+                            </ol>
+                        </li>
+                        <li>Do&nbsp;radu <b>nad</b> ním hráč ukladá:
+                            <ol type="i">
+                                <li>strelca priamo nad&nbsp;ľavého jazdca,</li>
+                                <li>vežu priamo nad&nbsp;pravého jazdca,</li>
+                                <li>zvyšok radu je prázdny.</li>
+                            </ol>
+                        </li>
+                        <li>Ďaľší a už <b>posledný rad</b> tvorí 9 pešiakov.</li>
+                    </ul>
+                    <figure class="sec-figure">
+                        <img src="pictures/rules/Shogi.webp" alt="" class="img-thumbnail">
+                        <figcaption>Rozloženie tradičných Shogi.</figcaption>
+                    </figure>
+                </article>
+            </section>
 
-                    <p class="sec-descript">
-                        Celkový set hráčových figúrok sa skladá z 20 fígúrok, konkrétne ide o:
-                        <br>
-                        Názov figúrky je hrubým prekladom, v zátvorke uvádzame japonské čítanie figúrok.
-                    </p>
-
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>9 pešiakov (fuhyō)</li>
-                                <li>2 oštepov (kyōsha)</li>
-                                <li>2 jazdcov (keima)</li>
-                                <li>2 strieborných generálov (ginshō)</li>
-                                <li>2 zlatých generálov (kinshō)</li>
-                                <li>1 strelca (kakugyō)</li>
-                                <li>1 vežu (hisha)</li>
-                                <li>1 kráľa (ōshō)</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <img class="shogi-figure" src="pictures/rules/prehlad.png" alt="Kráľ">
-                            <p>zjednodušený set figúrok</p>
-
-                        </div>
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Povýšenie figúrok</h1>
+                </header>
+                <article>
+                    <header class="sec-header">
+                        <h4>Ako vzniklo povýšenie?</h4>
+                    </header>
+                    <ul class="sec-list">
+                        <li>Každá z&nbsp;figúrok predstavuje bojovníka v&nbsp;generálovej armáde.</li>
+                        <li>Figúrky môžu za&nbsp;svoje <i>„zásluhy v&nbsp;boji“</i> získať povýšenie.</li>
+                        <li>Všetky figúrky <u>okrem</u> <b>kráľa</b> a <b>zlatého generála</b> majú na&nbsp;opačnej
+                            strane
+                            klínovej figúrky <b>iný znak</b>.
+                        </li>
+                        <li>Ten predstavuje povýšenu verziu rovnakého bojovníka.</li>
+                    </ul>
+                    <p class="sec-note"><b><i>Amatéri:</i></b> V amateŕskych setoch býva nepovýšená strana figúrky
+                        čierna a povýšená červená, aby boli strany lahšie rozlíšiteľné. V&nbsp;tradičných setoch sa
+                        strany
+                        líšia iba v&nbsp;znakoch.</p>
+                    <p class="sec-note"><b><i>Zlato:</i></b> Zlatý generál predstavuje pravú ruku kráľa, a preto už nevie
+                        byť viac povýšený. Keď sa neskôr budeš učiť pohyby figúrok, tak si všimneš, že veľa povýšených
+                        jednotiek sa hýbe práve tak, ako zlatý generál, lebo sa povýšením defacto dostávajú na&nbsp;jeho
+                        úroveň. </p>
+                    <div class="sec-two-figures">
+                        <figure class="sec-figure">
+                            <img src="pictures/rules/f1.png" alt="" class="img-thumbnail">
+                            <figcaption>Figúrka pešiaka</figcaption>
+                        </figure>
+                        <figure class="sec-figure">
+                            <img src="pictures/rules/f2.png" alt="" class="img-thumbnail">
+                            <figcaption>Povýšený pešiak</figcaption>
+                        </figure>
                     </div>
                 </article>
-
-                <article class="mySlides">
+                <article>
                     <header class="sec-header">
-                        <h2>Herné figúrky</h2>
+                        <h4>Povýšovacia zóna</h4>
                     </header>
-                    <p class="sec-descript">
-                        Každá z figúrok predstavuje bojovníka v generálovej armáde.
-                        <br>
-                        Jej pomenovanie je znázornené jedným alebo dvoma Kanji znakmi.
-                        <br>
-                        Jedna strana figúrky je čierna a druha červená (v tradičných setoch je tiež čierna a mení sa
-                        iba znak).
-                        <br>
-                        Čierna je základna podoba figúrky, červená je jej povýšená verzia.
-                    </p>
-
-                    <div class="row">
-                        <div class="col-6">
-                            <figure>
-                                <img class="shogi-figure" src="pictures/rules/f1.png" alt="Kráľ">
-                            </figure>
-                            <p>figúrka pešiaka nepovýšena</p>
-                        </div>
-                        <div class="col-6">
-                            <figure>
-                                <img class="shogi-figure" src="pictures/rules/f2.png" alt="Kráľ">
-                            </figure>
-                            <p>figúrka pešiaka povýšena</p>
-
-                        </div>
-
-                    </div>
+                    <ul class="sec-list">
+                        <li>Pre&nbsp;každého hráča existuje takzvaná <b>povýšovacia zóna</b>.</li>
+                        <li>Tá sa skladá z&nbsp;<b>1/3 celkových riadkov</b>.</li>
+                        <li>Každý hráč má svoju povýšovaciu zónu na&nbsp;inom mieste ako súper.</li>
+                        <li>Náchadza sa presne na&nbsp;<b>opačnej strane</b> dosky.</li>
+                        <li>Teda pre&nbsp;hráča sediaceho na&nbsp;spodnej strane, tvoria povýšovaciu zónu 3
+                            najvrchnejšie
+                            riadky.
+                        </li>
+                    </ul>
                 </article>
-
-                <article class="mySlides">
+                <article>
                     <header class="sec-header">
-                        <h2>Povýšenie jednotiek 1</h2>
+                        <h4>Možnosť povýšenia</h4>
                     </header>
-
-
-                    <p class="sec-descript">
-                        Každá z jednotiek okrem kráľa má možnosť byť povýšená.
-                        <br>
-                        Ak sa hráčova figúrka ocitne na začiatku alebo na konci ťahu v takzvanej povyšovacej
-                        zóne, môže sa hráč na konci svojho kola rozhodnúť povýšiť svoju jednotku.
-                    </p>
-
-                    <img src="pictures/rules/herz.png" alt="" class="img-thumbnail" width="200px">
-                    <p>Povyšovacia zóna z pohľadu dole sediaceho hráča</p>
+                    <p class="sec-descript">Ak sa hráčova figúrka ocitne na&nbsp;začiatku alebo na&nbsp;konci ťahu po&nbsp;vykonaní
+                        pohybu v&nbsp;povýšovacej zóne, môže sa hráč na&nbsp;konci svojho kola rozhodnúť povýšiť svoju
+                        jednotku.</p>
+                    <ul class="sec-list">
+                        <li>Teda povýšená môže byť <u>iba</u> taká figúrka, ktorá sa počas ťahu pohla.</li>
+                        <li><b>Hráč sa sám rozhoduje</b>, či figúrku povýši alebo nie.</li>
+                        <li>Povýšená figúrka <b>získava nový spôsob pohybu</b>.</li>
+                        <li>Figúrka sa mení na povýšenú vždy až <b>na&nbsp;konci ťahu</b>.</li>
+                        <li>Povýšené figúrky sa už <u>nevedia</u> vrátiť do&nbsp;nepovýšenej podoby.</li>
+                    </ul>
+                    <p class="sec-note"><b><i>Nutnosť povýšenia:</i></b> Pre&nbsp;jednotky (pešiak, jazdec, oštep),
+                        ktoré sa
+                        vedia hýbať iba smerom vpred platí pravidlo, že ak sa dostanú do posledných radov hernej plochy
+                        musia byť nutne povýšené. Keby sa nepovýšia, už by sa na hernej ploche nevedeli nikam pohnúť.</p>
                 </article>
-
-                <article class="mySlides">
+                <article>
                     <header class="sec-header">
-                        <h2>Povýšenie jednotiek 2</h2>
+                        <h4>Vyskúšaj si povýšenie</h4>
                     </header>
-
-                    <p class="sec-descript">
-                    </p>
-                    <div id="hracia_plocha3">
-                    </div>
-
+                    <ul class="sec-list">
+                        <li>Ak sa ti zdá, že toho bolo priveľa, vyskúšaj povýšenie na&nbsp;tomto ľahko príklade a
+                            pochopíš,
+                            že to nie je žiadna veda.
+                        </li>
+                    </ul>
+                    <div id="hracia_plocha3"></div>
                 </article>
+            </section>
 
-                <article class="mySlides">
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Vkladanie figúrok</h1>
+                </header>
+                <article>
                     <header class="sec-header">
-                        <h2>Vkladanie figúrok</h2>
+                        <h4>Zajatí bojovníci</h4>
                     </header>
-
-                    <p class="sec-descript">
-                        Hráč má možnosť ako svoju akciu za kolo vložiť jednu z figúrok,
-                        ktoré zajal súperovi späť do hry ako vlastnú figúrku na ľubovoľné
-                        prázdne herné políčko.
-                        <br><br>
-                        Teda napríklad môže figúrku vložiť priamo do povyšovacej zóny na súperovej strane.
-                        <br>
-                        Pozor, figúrka sa však nemôže povýšiť hneď po vložení, musí vykonať pohyb.
-                        <br>
-                        Figúrky pešiaka a kópijnika sa nedajú vložiť do poslednej rady,
-                        pretože by nevedeli vykonať žiaden pohyb!
-
-                    </p>
-
-                    <div class="row">
-                        <div class="col-6">
-                            <figure>
-                                <img class="shogi-figure" src="pictures/pieces/Shogi_kyosha.svg" alt="Oštep">
-                            </figure>
-                            <p>figúrka Oštepu nepovýšená</p>
-                        </div>
-                        <div class="col-6">
-                            <figure>
-                                <img class="shogi-figure" src="pictures/pieces/Shogi_fuhyo.svg" alt="Pešiak">
-                            </figure>
-                            <p>figúrka Pešiaka nepovýšená</p>
-
-                        </div>
-                    </div>
-
-                    <p>PS: figúrky sa vkladajú vždy nepovýšenou stranou.</p>
+                    <ul class="sec-list">
+                        <li>V&nbsp;hre Shogi nie je zvykom zabiť súperových bojovníkov.</li>
+                        <li>Miesto smrti majú bojovníci <b>možnosť pokračovať v&nbsp;boji</b>.</li>
+                        <li>Samozrejme iba pod kontrolou hráča, ktorý figúrku zajal.</li>
+                        <li>To platí pre&nbsp;všetky figúrky, aj povýšené <u>okrem</u> <b>kráľa</b>.</li>
+                        <li>Zajatím kráľa <b>hra končí</b>.</li>
+                    </ul>
+                    <p class="sec-note"><b><i>Nevhodné vloženie:</i></b> Pre jednotky (pešiak, jazdec, oštep), ktoré sa
+                        vedia hýbať iba smerom vpred platí pravidlo, že musia byť vložené tak aby mali možnosť pohybu vpred na hernej doske. Iné figúrky im v pohybe zavadzať môžu.</p>
                 </article>
-
-                <article class="mySlides">
+                <article>
                     <header class="sec-header">
-                        <h2>Zajatie figúrok 2</h2>
+                        <h4>Možnosť návratu</h4>
                     </header>
-
-                    <p class="sec-descript">
-                            Vyskúšaj si zajatie a vloženie súperovej figúrky.
+                    <ul class="sec-list">
+                        <li>Hráč má <b>možnosť vložiť</b> jednu z&nbsp;figúrok, ktoré zajal súperovi späť do&nbsp;hry.
+                        </li>
+                        <li>Takéto vloženie ho <b>stojí celý ťah</b>, po vložení je na&nbsp;rade súper.</li>
+                        <li>Vložiť figúrku môže iba na&nbsp;<b>prázdne políčko</b>.</li>
+                        <li>Prázdne políčko sa môže nachádzať <b>ľubovoľne na hernej ploche</b>, aj na&nbsp;súperovej
+                            strane.
+                        </li>
+                        <li>Figúrky sa vkladajú vždy v&nbsp;ich <b>nepovýšenej</b> podobe.</li>
+                        <li>Aj zajatá povýšená súperova figúrka sa vkladá v&nbsp;pôvodnej forme.</li>
+                    </ul>
+                    <p class="sec-note"><b><i>Dvaja pešiaci</i></b> (japonsky: 二歩 <b><i>nifu</i></b>): Aby sa v&nbsp;hre
+                        Shogi nestávala situácia,
+                        kedy si hráč chráni jedného pešiaka sériou iných pešiakov, zaviedlo sa pravidlo, že hráč nemôže
+                        vložiť pešiaka do takého stĺpca, kde sa nachádza iný jeho nepovýšený pešiak.</p>
+                    <p class="sec-note"><b><i>Mat vloženým pešiakom</i></b> (japonsky: 打ち歩詰め <b><i>uchifudzume</i></b>):
+                        Pešiak nemôže byť vložený tak aby spôsobil sitúaciu, v ktorej súper dostane okamžitý mat(詰み tsumi).
+                        Toto pravidlo platí špecificky pre vkladanie figúrky pešiaka a situáciu, v ktorej nastane mat. Hráč môže vložiť pešiaka
+                        tak, aby ohrozoval kráľa, iba ak existuje pre súpera ťah, ktorým môže svojho kráľa zachrániť.
                     </p>
+                </article>
+                <article>
+                    <header class="sec-header">
+                        <h4>Vyskúšaj si vloženie figúrky</h4>
+                    </header>
+                    <ul class="sec-list">
+                        <li>Využi vloženie figúrky, tak aby si dokázal zajať súperovho kráľa.</li>
+                    </ul>
                     <div id="hracia_plocha4"></div>
                 </article>
+            </section>
 
-                <article class="mySlides">
-                    <header class="sec-header">
-                        <h2>Zhrnutie</h2>
-                    </header>
-
-                    <p class="sec-descript">
-                        Každá figúrka okrem kráľa má aj svojú povýšenu stranu (označenú červenou).
-                        <br>
-                        Hráč sa môže rozhodnúť povýšiť figúrku, ak začína alebo končí ťah v povyšovacej zóne.
-                        <br>
-                        Vyradené figúrky sa stávaju zajatcami a hráč, ktorý ich zajal ich môže vrátiť do hry ako
-                        svoje.
-                        <br>
-                        Ak chceš spoznať všetky rôzne figúrky a ich povýšenia, máme pripravený prehľad:
-                    </p>
-                    <button><a class="nav-link" href="piecesOverview.html">Prehľad </a></button>
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Zhrnutie</h1>
+                </header>
+                <article>
+                    <ul class="sec-list">
+                        <li>Každá figúrka <u>okrem</u> <b>kráľa</b> a <b>zlatého generála</b> má aj svoju povýšenú
+                            stranu (niekedy označenú červenou).
+                        </li>
+                        <li>Hráč sa <b>môže</b> rozhodnúť povýšiť figúrku, ak figúrka začína alebo končí ťah v&nbsp;povýšovacej
+                            zóne.
+                        </li>
+                        <li>Vyradené figúrky sa stávaju zajatcami a hráč, ktorý ich zajal ich <b>môže vrátiť
+                            do&nbsp;hry</b>
+                            ako svoje.
+                        </li>
+                        <li>Ak chceš spoznať všetky rôzne figúrky a ich povýšenia, pokračuj sem:<br>
+                            <div class="sec-button">
+                                <a class="btn btn-outline-dark" type="button" href="piecesOverview.html">Prehľad
+                                    figúrok</a></div>
+                        </li>
+                        <li>Alebo, ak si chceš vyskúšať zjednodušenú verziu Goro Goro Shogi, pokračuj sem:<br>
+                            <div class="sec-button">
+                                <a class="btn btn-outline-dark sec-button" type="button" href="play.html">Hrať</a></div>
+                        </li>
+                    </ul>
                 </article>
+            </section>
 
-                <article class="mySlides">
-                    <header class="sec-header">
-                        <h2>Hra</h2>
-                    </header>
-
-                    <p class="sec-descript">
-                        Základné pravidlá a figúrky by si poznať už mal, zvyšok sa naučiš priamo pri hraní.
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Začínajúci hráč</h1>
+                </header>
+                <article>
+                    <p class="sec-descript"><b>Vhodenie figúrok</b> (振り駒 furigoma) je stará japonská tradícia, pomocou
+                        ktorej sa pred začiatkom hry <b>určí začínajúci hráč</b>. Jej postup vieme zosumarizovať do&nbsp;následujúcich krokov:</p>
+                    <ol type="1" class="sec-list">
+                        <li>Vyššie postavený hráč zoberie do&nbsp;hrsti <b>5 figúrok pešiaka</b>.</li>
+                        <li>Figúrky schová v dlaniach a potrasie nimi. Figúrky musia mať šancu sa otočiť na&nbsp;svoju druhú
+                            stranu.
+                        </li>
+                        <li>Zamiešané figúrky vrhne na&nbsp;stôl.</li>
+                        <li>Hráči spočítajú počet figúriek v&nbsp;povýšenej podobe, ak je ich <b>viac</b> ako v nepovýšenej,
+                            začínať bude <b>protihráč</b>.
+                        </li>
+                    </ol>
+                    <p class="sec-note"><b><i>Veľké turnaje:</i></b> Ako súčasť profesionálnych a vysoko sledovaných
+                        Shogi zápasov je zvykom, že Furigomu nevykonávaju hráči, ale je pozvaná známa japonská osobnosť.
                     </p>
-                    <button><a class="nav-link" href="play.html">Hraj</a></button>
+                    <figure class="sec-figure">
+                        <img src="pictures/rules/furigoma.jpg" alt="" class="img-thumbnail">
+                        <figcaption>Japonský herec Kamiki Ryuunosuke vykonávajúci Furigomu.</figcaption>
+                    </figure>
                 </article>
+            </section>
+
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Koniec hry</h1>
+                </header>
+                <article>
+                    <p class="sec-descript">Najčastejším zakončením Shogi hry je výhra jedného z&nbsp;hráčov. Malé percento
+                        hier končí v&nbsp;hernom stave, kedy sa ani jeden z&nbsp;hráčov nedokáže stať víťazom. V Shogi nastáva
+                        remíza podstatne menej často ako v&nbsp;šachu, ale stále je pre&nbsp;hráča dôležité vedieť tento stav
+                        identifikovať.</p>
+                </article>
+                <article>
+                    <header class="sec-header">
+                        <h4>Nelegálny ťah</h4>
+                    </header>
+                    <p class="sec-descript">Ak hráč spraví <b>nelegálny ťah</b> v&nbsp;profesionálnom Shogi, hru <b>okamžite
+                        prehráva</b>. Ak si pozorne následoval pravidlá, tak mal by si poznať všetky povolené akcie. Aby
+                        sme ti pomohli uvedomiť si tie nepovolené, tak patrí sem:</p>
+                    <ul class="sec-list">
+                        <li>Pohyb figúrkou <b>mimo hráčoveho kola</b>.</li>
+                        <li>Pohyb figúrkou <b>inak</b>, ako umožnuje jej <b>definovaný pohyb</b>.</li>
+                        <li>Pohyb <b>kráľom</b> do&nbsp;takej pozície, v&nbsp;ktorej je <b>ohrozený</b> inou figúrkou.</li>
+                        <li>Vloženie figúrky v&nbsp;jej <b>povýšenej forme</b>.</li>
+                        <li>Vloženie figúrky <b>pešiaka, jazdca</b> alebo <b>oštepu</b> do&nbsp;poslednej rady, v&nbsp;ktorej sa
+                            <b>nedokáže hýbať</b>.
+                        </li>
+                        <li>Vloženie pešiaka do&nbsp;stĺpca s&nbsp;<b>iným</b> tvojím <b>nepovýšeným pešiakom</b>.</li>
+                        <li>Vloženie pešiaka, tak aby spôsobil súperovi <b>mat</b>(詰み tsumi).</li>
+                    </ul>
+                    <p class="sec-note"><b><i>Večný šach:</i></b> Poslednou netradičnou možnosťou ako môže byť hráč
+                        diskvalifikovaný je opakovane (večne) ohrozovať súperovho kráľa tak, že nejde o&nbsp;mat, ale
+                        súper je iba nútený posunúť kráľa na&nbsp;inú pozíciu. V tomto prípade ide o&nbsp;prehru hráča, ktorý
+                        kráľa opakovane ohrozuje.</p>
+                </article>
+                <article>
+                    <header class="sec-header">
+                        <h4>Remíza opakovaním herného stavu</h4>
+                    </header>
+                    <p class="sec-descript"><b>Sennichite</b> (千日手) je stav, ktorý dosiahnu hráči, ak sa po&nbsp;štvrtýkrát
+                        zopakuje presne <b>rovnaká situácia hry</b>. Hra v&nbsp;takomto príade končí <b>remízou</b>. Rovnaká
+                        sitúacia hry znamená:</p>
+                    <ul class="sec-list">
+                        <li>Všetky <b>figúrky</b> sú v&nbsp;<b>rovnakej pozícii</b> na&nbsp;hernej doske.</li>
+                        <li><b>Zajaté figúrky</b>, ktoré môžu hráči vložiť sú pre&nbsp;oboch hráčov rovnaké.</li>
+                        <li>Pre&nbsp;každú opakovanú situáciu je <b>na&nbsp;ťahu ten istý hráč</b>.</li>
+                    </ul>
+                    <p class="sec-note"><b><i>Remízou to nekončí:</i></b> V&nbsp;profesionálnych hrách nie je remíza
+                        akceptovaná ako finálny výsledok zápasu. Hráči si vymenia role začínajúceho hráča a hrajú ďaľší
+                        zápas.</p>
+                    <p class="sec-note"><b><i>Remíza dohodou:</i></b> Na&nbsp;rozdiel od&nbsp;šachu v&nbsp;Shogi je remíza dohodou
+                        považovaná za&nbsp;neuctivú a hráči ju nepraktizujú.</p>
+                </article>
+                <article>
+                    <header class="sec-header">
+                        <h4>Uviaznutie</h4>
+                    </header>
+                    <p class="sec-descript">Hra dovŕši <b>uviaznutie</b> (持将棋 jishōgi), ak sa <b>obaja králi</b> dostali
+                        do&nbsp;<b>povýšovacej zóny</b> na&nbsp;opačnej strane dosky a hráči <u>nevidia</u> spôsob, akým by mohli
+                        súperovho kráľa vyradiť. Dôvodom je útočná natura Shogi figúrok, ktorá neumožnuje figúrkam pohyb
+                        vzad. Ak sa hráči zhodnú na&nbsp;tom, že ide o&nbsp;jishōgi následuje počítanie bodov.</p>
+                    <ul class="sec-list">
+                        <li>Hra končí <b>výhrou</b> hráča alebo <b>remízou</b>.</li>
+                        <li>Na&nbsp;<b>začiatku hry</b> má každý hráč <b>27 bodov</b>.</li>
+                        <li>Každý hráč si <b>spočíta body</b> za&nbsp;svoje figúrky:
+                            <ul>
+                                <li><b>Veža</b> alebo <b>strelec</b>, povýšený či nie poskytuje vlastníkovi <b>5
+                                    bodov</b>.
+                                </li>
+                                <li><b>Ostatné figúrky</b> poskytujú vlastníkom <b>1 bod</b>.</li>
+                                <li>Ak obaja hráči majú aspoň <b>24 bodov</b> ide o&nbsp;<b>remízu</b>.</li>
+                            </ul>
+                        </li>
+                        <li>Ak nejaký z&nbsp;hráčov nemá 24 bodov, zvykom je, že sa vzdá alebo pokračuje v&nbsp;hre so&nbsp;snahou
+                            vyhrať alebo nazbierať&nbsp;24.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="mySlides">
+                <header class="sec-header">
+                    <h1>Koniec pravidiel</h1>
+                </header>
+                <article>
+                    <p class="sec-descript"><b>Gratulujeme!!!</b> Si jeden z mála vyvolených, ktorý vytrval až do konca
+                        a môže sa chváliť ovládaním pravidiel tradičných Shogi. Tím Japončatá z <b>FMFI
+                            Univerzity Komenského</b> ti ďakuje za tvoj čas a praje ti veľa <b>úspechov a zábavy</b>
+                        &#128521;.</p>					
+                </article>
+				<article>
+                    <header class="sec-header">
+                        <h4>Autori</h4>
+                    </header>
+                    <ul class="sec-list">
+						<li><b>Dominika Kincelová</b> - HTML, CSS a testovanie.</li>
+                        <li><b>Samuel Kubala</b> - Nápad, webdizajn, textový obsah a hra v Unity.</li>
+						<li><b>Dominika Mihálová</b> - HTML, CSS, JS. </li>
+						<li><b>Filip Novák</b> - React: interaktívne hracie plochy, dokumentácia. </li>
+                    </ul>
+                </article>
+                <figure class="sec-figure">
+                    <img src="pictures/tmp/cat.gif" alt="" class="img-thumbnail">
+                    <figcaption>Shogi parťák môže byť ktokoľvek.</figcaption>
+                </figure>
+            </section>
 
 
-
-                <!--                <a class="prev" onclick="plusSlides(-1)">back</a>-->
-                <!--                <a class="next" onclick="plusSlides(1)">next</a>-->
-
+            <div class="rules-button">
+                <a class="btn btn-outline-dark" type="button" onclick="plusSlides(-1)">&#8249; Predchádzajúce
+                    pravidlo</a>
+                <a class="btn btn-outline-dark" type="button" onclick="plusSlides(1)">Ďalšie pravidlo &#8250;</a>
             </div>
-                <img class="arrow_slides" onclick="plusSlides(1)" border="0" alt="right" src="pictures/right.png">
         </section>
 
-        <div class="col-xl-1">
-            <div class="pitko">
-                <img src="pictures/Sensei.png" alt="" width="150%">
-            </div>
+        <div class="pitko col-xl-2">
+            <img src="pictures/Sensei.png" alt="" width="100%">
         </div>
-
     </div>
 </main>
 
@@ -417,16 +652,18 @@
 
     function plusSlides(n) {
         showSlides(slideIndex += n);
+        window.scrollTo(0, 0);
     }
 
     function currentSlide(n) {
         showSlides(slideIndex = n);
+        document.getElementById("navbarSupported").hidden = true;
     }
 
     function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
+        var dots = document.getElementsByClassName("menu-item");
         if (n > slides.length) {
             slideIndex = 1
         }
@@ -461,8 +698,6 @@
 <script type="text/babel" src="Board2.js"></script>
 <script type="text/babel" src="Board3.js"></script>
 <script type="text/babel" src="Board4.js"></script>
-
-
 
 
 </body>
