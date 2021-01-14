@@ -328,7 +328,7 @@ class Board0 extends React.Component {
 
         let wText = document.getElementById("windowText_B0");   //zmen text
         wText.innerHTML = "Predstavenie hernej plochy<br/> s 9x9 políčkami.";
-        document.getElementById("infButton_B0").style.display = "block";     //zobraz button lebo uz je potrebny
+        document.getElementById("infButton_B0").style.display = "inline";     //zobraz button lebo uz je potrebny
         let iW = document.getElementById("informationW_B0");    //zobraz pomocne okno na strane
         iW.style.visibility = "visible";
     }
