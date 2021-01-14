@@ -2,89 +2,143 @@
 /*    outline: 3px solid black;*/
 /*}*/
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0;}
+body {margin:0; display: flex;}
 
-.active, .dot:hover {
-    background-color: #717171;
-    color: #fff;
+.menu-item.active, .menu-item:hover {
+    background-color: black;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
-main{
+menu {
+    flex: 20%;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+}
+.menu-column {
+    padding-top: 40px;
+    list-style: none;
+    width: 100%
+}
+main {
+    flex: 80%;
     display: inline-block;
     margin-bottom: 20px;
+    margin-left: 0;
 }
 
-.row{
+.row {
     width: 95%;
     margin: 0 auto;
 }
 
-aside{
+/*aside{
     /*display: block !important;*/
-    max-height: 650px;
+    /*max-height: 650px;
     /*position: fixed !important;*/
     /*z-index: 1;*/
-    overflow: auto;
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+    /*overflow: auto;
+    /*box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
 
     /*display: none;*/
-}
+/*}*/
 
-ol{
+ol {
     padding-top: 10px;
     padding-bottom: 10px;
     /*box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);*/
 }
 
-ul{
-    list-style: none;
+.menu-item {
+    padding: 8px 8px 8px 16px;
+    font-size: 16px;
+    color: black;
 }
-
-.dot {
-    padding-left: 4px;
+.menu-chapter{
+    padding: 16px 8px 8px 16px;
+    font-size: 20px;
+    color: white;
+    background: gray;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
-
 
 section {
     /*display: block;*/
     /*height: 560px;*/
     /*width: 700px;*/
     /*padding: 0 100px;*/
-    color: black;
-    margin: 10px;
-    background-image: url("pictures/00.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
+
 }
 
 #slides {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: black;
+    /*background-image: url("pictures/00.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    border-radius: 10px;
 }
 
 .arrow_slides {
     width: 20px;
     height: 20px;
-    margin: 5px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
 }
 
 .mySlides{
     margin-bottom: 30px;
     min-height: 300px;
+    text-align: left;
 }
 
-.sec-header h2{
-    margin-top: 30px;
-    padding-bottom: 5px;
-    border-bottom: 5px solid whitesmoke;
-    font-weight: 700;
+.sec-header {
+    padding-bottom: 6px;
 }
 
-.sec-descript{
-    margin: 20px 25px;
-    font-size: 24px;
+.sec-header h1{
+    padding-bottom: 10px;
+    border-bottom: 2px solid grey;
+    text-align: center;
+}
+
+.sec-header h4{
+    padding-top: 18px;
+}
+
+.sec-descript {
+    margin: 2px 0 4px 24px
+}
+
+.sec-list {
+    padding-left: 60px;
+}
+
+.sec-note {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    color: #6a737d;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
+    background-color: whitesmoke;
+    border-left: 6px solid #6a737d;
+}
+
+.sec-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec-figure img {
+    max-width: 50%;
+}
+
+.sec-figure figcaption {
+    font-style: italic;
 }
 
 article{
@@ -92,17 +146,70 @@ article{
     margin: 0 auto;
 }
 
-aside .aside-activ{
+.rules-button > .btn {
+    margin: 8px;
+    background-color: gray;
+    border-color: gray;
+    color: white;
+    border-radius: 15px;
+}
+
+.rules-button > .btn:hover {
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+.sec-two-figures {
+    display: flex;
+}
+.sec-two-figures > .sec-figure {
+    flex: 50%;
+}
+
+.sec-button {
+    display: flex;
+    justify-content: center;
+}
+
+.sec-button > .btn{
+    margin: 8px;
+    background-color: white;
+    border-color: black;
+    color: black;
+    border-radius: 15px;
+}
+
+.sec-button > .btn:hover {
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+/*aside .aside-activ{
     background-color: black;
     color: #fff;
     padding: 2px 5px 3px 5px;
     border-radius: 5px;
 }
-
+*/
 @media only screen and (max-width: 1200px) {
     .pitko{
         display: none;
     }
 }
 
-
+@media only screen and (max-width: 768px) {
+    body{display: block;}
+    menu{flex: 100%}
+    main{flex: 100%}
+    .sec-two-figures > .sec-figure {flex: 100%;}
+    .sec-list {padding-left: 30px;}
+    .sec-descript {margin: 16px 0 16px 0px}
+    .sec-header {padding-bottom: 12px;}
+    .sec-header h1{padding-bottom: 8px;}
+}
+@media only screen and (max-width: 992px) {
+    menu{flex: 30%}
+    main{flex: 70%}
+}
