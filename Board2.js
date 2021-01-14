@@ -654,7 +654,7 @@ class Board2 extends React.Component {
 
     modalWindows(type){
         let iW = document.getElementById("informationW_B2");    //ukryjeme pomocne okno na strane
-        iW.style.visibility = "hidden";
+        iW.style.display = "none";
 
         if(type === "goodEnd"){
             let w = document.getElementById("goodEndW_B2");
@@ -730,7 +730,7 @@ class Board2 extends React.Component {
         let wText = document.getElementById("windowText_B2");   //zmen text
         wText.innerHTML = "Môžeš si kliknúť na jednotlivé<br/> figúrky, aby si zistil ich pohyb.";
         let iW = document.getElementById("informationW_B2");    //zobraz pomocne okno na strane
-        iW.style.visibility = "visible";
+        iW.style.display = "block";
     }
 
     render() {

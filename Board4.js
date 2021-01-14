@@ -560,7 +560,7 @@ class Board4 extends React.Component {
 
     modalWindows(type){
         let iW = document.getElementById("informationW_B4");    //ukryjeme pomocne okno na strane
-        iW.style.visibility = "hidden";
+        iW.style.display = "none";
 
         if(type === "goodEnd"){
             let w = document.getElementById("goodEndW_B4");
@@ -668,7 +668,7 @@ class Board4 extends React.Component {
         let wText = document.getElementById("windowText_B4");   //zmen text
         wText.innerHTML = "Klikni na svoju figúrku<br/> <b>Pešiaka</b> a zajmi figúrku<br/> <b>Veže</b>, ktorá je oproti.";
         let iW = document.getElementById("informationW_B4");    //zobraz pomocne okno na strane
-        iW.style.visibility = "visible";
+        iW.style.display = "block";
     }
 
     render() {
