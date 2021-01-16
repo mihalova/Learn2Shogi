@@ -277,7 +277,7 @@ class Board0 extends React.Component {
             let p = document.getElementById("king_black_B0");
             p.setAttribute("y", 157 + "px");
         } else if(situation === 5) {
-            wText.innerHTML = "Teraz máš možnosť zajať<br/> nepriateľského <b>Kráľa</b> alebo<br/> sa vyhnúť súboju pohybom<br/> svojho <b>Kráľa</b> na iné políčko.<br/>" +
+            wText.innerHTML =
                 "<u>Pohyb</u> - <b>klikni</b> na svojho<br/> <b>Kráľa</b> a následne <b>zvoľ</b><br/> jedno z vyznačených políčok.";
             document.getElementById("infButton_B0").style.display = "none";     //ukry button lebo neni potrebny
 
